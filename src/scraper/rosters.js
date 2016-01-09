@@ -5,6 +5,8 @@
 import scrape from './scraper';
 import Promise from 'promise';
 
+const teams = ["ALL", "BOS", "MET"];
+
 function get40ManRosterBaseballRef(teamAbbrv){
     let url = 'http://www.baseball-reference.com/teams/' + teamAbbrv + '/2015-roster.shtml';
 
@@ -34,7 +36,8 @@ function get40ManRosterBaseballRef(teamAbbrv){
 }
 
 function getBravesRoster() {
-   return get40ManRosterBaseballRef('ATL'); 
+    console.log("Here"); 
+   return get40ManRosterBaseballRef('BOS'); 
 }
 
 
