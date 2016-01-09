@@ -1,0 +1,28 @@
+{
+  "name": "mlb-ranking",
+  "version": "1.0.0",
+  "description": "A application to predict which MLB teams will be contenders in the range of 3-5 years. Also suggest what a particular team can do to make their team a contender in 3-5 years. Focus which stage a team is in (buying, selling, rebuilding, etc.) and how aggressive they are in that mode. Determine value of players focused on WAR and years of control as primary factors. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaRogan/mlb-ranking.git"
+  },
+  "keywords": [
+    "mlb",
+    "ranking",
+    "baseball",
+    "players",
+    "stats",
+    "node",
+    "database"
+  ],
+  "author": "Josh Rogan (JoshJRogan@gmail.com)",
+  "license": "CC-BY-NC-ND-4.0",
+  "bugs": {
+    "url": "https://github.com/JoshuaRogan/mlb-ranking/issues"
+  },
+  "homepage": "https://github.com/JoshuaRogan/mlb-ranking#readme"
+}
