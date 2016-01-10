@@ -23,7 +23,8 @@ function get40ManRosterBaseballRef(teamAbbrv){
                 player.name = player_data.eq(2).text(); 
                 player.url = player_data.eq(2).find('a').attr('href'); 
                 player.position = player_data.eq(4).text();
-                player.id = player.source + '-' + player_data.eq(12).text() + '-' +  player.name;
+                // player.id = player.source + '-' + player_data.eq(12).text() + '-' +  player.name;
+                player.id = `id = ${player.source}`;
                 player.id = player.id.replace(/ /g,'').toLowerCase();
 
                 players.push(player);
