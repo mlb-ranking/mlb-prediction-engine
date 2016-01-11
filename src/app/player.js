@@ -1,4 +1,3 @@
-
 "use strict";
 
 class Player {
@@ -41,14 +40,13 @@ class Player {
 
 	}
 
-
 	/**
 	 * Verify if the player is the same as this current
 	 * player. 
 	 * @param  {String} potentialID [description]
-	 * @return {Bolean}             [description]
+	 * @return {Boolean}             [description]
 	 */
-	static verifyPlayer(potentialID){
+	verifyPlayer(potentialID){
 
 	} 
 }
