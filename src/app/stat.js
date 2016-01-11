@@ -17,7 +17,15 @@ class Stat {
 	get frequency(){
 
 	}
+}
 
+class PredictedStat extends Stat{
 	
+	/**
+	 * Return a percentage (0-1) of the confidence level of this predicted stat.
+	 * @return {Float} 0-1
+	 */
+	get confidence(){
 
+	}
 }
