@@ -27,7 +27,7 @@ class Player {
 	 * @return {Array of sets} Array of each year containing all stats 
 	 */
 	get futureStats(){
-
+		
 	}
 
 	/**
@@ -37,7 +37,7 @@ class Player {
 	 * @return {Array of sets} Array of each year containing all stats 
 	 */
 	get futureStatsWithTeam(){
-
+		
 	}
 
 	/**
@@ -47,7 +47,7 @@ class Player {
 	 * @return {Boolean}             [description]
 	 */
 	verifyPlayer(potentialID){
-
+		
 	} 
 }
 

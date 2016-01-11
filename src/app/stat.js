@@ -1,7 +1,23 @@
 // Base object for all stats
-Stat Name
-Stat Influence 
+"use strict";
 
+class Stat {
 
-//How many players of this position have the stat
-function frequency(){}
+	constructor(name, influence, value) {
+		this.influence = influence;
+		this.name = name; 
+		this.value = value; 
+	}
+
+	/**
+	 * Return a percentage (0-1) of how common this stat is in the data set. 
+	 * i.e how many players have this stat for every year. 
+	 * @return {Float} 0-1 
+	 */
+	get frequency(){
+
+	}
+
+	
+
+}
