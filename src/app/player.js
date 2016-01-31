@@ -1,7 +1,7 @@
 "use strict";
 
 class Player {
-	const current = 2015; //The last year where there a good stats 
+	// const current = 2015; //The last year where there a good stats 
 
 	constructor(name, team, position, height, weight, age) {
 		this.name = name;
@@ -21,11 +21,11 @@ class Player {
 	 * @param  {String} name The name of the statistic to look up for this player.
 	 * @return {[type]}      [description]
 	 */
-	get stat(name, year = this.current){
+	get stat(){
 
 	}
 
-	get stats(year = this.current){
+	get stats(){
 		return set; 
 	}
 

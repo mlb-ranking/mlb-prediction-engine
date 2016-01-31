@@ -127,7 +127,7 @@ class ConserativeTeam extends Team {
 }
 
 
-class AggresiveTeam extend Team {
+class AggresiveTeam extends Team {
 	constructor(teamAbrev, aggresiveLevel) {
 		super(teamAbrev);
 		this.aggresiveLevel;
