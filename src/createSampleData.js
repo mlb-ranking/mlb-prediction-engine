@@ -8,19 +8,27 @@ import rosters from './scraper/rosters';
 import Promise from 'bluebird';
 
 let result = {};
-let promises;
 
-//Creates all of the promises 
-promises = Object.getOwnPropertyNames(rosters).map(name => rosters[name]());
-result.players = [];
-result.updated = new Date();
 
-Promise.all(promises)
-	.then(response => {
-	    response.forEach(players => {
-	        result.players = players;
-	    });
-	    console.log(result); 
-	    return result; 
+//None of the promise logic should be here 
+
+
+// rosters.getCurrent40Man('ATL')
+// 	.then(players => {
+// 		rosters.getStat(players[36])
+// 			.then(players=>{
+// 				console.log(JSON.stringify(players, null, 2)); 
+// 			})
+// 			.catch(console.log.bind(console));
+// 	})
+// 	.catch(console.log.bind(console)
+// ); 
+// 
+rosters.getCurrent40Man('ATL')
+	.then(players => {
+
+		rosters.getStats(players)
+			.then(x => {
+				console.log(JSON.stringify(x, null, 2));
+			});
 	})
-	.catch(console.log.bind(console)); 

@@ -32,9 +32,11 @@
     "express": "^4.13.3",
     "mongoose": "^4.3.4",
     "promise": "^7.1.1",
-    "request": "^2.67.0"
+    "request": "^2.67.0",
+    "torrequest": "0.0.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.4.0"
+    "babel-cli": "^6.4.0",
+    "torrequest": "0.0.2"
   }
 }

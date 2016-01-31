@@ -1,11 +1,14 @@
 /**
- * All of the web scrapres for building of the data
- * Should return propises 
+ * Scrapper for baseball reference website. Utilizes cheerio for parsing DOM
+ * 
  */
+
+
 import scrape from './scraper';
 import Promise from 'promise';
 
 const teams = ["ARI", "ANA", "ATL", "BAL", "BOS", "BOA", "BOB", "BOD", "BOR", "BOU", "BKN", "CAL", "CHC", "CHO", "CHI", "CHW", "CIN", "CLE", "COL", "DET", "FLA", "HOU", "KC", "LAA", "LAD", "LA", "MIA", "MIL", "MIN", "MTL", "NY", "NYG", "NYM", "NYY", "NYH", "OAK", "PHA", "PHI", "PHP", "PHB", "PIT", "SD", "SEA", "SF", "STB", "STL", "STC", "TB", "TEX", "TOR", "WSH"];
+
 
 /**
  * Return all of the roster data 
@@ -16,49 +19,140 @@ function getAll40Man(){
 }
 
 /**
- * [get40ManRosterBaseballRef description]
+ * Very specifically get the individual table rows that are neccessary 
  * @param  {String} teamAbbrv Abbreavted team name
  * @return {Promise} return a promise that will allow access to an array of all of the players 
  */
 function getCurrent40Man(teamAbbrv) {
     let url = 'http://www.baseball-reference.com/teams/' + teamAbbrv + '/2015-roster.shtml';
-    console.log(url);
+
     return new Promise((resolve, reject) => {
         let players = [];
-        scrape(url, '#div_40man tbody tr', ($, content) => {
-            content.each(function(index, element) {
+        let dateUpdated  = new Date();
+        scrape(url, ($) => {
+            let table = $('#div_40man tbody tr'); 
+            table.each(function(index, element) {
                 let player = {};
-                let player_data = $(element).children();
+                let playerData = $(element).children();
+
+                //Meta Data
                 player.source = "baseball-reference.com"
-                player.team = teamAbbrv;
-                player.name = player_data.eq(2).text();
-                player.url = player_data.eq(2).find('a').attr('href'); //Url to retrieve other stats 
-                player.position = player_data.eq(4).text().toLowerCase();
-                // player.id = player.source + '-' + player_data.eq(12).text() + '-' +  player.name;
-                player.id = `id = ${player.source}`;
-                // player.id = player.id.replace(/ /g, '').toLowerCase();
+                player.updatedTime = dateUpdated; 
+                player.url = playerData.eq(2).find('a').attr('href'); //Access detailed stats
+
+                //Bio Data
+                player.name = playerData.eq(2).text();
+                player.currentTeam = teamAbbrv;
+                player.position = playerData.eq(4).text().toLowerCase(); // Pitcher or Position 
+                player.currentAge = playerData.eq(7).text(); // Pitcher or Position 
+                player.heightInches = playerData.eq(10).attr('csk'); 
+                player.currentWeight = playerData.eq(11).text();
+                player.birth = playerData.eq(12).attr('csk');
+                player.firstYear = playerData.eq(13).text();
+                player.country = "tbd";
+                player.throwingHand = playerData.eq(9).text();
+                player.battingSide = playerData.eq(8).text();
+
+                //Player IDs
+                player.id = `TBD`; //Important will need to fix 
+                player.uid = (player.name + player.currentTeam + player.currentWeight).replace(/ /g, '').toLowerCase(); //Needs to be more thought out 
                 players.push(player);
             });
             resolve(players);
+
+            //Handle rejection
         });
     });
 }
 
+
+function getStats(players){
+    let promises; 
+    promises = players.map(player => getStat(player));
+    return Promise.all(promises);
+}
+
 /**
- * Get the actual stats of players
- * @param  {String} playerURL 
- * @param  {Enum} position  position or pitcher
- * @return {[type]}           [description]
+ * Add the actual stats to a given player
+ * @param  {Player} player object that contains the url to access the stats
+ * @return {Promise} Returns a promise once the player has been returned 
  */
-function getPlayer(playerURL, position){
+function getStat(player){
+    let url = 'http://www.baseball-reference.com' + player.url;
+    return new Promise((resolve, reject) => {
+        player.stats = {}; 
+        player.stats.dateUpdated = new Date();
+        scrape(url, ($) => {
+            if(player.position == 'pitcher'){
+                player.stats.standardPitching = getStatsFromTable($, $('#pitching_standard')); 
+                 
+            }
+            else if(player.position == 'position'){
+                player.stats.standardBatting = getStatsFromTable($, $('#batting_standard'));
+                player.stats.battingValue = getStatsFromTable($, $('#batting_value'));
+            }
 
+            player.stats.standardFielding = getStatsFromTable($, $('#standard_fielding'));
+
+            resolve(player);
+        });
+    });
 }
 
-function getBravesRoster() {
-    return getCurrent40Man('ATL');
+
+/**
+ * Create an array indexed 
+ * @param  {Cheerio} Entire cheerio html 
+ * @param  {Cheerio} cheerioTable Cheerio object of a table
+ * @return {Array}  all of the names of a stat table to lookup 
+ */
+function createStatIndex(cheerio, cheerioTable){
+    return cheerioTable.find('thead tr th').map((index,element) => cheerio(element).text()); 
 }
+
+
+function getStatsFromTable(cheerio, cheerioTable, filters){
+    let stats = []; 
+
+    //Lookup table for the stat names 
+    let statIndex = createStatIndex(cheerio, cheerioTable); 
+
+    //Iterate over all of the rows that contain the stats 
+    cheerioTable.find('tbody tr').each(function(index, element){
+        let statRow = cheerio(element).children(); 
+
+        //Ignore rows without a year
+        if(statRow.eq(0).text().length === 4){
+            let stat = {};
+            statRow.each(function(statRowIndex, statValue){
+                if(cheerio(statValue).text().length > 0){
+                    stat[statIndex[statRowIndex]] = normalizeValue(cheerio(statValue).text()); 
+                }
+            });
+            stats.push(stat); 
+        } 
+    });
+    return stats; 
+}
+
+/**
+ * Try to convert the value to the correct type
+ * @param  {String} value Parsed value in html 
+ * @return {[type]}    Returns the correct type
+ */
+function normalizeValue(value){
+    if(/[^$,\.\d]/.test(value)){
+        return value; 
+    }
+    else{
+        return Number(value); 
+    }
+}
+
 
 //Return all of the scrapers that will be run 
 module.exports = {
-    getBravesRoster
+    getCurrent40Man,
+    getStat,
+    getStats
 }
