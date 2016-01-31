@@ -3,16 +3,12 @@
  * of current 40 man rosters. First attempt to analyze player similarities using similarity metrics. 
  *
  */
-
 import rosters from './scraper/rosters';
 import Promise from 'bluebird';
+import fs from 'fs';
 
-let result = {};
-
-
+// let result = {};
 //None of the promise logic should be here 
-
-
 // rosters.getCurrent40Man('ATL')
 // 	.then(players => {
 // 		rosters.getStat(players[36])
@@ -24,11 +20,22 @@ let result = {};
 // 	.catch(console.log.bind(console)
 // ); 
 // 
-rosters.getCurrent40Man('ATL')
-	.then(players => {
+// 
+// 
+// rosters.getCurrent40Man('ATL').then(players => {
+//     rosters.getStats(players).then(x => {
+//         writeToFile(JSON.stringify(x, null, 2), 'data/ATL-2.json');
+//     });
+// })
+// 
+// 
+rosters.getAll40Man().then(result => writeToFile(JSON.stringify(result, null, 2), 'data/all.json'));
 
-		rosters.getStats(players)
-			.then(x => {
-				console.log(JSON.stringify(x, null, 2));
-			});
-	})
+function writeToFile(players, filename) {
+    fs.writeFile(filename, players, function(err) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log("The file was saved!");
+    });
+}

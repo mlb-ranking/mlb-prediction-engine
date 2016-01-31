@@ -7,15 +7,22 @@
 import scrape from './scraper';
 import Promise from 'promise';
 
-const teams = ["ARI", "ANA", "ATL", "BAL", "BOS", "BOA", "BOB", "BOD", "BOR", "BOU", "BKN", "CAL", "CHC", "CHO", "CHI", "CHW", "CIN", "CLE", "COL", "DET", "FLA", "HOU", "KC", "LAA", "LAD", "LA", "MIA", "MIL", "MIN", "MTL", "NY", "NYG", "NYM", "NYY", "NYH", "OAK", "PHA", "PHI", "PHP", "PHB", "PIT", "SD", "SEA", "SF", "STB", "STL", "STC", "TB", "TEX", "TOR", "WSH"];
+const teams = ["ARI", "ATL", "BAL", "BOS", "CHC", "CHW", "CIN", "CLE", "COL", "DET", "HOU", "KC", "LAA", "LAD", "MIL", "MIN", "NYM", "NYY", "OAK", "PHI", "PIT", "SD", "SEA", "SFG", "STL", "STC", "TBR", "TEX", "TOR", "WSN"];
+const totalTeams = teams.length; 
+const totalPlayers = teams.length * 40;
+
+let teamsScrapped = 0;
+let playersScrapped = 0;
 
 
 /**
- * Return all of the roster data 
- * @return {Promise} return array of players from all of the current teams 
+ * Full featured parse. Prase every team and everyplayer all at once. 
+ * @return {Promise} Promise that only resolves if all are fullfilled 
  */
-function getAll40Man(){
-    return teams.map(x => getCurrent40Man(x));
+function getAll40Man()
+{    let promises;
+    promises = teams.map(team => getCurrent40Man(team).then(players => getStats(players)));
+    return Promise.all(promises);
 }
 
 /**
@@ -29,6 +36,10 @@ function getCurrent40Man(teamAbbrv) {
     return new Promise((resolve, reject) => {
         let players = [];
         let dateUpdated  = new Date();
+
+        console.log(`Currently scrapping players for ${teamAbbrv}`);
+
+
         scrape(url, ($) => {
             let table = $('#div_40man tbody tr'); 
             table.each(function(index, element) {
@@ -58,6 +69,10 @@ function getCurrent40Man(teamAbbrv) {
                 player.uid = (player.name + player.currentTeam + player.currentWeight).replace(/ /g, '').toLowerCase(); //Needs to be more thought out 
                 players.push(player);
             });
+
+            teamsScrapped++;
+            console.log(`Finished scrapping players for ${teamAbbrv} \t\t team ${teamsScrapped} out of ${totalTeams}`);
+
             resolve(players);
 
             //Handle rejection
@@ -65,7 +80,11 @@ function getCurrent40Man(teamAbbrv) {
     });
 }
 
-
+/**
+ * Add the stats (Probably shouldn't be exposed)
+ * @param  {Array} players All of the previously built players 
+ * @return {[type]}         [description]
+ */
 function getStats(players){
     let promises; 
     promises = players.map(player => getStat(player));
@@ -80,6 +99,7 @@ function getStats(players){
 function getStat(player){
     let url = 'http://www.baseball-reference.com' + player.url;
     return new Promise((resolve, reject) => {
+        console.log(`Currently scrapping stats for ${player.name}`);
         player.stats = {}; 
         player.stats.dateUpdated = new Date();
         scrape(url, ($) => {
@@ -94,10 +114,20 @@ function getStat(player){
 
             player.stats.standardFielding = getStatsFromTable($, $('#standard_fielding'));
 
+            playersScrapped++;
+            console.log(`Finished scrapping stats for ${player.name} \t\t player ${playersScrapped} out of ${totalPlayers} finished`);
             resolve(player);
         });
     });
 }
+
+/*
+|--------------------------------------------------------------------------
+| Helper Functions 
+|--------------------------------------------------------------------------
+|   - Formatting and DOM traversing 
+|
+*/
 
 
 /**
@@ -110,7 +140,13 @@ function createStatIndex(cheerio, cheerioTable){
     return cheerioTable.find('thead tr th').map((index,element) => cheerio(element).text()); 
 }
 
-
+/**
+ * Retrieve all of the stats from the individual rows 
+ * @param  {cheerio} cheerio      Loaded dom
+ * @param  {[type]} cheerioTable  Table within the dom for convience 
+ * @param  {[type]} filters      (optional) filters to parse out content
+ * @return {Stat}              All of the stats in each row of this table 
+ */
 function getStatsFromTable(cheerio, cheerioTable, filters){
     let stats = []; 
 
@@ -138,7 +174,7 @@ function getStatsFromTable(cheerio, cheerioTable, filters){
 /**
  * Try to convert the value to the correct type
  * @param  {String} value Parsed value in html 
- * @return {[type]}    Returns the correct type
+ * @return {Varies}    Attempts to return the correct type for JSON 
  */
 function normalizeValue(value){
     if(/[^$,\.\d]/.test(value)){
@@ -153,6 +189,7 @@ function normalizeValue(value){
 //Return all of the scrapers that will be run 
 module.exports = {
     getCurrent40Man,
+    getAll40Man,
     getStat,
     getStats
 }
