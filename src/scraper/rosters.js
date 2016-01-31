@@ -19,8 +19,8 @@ let playersScrapped = 0;
  * Full featured parse. Prase every team and everyplayer all at once. 
  * @return {Promise} Promise that only resolves if all are fullfilled 
  */
-function getAll40Man()
-{    let promises;
+function getAll40Man(){    
+    let promises;
     promises = teams.map(team => getCurrent40Man(team).then(players => getStats(players)));
     return Promise.all(promises);
 }
@@ -74,6 +74,7 @@ function getCurrent40Man(teamAbbrv) {
             console.log(`Finished scrapping players for ${teamAbbrv} \t\t team ${teamsScrapped} out of ${totalTeams}`);
 
             resolve(players);
+            
 
             //Handle rejection
         });
