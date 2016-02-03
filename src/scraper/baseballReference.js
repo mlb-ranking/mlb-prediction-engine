@@ -7,6 +7,7 @@ import scrape from './scraper';
 import Promise from 'promise';
 import fs from 'fs'; 
 
+const baseURL = "http://www.baseball-reference.com/";
 const teams = ["ARI", "ATL", "BAL", "BOS", "CHC", "CHW", "CIN", "CLE", "COL", "DET", "HOU", "KC", "LAA", "LAD", "MIL", "MIN", "NYM", "NYY", "OAK", "PHI", "PIT", "SD", "SEA", "SFG", "STL", "STC", "TBR", "TEX", "TOR", "WSN"];
 const totalTeams = teams.length; 
 const totalPlayers = teams.length * 40;
@@ -15,27 +16,17 @@ let teamsScrapped = 0;
 let playersScrapped = 0;
 
 /**
- * Update the URL file to make sure the new urls 
+ * Update the URL file to make verify current urls
  * @return {[type]} [description]
  */
 function updateAllUrls(){
-    let urls = {};
-    // urls.currentRosterPages = teams.map(teamAbbrev => `http://www.baseball-reference.com/teams/${teamAbbrev}/2015-roster.shtml`);
-    // urls.playerPages = teams.map(teamAbbrev => getCurrent40Man(teamAbbrev).then(x => {console.log(x[0].url)})); 
-    // urls.playerPages = teams.map(teamAbbrev => getCurrent40Man(teamAbbrev)
-    //     .then(x => {
-    //             x.map(x => console.log(x.url));
-    //             return x.url; 
-    //             console.log(urls); 
-    //         }
-    //     )); 
-    
-    let playerPages = [];
+    let urls = []; 
     let rosters = teams.map(teamAbbrev => getCurrent40Man(teamAbbrev)); 
-    Promise.all(rosters).then(x => console.log(x[0][5].url));
-   
-    // console.log(urls); 
-    
+
+    //When all of pages are parsed create a file with all of the urls 
+    Promise.all(rosters)
+        .then(allRosters => allRosters.map(roster => roster.map(player => urls.push({url: player.url, downloaded: false}))))
+        .then(() => fs.writeFile('data/baseballref/urls.json', JSON.stringify(urls, null, 2), err => {if (err) throw err;}));
 }
 
 /**
@@ -105,7 +96,7 @@ function getCurrent40Man(teamAbbrv) {
             console.log(`Finished scrapping players for ${teamAbbrv} \t\t team ${teamsScrapped} out of ${totalTeams}`);
 
             resolve(players);
-            
+            reject("failed scrapping a player");
 
             //Handle rejection
         });
@@ -149,8 +140,14 @@ function getStat(player){
             playersScrapped++;
             console.log(`Finished scrapping stats for ${player.name} \t\t player ${playersScrapped} out of ${totalPlayers} finished`);
             resolve(player);
+            reject("failed scrapping a stats for a player");
         });
     });
+}
+
+
+function downloadRosterPage(abbrev){
+
 }
 
 /*
