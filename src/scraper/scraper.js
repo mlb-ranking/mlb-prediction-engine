@@ -1,6 +1,13 @@
 // src/scraper.js
+
+// Imports
 import torRequest from 'torrequest';
 import cheerio from 'cheerio';
+import fs from 'fs'; 
+
+//Constants
+const TOR_HOST      = "localhost"; 
+const TOR_PORT      = 9050;
 
 /**
  * Scrape a given url
@@ -9,10 +16,12 @@ import cheerio from 'cheerio';
  * @return {[type]}            [description]
  */
 function scrape(url, callback) {
+    console.log(`[DOWNLOAD] Scraping the url: ${url}`); 
+
     let options = {
         url: url,
-        torHost: "localhost",
-        torPort: 9050
+        torHost: TOR_HOST,
+        torPort: TOR_PORT
     };  
 
     torRequest(options, (err, response, html) => {
@@ -26,15 +35,9 @@ function scrape(url, callback) {
     });
 }
 
-/**
- * Download the url and save it to the destination directory
- * @param  {String} url  URL
- * @param  {[type]} dest [description]
- * @return {[type]}      [description]
- */
-function downloadPage(url, dest){
 
-}
 
 // Expose the function to the rest of the app.
-module.exports = scrape;
+module.exports = {
+    scrape
+};

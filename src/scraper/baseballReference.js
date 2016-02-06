@@ -3,33 +3,81 @@
  * 
  */
 
-//Imports 
+//Module Imports 
 import scrape from './scraper';
+import downloader from './downloader';
 import Promise from 'promise';
 import constants from '../util/constants';
 import fs from 'fs'; 
 
 //General Constants for baseball reference 
-const baseURL = "http://www.baseball-reference.com/";
-const teams = constants.teamsAbbrevs; 
-const totalTeams = teams.length; 
-const totalPlayers = teams.length * 40;
+const BASEURL               = "http://www.baseball-reference.com/"; 
+const TEAMS                 = constants.teamsAbbrevs; 
+const TOTALTEAMS            = TEAMS.length; 
+const TOTALPLAYERS          = TEAMS.length * 40;
 
-//URLs File Constants 
-const defatulURLFileName = "urls.json";
-const urlsJSONFileLoc = `data/baseballref/${defatulURLFileName}`; 
+//File Constants 
+const DEFAULT_URL_FILENAME  = "urls.json";
+const URLS_JSON_FILE_LOC    = `data/baseballref/${DEFAULT_URL_FILENAME}`; 
+const PLAYERPAGE_FILE_LOC   = "data/baseballref/pages"; 
 
 //Degbugging instance vars  
-let teamsScrapped = 0;
-let playersScrapped = 0;
+let teamsScrapped           = 0;
+let playersScrapped         = 0;
+
+//URLs loaded for this run
+let urlsJSONFile            = null;    
+
+//Configurable options with defaults
+let config = {
+    debug: true,
+    name: "Baseball Reference Scrapper"
+}; 
 
 /*
 |--------------------------------------------------------------------------
 | API
 |--------------------------------------------------------------------------
-|   - updatePlayerURLs() - Update the URLS file
-|   - downloadPages() - Trigger downloading of pages
+| run()     - Run this scrapper
+| clean()   - Clean previous data
 |
+*/
+
+/**
+ * Run the scraper for baseballreference.com 
+ * 
+ * @param  {Object} extendConfig Ability to extend the configuration
+ * 
+ * @return Promise
+ */
+function run(extendConfig = {}){
+    if(!urlsFileExists()){
+        updatePlayerURLs()
+            .then(run()); 
+    }
+    else{
+        return downloadPlayers(); 
+    }
+}
+
+
+/**
+ * Wipe all previous page downloads and URL files to start clean.  
+ * 
+ * @return Promise
+ */
+function clean(){
+    return Promise.all([deletePlayers(), updatePlayerURLs()])
+        .then(() => `${config.name} has been cleaned`);  
+}
+
+/*
+|--------------------------------------------------------------------------
+| Internal API
+|--------------------------------------------------------------------------
+|   - updatePlayerURLs()    - Update the URLS file
+|   - downloadPlayers()     - Trigger downloading of pages
+|   - deletePlayers()       - Remove old data
 */
 
 /**
@@ -39,7 +87,7 @@ let playersScrapped = 0;
  * @return Promise 
  */
 function updatePlayerURLs(changeExport = false){
-    let exportFile = changeExport === false ? urlsJSONFileLoc: changeExport;
+    let exportFile = changeExport === false ? URLS_JSON_FILE_LOC: changeExport;
     console.log(`Updating the ${exportFile} file with new URLS.`);
 
     let jsonFile = {
@@ -51,37 +99,101 @@ function updatePlayerURLs(changeExport = false){
     //When all of rosters are scrapped get the URLS from those pages for later downloading 
     return Promise.all(rosters)
         .then(allRosters => allRosters.map(roster => roster.map(player => jsonFile.urls.push({url: player.url, downloading: false, downloaded: false, inAWS: false}))))
-        .then(() => fs.writeFile(exportFile, JSON.stringify(jsonFile, null, 2), err => {if (err) throw err;}))
-        .then(() => console.log(`The file was successfully written to ${exportFile}`))
+        .then(() => fs.writeFile(exportFile, JSON.stringify(jsonFile, null, 2), err => {if (err) throw err;})) 
+        .then(() => console.log(`The file was successfully written to ${exportFile}`))  //This then mis not in sync need to use promise file system
         .catch(err => console.log(err));
 }
 
 /**
- * Start downloading some of the pages that will be parsed. Eventually put these pages in 
- * AWS. 
+ * Start downloading some of the pages that will be parsed. 
+ * Eventually put these pages in AWS. 
  * 
  * @param {Boolean} Update the urls page first
  * @param {Vary} false if default file name otherwise the file name of the urls 
- * @return 
+ * @return Promise 
  */
-function downloadPages(updateURLs = false, changedImport = false){
-    let importFile = changedImport === false ? urlsJSONFileLoc: changedImport;
+function downloadPlayers(updateURLs = false, changedImport = false){
+    let importFile = changedImport === false ? URLS_JSON_FILE_LOC: changedImport;
     
     if(updateURLs !== false){
         updatePlayerURLs(importFile)
-            .then(() => console.log("URLS updated from downloadPages"))
-            .then(() => downloadPages(false, importFile)); // Then run this function without updating
+            .then(() => console.log("URLS updated from downloadPlayers()"))
+            .then(() => downloadPlayers(false, importFile)); // Then run this function without updating
     }
     else{
+        downloader.run(importFile); 
+        // fs.readFile(importFile, (err, data) => {
+        //     if (err) throw err;
+        //     urlsJSONFile = JSON.parse(data); //Load up the JSON file
+        //     let urls = urlsJSONFile.urls; 
 
-        //Check to see if there is a valid urls file
-        fs.readFile(importFile, (err, data) => {
-            if (err) throw err;
-            console.log(JSON.parse(data));
-        });
+        //     //Start sending appropriate files to be downloaded
+        //     urls.slice(0, 5).map((elem, index) => {
+        //         if(!elem.downloaded){
+        //             downloadPlayer(index, elem);
+        //         }
+        //         else{
+        //             debugMessage(`[DEBUG] Player index ${index} is already downloaded. Skipping...`);
+        //         }
+        //     });
+        // });
+
+
+
+
+    }    
+}
+
+/**
+ *  Download the full player page. 
+ * 
+ * @param  {Integer} index   Index in the full URLS file
+ * @param  {Object} urlObj  the working object for downloaded, downloading and other metadata
+ * @return {Promise}       
+ */
+function downloadPlayer(index, urlObj){
+    debugMessage(`[DEBUG] Attempting to download player at index ${index}`); 
+
+    if(needToDownload(index)){
+        try{
+            let url = BASEURL + urlObj.url;
+            urlObj.downloading = true; 
+            urlObj.startedAt = new Date();
+            updateURLObj(urlObj, index); 
+
+            //Use the mlb_ID for the file names
+            let fileName = PLAYERPAGE_FILE_LOC + '/' + getMLBIDFromURL(url);
+            scrape.downloadPage(url, fileName, function(response, data){
+                debugMessage(`[DEBUG] File at index ${index} downloaded with status ${response.statusCode}.`);
+                urlObj.downloading = false; 
+                urlObj.downloaded = true; 
+                urlObj.completedAt = new Date(); 
+                urlObj.fileLocation = fileName;
+                updateURLObj(urlObj, index); 
+            }); 
+
+        }
+        catch (e){
+            urlObj.downloading = false; 
+            urlObj.downloaded = false; 
+            updateURLObj(urlObj, index);
+            console.log(e); 
+        }
     }
-
+    else{
+        debugMessage(`[DEBUG] Skipping player at index ${index}. Downloaded or Downloading already.`);
+    }
     
+
+}
+
+/**
+ * Hide all of the currently downloaded player files.
+ * 
+ * @return Promise
+ */
+function deletePlayers(){
+
 }
 
 
@@ -103,7 +215,7 @@ function getCurrent40Man(teamAbbrv) {
 
         console.log(`Currently scrapping players for ${teamAbbrv}`);
 
-        scrape(url, ($) => {
+        scrape.scrape(url, ($) => {
             let table = $('#div_40man tbody tr'); 
             table.each(function(index, element) {
                 let player = {};
@@ -134,7 +246,7 @@ function getCurrent40Man(teamAbbrv) {
             });
 
             teamsScrapped++;
-            console.log(`Finished scrapping players for ${teamAbbrv} \t\t team ${teamsScrapped} out of ${totalTeams}`);
+            console.log(`Finished scrapping players for ${teamAbbrv} \t\t team ${teamsScrapped} out of ${TOTALTEAMS}`);
 
             resolve(players);
             reject("failed scrapping a player");
@@ -159,7 +271,7 @@ function getStat(player){
         console.log(`Currently scrapping stats for ${player.name}`);
         player.stats = {}; 
         player.stats.dateUpdated = new Date();
-        scrape(url, ($) => {
+        scrape.scrape(url, ($) => {
             if(player.position == 'pitcher'){
                 player.stats.standardPitching = getStatsFromTable($, $('#pitching_standard')); 
                  
@@ -172,7 +284,7 @@ function getStat(player){
             player.stats.standardFielding = getStatsFromTable($, $('#standard_fielding'));
 
             playersScrapped++;
-            console.log(`Finished scrapping stats for ${player.name} \t\t player ${playersScrapped} out of ${totalPlayers} finished`);
+            console.log(`Finished scrapping stats for ${player.name} \t\t player ${playersScrapped} out of ${TOTALPLAYERS} finished`);
             resolve(player);
             reject("failed scrapping a stats for a player");
         });
@@ -195,7 +307,7 @@ function getStat(player){
  * @return {Array} Array of all of the 40 man rosters
  */
 function getAll40Man(){
-    return teams.map(teamAbbrev => getCurrent40Man(teamAbbrev)); 
+    return TEAMS.map(teamAbbrev => getCurrent40Man(teamAbbrev)); 
 }
 
 
@@ -218,7 +330,7 @@ function getStats(players){
  */
 function getAll40ManStats(){    
     let promises;
-    promises = teams.map(team => getCurrent40Man(team).then(players => getStats(players)));
+    promises = TEAMS.map(team => getCurrent40Man(team).then(players => getStats(players)));
     return Promise.all(promises);
 }
 
@@ -279,9 +391,112 @@ function normalizeValue(value){
     }
 }
 
+/**
+ * Return the MLB ID for this URL. If doesn't exist return large random 
+ * 
+ * @param  {String} url Url containging mlb_ID=######
+ * @return {String}  MLB ID
+ */
+function getMLBIDFromURL(url){
+    url = url.toLowerCase(); 
+    let matches = url.match(/([^\?]*)\mlb_id=(\d*)/);
+
+    if(matches !== null){
+        return matches[2];
+    }
+    else{
+        throw new Error("No MLB ID Found"); 
+    }
+}
+
+
+
+/**
+ * Debug only messages
+ * !!!MOVE TO UTILS 
+ * 
+ * @return {[type]}      [description]
+ */
+function debugMessage(){
+    if(config.debug){
+        console.log.apply(null, arguments);
+    }
+}
+
+
+
+/******************* MOVING TO DOWNLOADER *******************/
+
+/**
+ * Returns true if the urls file exists
+ * @return {Boolean} Existence of URL.json or similar file 
+ */
+function urlsFileExists(){
+    return false; //NEED TO IMPLEMENT
+}
+
+
+
+/**
+ * Update the JSON file at this URL index with a new urlObj 
+ * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
+ * 
+ * @param  {Object} urlObj Updated status of the URL Object
+ * @param  {Integer} index  position in the URL array of the JSON file
+ * @return {[type]}        [description]
+ */
+function updateURLObj(urlObj, index){
+    //Setup the urls object for this instance
+    if(urlsJSONFile === null){
+        
+    }
+
+    urlsJSONFile.urls[index] = urlObj; 
+    console.log(urlsJSONFile.urls.slice(0,5)); 
+
+}
+
+/**
+ * Get the most upto date URL Obj 
+ * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
+ * 
+ * @param  {Integer} index  position in the URL array of the JSON file
+ * @return {Object}       Most recent version of the URL object
+ */
+function getURLObj(index){
+
+    return {};
+}
+
+/**
+ * If the file is downloading or already downloaded don't start it again. 
+ * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
+ * 
+ * @param  {[type]} index [description]
+ * @return {Boolean}  Do we need to download this file
+ */
+function needToDownload(index){
+    return !(urlsJSONFile.urls[index].downloading === true || urlsJSONFile.urls[index].downloaded === true);
+}
+
+/**
+ * Update the JSON file with the new downloaded/downloading metadata. 
+ * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
+ * 
+ * @param  {Object} fullURLObj Copy of the Full URL Object for writing
+ * @return Promise
+ */
+function updateJSONFile(){
+
+
+}
+
+/******************* MOVING TO DOWNLOADER *******************/
+
 
 //Return all of the scrapers that will be run 
 module.exports = {
+    run, 
     updatePlayerURLs, 
-    downloadPages
+    downloadPlayers
 };

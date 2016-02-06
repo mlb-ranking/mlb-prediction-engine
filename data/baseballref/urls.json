@@ -3,242 +3,362 @@
     {
       "url": "/route.cgi?player=1&mlb_ID=425844",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:41:25.035Z",
+      "completedAt": "2016-02-06T11:41:55.068Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=425844"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=571863",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T10:57:15.098Z",
+      "completedAt": "2016-02-06T10:57:26.547Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=571863"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=571946",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T10:57:15.100Z",
+      "completedAt": "2016-02-06T10:57:25.180Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=571946"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=643327",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T10:57:15.100Z",
+      "completedAt": "2016-02-06T10:57:25.634Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=643327"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=592662",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T10:57:15.100Z",
+      "completedAt": "2016-02-06T10:57:26.233Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=592662"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=594857",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.686Z",
+      "completedAt": "2016-02-06T11:27:34.007Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=594857"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=595235",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.694Z",
+      "completedAt": "2016-02-06T11:27:34.405Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=595235"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=605151",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.695Z",
+      "completedAt": "2016-02-06T11:27:42.241Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=605151"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=605177",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.696Z",
+      "completedAt": "2016-02-06T11:27:34.357Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=605177"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=605342",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.696Z",
+      "completedAt": "2016-02-06T11:27:35.719Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=605342"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=605359",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.696Z",
+      "completedAt": "2016-02-06T11:27:43.311Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=605359"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=608678",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.697Z",
+      "completedAt": "2016-02-06T11:27:34.380Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=608678"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=611093",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.697Z",
+      "completedAt": "2016-02-06T11:27:34.272Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=611093"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=621281",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.697Z",
+      "completedAt": "2016-02-06T11:27:34.291Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=621281"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=571578",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.697Z",
+      "completedAt": "2016-02-06T11:27:34.396Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=571578"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=545332",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.698Z",
+      "completedAt": "2016-02-06T11:27:44.746Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=545332"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=446899",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.698Z",
+      "completedAt": "2016-02-06T11:27:39.474Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=446899"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=517414",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.698Z",
+      "completedAt": "2016-02-06T11:27:41.403Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=517414"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=518567",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.698Z",
+      "completedAt": "2016-02-06T11:27:38.320Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=518567"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=519186",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:27:30.699Z",
+      "completedAt": "2016-02-06T11:27:34.372Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=519186"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=523989",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.741Z",
+      "completedAt": "2016-02-06T11:30:05.302Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=523989"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=542609",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.748Z",
+      "completedAt": "2016-02-06T11:30:12.655Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=542609"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=543339",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.749Z",
+      "completedAt": "2016-02-06T11:30:13.869Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=543339"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=591712",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.750Z",
+      "completedAt": "2016-02-06T11:30:08.556Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=591712"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=516416",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.750Z",
+      "completedAt": "2016-02-06T11:30:10.790Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=516416"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=502671",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.751Z",
+      "completedAt": "2016-02-06T11:30:06.083Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=502671"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=488912",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.751Z",
+      "completedAt": "2016-02-06T11:30:05.394Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=488912"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=456078",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.751Z",
+      "completedAt": "2016-02-06T11:30:11.854Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=456078"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=444482",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.751Z",
+      "completedAt": "2016-02-06T11:30:04.641Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=444482"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=630111",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T11:30:00.752Z",
+      "completedAt": "2016-02-06T11:30:09.542Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=630111"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=571875",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.468Z",
+      "completedAt": "2016-02-06T12:11:48.873Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=571875"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=605113",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.480Z",
+      "completedAt": "2016-02-06T12:11:50.978Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=605113"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=602115",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.482Z",
+      "completedAt": "2016-02-06T12:11:55.287Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=602115"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=598284",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.483Z",
+      "completedAt": "2016-02-06T12:11:52.873Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=598284"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=543302",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.483Z",
+      "completedAt": "2016-02-06T12:11:46.181Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=543302"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=572008",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.483Z",
+      "completedAt": "2016-02-06T12:11:46.585Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=572008"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=594838",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.484Z",
+      "completedAt": "2016-02-06T12:11:49.545Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=594838"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=593647",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.484Z",
+      "completedAt": "2016-02-06T12:11:49.845Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=593647"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=592273",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.484Z",
+      "completedAt": "2016-02-06T12:11:51.958Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=592273"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=572041",
       "downloading": false,
-      "downloaded": false,
-      "inAWS": false
+      "downloaded": true,
+      "inAWS": false,
+      "startedAt": "2016-02-06T12:11:41.484Z",
+      "completedAt": "2016-02-06T12:11:47.258Z",
+      "fileLocation": "data/baseballref/pages/route.cgi?player=1&mlb_ID=572041"
     },
     {
       "url": "/route.cgi?player=1&mlb_ID=623406",
@@ -6913,5 +7033,7 @@
       "inAWS": false
     }
   ],
-  "dateCreated": "2016-02-06T06:53:10.832Z"
+  "dateCreated": "2016-02-06T06:53:10.832Z",
+  "baseURL": "http://www.baseball-reference.com/",
+  "downloadDir": "data/baseballref/pages/"
 }
