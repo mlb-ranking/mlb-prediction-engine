@@ -7,4 +7,7 @@
 import baseballRefScrapper from './scraper/baseballReference';
 
 // baseballRefScrapper.updatePlayerURLs(); 
-baseballRefScrapper.downloadPlayers();
+// 
+baseballRefScrapper.downloadPlayers(); 
+setInterval(function() { baseballRefScrapper.downloadPlayers(); }, 60000);
+// baseballRefScrapper.downloadPlayers();

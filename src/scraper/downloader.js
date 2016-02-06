@@ -1,15 +1,15 @@
 //Imports
-// import request from 'request'; 
 import request from 'torrequest';
 import fs from 'fs'; 
 import fsp from 'fs-promise'; 
 import Promise from 'promise';
 import scrape from './scraper';
+import md5 from 'md5';
 
 //Constants 
 const TOR_HOST                  = "localhost"; 
 const TOR_PORT                  = 9050;
-const NETWORK_TIMEOUT           = 10000;
+const NETWORK_TIMEOUT           = 30000;
 const DEFAULT_DESTINATION       = "data/temp/";
 const DEFAULT_URLS_FILENAME     = "urls.json"; 
 
@@ -21,6 +21,7 @@ let baseURL                     = "";
 let downloadDir                 = "";
 
 //Network Mointoring
+const DEFAULT_MAX_DOWNLOADS     = 50;            //Value 1-10 on how aggresive to throttle
 const THROTTLER                 = 1;            //Value 1-10 on how aggresive to throttle
 let requests                    = [];           //All of the reuests to be made
 
@@ -52,7 +53,8 @@ function create(urls, dest, baseURL){
             url: url, 
             downloaded:false, 
             downloading: false, 
-            inAWS: false
+            inAWS: false,
+            hash: null //Hash of the page to detect changes in the future
         });
     });
 
@@ -100,9 +102,9 @@ function clean(urlsJSONFileLoc){
  * 
  * @return {[type]} [description]
  */
-function startDownloads(max = 10){   
+function startDownloads(max = DEFAULT_MAX_DOWNLOADS){   
     let downloads = 0;
-
+    
     for(let index = getStartingPoint(); index < urlsJSONFile.urls.length; index++){
         let urlObj = urlsJSONFile.urls[index];
 
@@ -146,6 +148,7 @@ function startDownload(urlObj, index){
                 urlObj.downloaded = true; 
                 urlObj.completedAt = new Date(); 
                 urlObj.fileLocation = fileName;
+                // urlObj.hash = data;
                 updateURLObj(urlObj, index); 
 
                 //Every so often
@@ -179,7 +182,8 @@ function downloadPage(url, dest, callback){
     let options = {
         url: url,
         torHost: TOR_HOST,
-        torPort: TOR_PORT
+        torPort: TOR_PORT,
+        timeout: NETWORK_TIMEOUT
     };  
 
     //Send the request using TOR
@@ -191,9 +195,13 @@ function downloadPage(url, dest, callback){
         }
         else{
             if(err.code === 'ETIMEDOUT'){
-                throw new Error(`[DOWNLOADER - TOR ERROR TIMEOUT] TOR Request failed for ${url}`);
+                console.log(`[DOWNLOADER - TIMEOUT] File '${url}' timedout.`);
+                // throw new Error(`[DOWNLOADER - TOR ERROR TIMEOUT] TOR Request failed for ${url}`);
             }
-            throw new Error(`[DOWNLOADER - TOR ERROR] Request failed for ${url} exited with ${response.statusCode}.`); 
+            else{
+                console.log(`[DOWNLOADER - TOR ERROR] Request failed for ${url}`);
+                // throw new Error(`[DOWNLOADER - TOR ERROR] Request failed for ${url} exited with ${response.statusCode}.`); 
+            }
         }
     });
 
@@ -286,12 +294,13 @@ function needToDownload(index){
  * @return Promise
  */
 function writeToFile(){
-    console.log('[DEBUG] Writing to JSON FILE');
+    // console.log('[DEBUG] Writing to JSON FILE');
     fs.writeFile(urlsJSONFileLoc, JSON.stringify(urlsJSONFile, null, 2), 
         err => {
             if (err) throw err;
-            console.log('[DEBUG] Successful write to JSON FILE');
     });
+
+
 }
 
 

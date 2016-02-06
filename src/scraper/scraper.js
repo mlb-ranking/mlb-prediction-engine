@@ -16,7 +16,7 @@ const TOR_PORT      = 9050;
  * @return {[type]}            [description]
  */
 function scrape(url, callback) {
-    console.log(`[DOWNLOAD] Scraping the url: ${url}`); 
+    console.log(`[SCRAPER START] Scraping the url: ${url}`); 
 
     let options = {
         url: url,
@@ -28,6 +28,7 @@ function scrape(url, callback) {
         if(!err) {
             let $ = cheerio.load(html);
             callback($);
+            console.log(`[SCRAPER FINISH] Finished scraping the url: ${url}`); 
         }
         else{
             console.log(err); 

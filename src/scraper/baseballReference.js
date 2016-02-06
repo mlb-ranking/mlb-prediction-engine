@@ -82,6 +82,7 @@ function clean(){
 
 /**
  * Update the URL file to make verify current URLS.
+ * **************** USE THE DOWNLOADER CREATE JSON ****************
  * 
  * @param {Vary} False by default or file name to change the export file to
  * @return Promise 
@@ -122,69 +123,7 @@ function downloadPlayers(updateURLs = false, changedImport = false){
     }
     else{
         downloader.run(importFile); 
-        // fs.readFile(importFile, (err, data) => {
-        //     if (err) throw err;
-        //     urlsJSONFile = JSON.parse(data); //Load up the JSON file
-        //     let urls = urlsJSONFile.urls; 
-
-        //     //Start sending appropriate files to be downloaded
-        //     urls.slice(0, 5).map((elem, index) => {
-        //         if(!elem.downloaded){
-        //             downloadPlayer(index, elem);
-        //         }
-        //         else{
-        //             debugMessage(`[DEBUG] Player index ${index} is already downloaded. Skipping...`);
-        //         }
-        //     });
-        // });
-
-
-
-
     }    
-}
-
-/**
- *  Download the full player page. 
- * 
- * @param  {Integer} index   Index in the full URLS file
- * @param  {Object} urlObj  the working object for downloaded, downloading and other metadata
- * @return {Promise}       
- */
-function downloadPlayer(index, urlObj){
-    debugMessage(`[DEBUG] Attempting to download player at index ${index}`); 
-
-    if(needToDownload(index)){
-        try{
-            let url = BASEURL + urlObj.url;
-            urlObj.downloading = true; 
-            urlObj.startedAt = new Date();
-            updateURLObj(urlObj, index); 
-
-            //Use the mlb_ID for the file names
-            let fileName = PLAYERPAGE_FILE_LOC + '/' + getMLBIDFromURL(url);
-            scrape.downloadPage(url, fileName, function(response, data){
-                debugMessage(`[DEBUG] File at index ${index} downloaded with status ${response.statusCode}.`);
-                urlObj.downloading = false; 
-                urlObj.downloaded = true; 
-                urlObj.completedAt = new Date(); 
-                urlObj.fileLocation = fileName;
-                updateURLObj(urlObj, index); 
-            }); 
-
-        }
-        catch (e){
-            urlObj.downloading = false; 
-            urlObj.downloaded = false; 
-            updateURLObj(urlObj, index);
-            console.log(e); 
-        }
-    }
-    else{
-        debugMessage(`[DEBUG] Skipping player at index ${index}. Downloaded or Downloading already.`);
-    }
-    
-
 }
 
 /**
@@ -195,8 +134,6 @@ function downloadPlayer(index, urlObj){
 function deletePlayers(){
 
 }
-
-
 
 
 /**
@@ -212,9 +149,7 @@ function getCurrent40Man(teamAbbrv) {
     return new Promise((resolve, reject) => {
         let players = [];
         let dateUpdated  = new Date();
-
         console.log(`Currently scrapping players for ${teamAbbrv}`);
-
         scrape.scrape(url, ($) => {
             let table = $('#div_40man tbody tr'); 
             table.each(function(index, element) {
@@ -392,28 +327,8 @@ function normalizeValue(value){
 }
 
 /**
- * Return the MLB ID for this URL. If doesn't exist return large random 
- * 
- * @param  {String} url Url containging mlb_ID=######
- * @return {String}  MLB ID
- */
-function getMLBIDFromURL(url){
-    url = url.toLowerCase(); 
-    let matches = url.match(/([^\?]*)\mlb_id=(\d*)/);
-
-    if(matches !== null){
-        return matches[2];
-    }
-    else{
-        throw new Error("No MLB ID Found"); 
-    }
-}
-
-
-
-/**
  * Debug only messages
- * !!!MOVE TO UTILS 
+ * *******************MOVE TO UTILS *******************
  * 
  * @return {[type]}      [description]
  */
@@ -422,76 +337,6 @@ function debugMessage(){
         console.log.apply(null, arguments);
     }
 }
-
-
-
-/******************* MOVING TO DOWNLOADER *******************/
-
-/**
- * Returns true if the urls file exists
- * @return {Boolean} Existence of URL.json or similar file 
- */
-function urlsFileExists(){
-    return false; //NEED TO IMPLEMENT
-}
-
-
-
-/**
- * Update the JSON file at this URL index with a new urlObj 
- * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
- * 
- * @param  {Object} urlObj Updated status of the URL Object
- * @param  {Integer} index  position in the URL array of the JSON file
- * @return {[type]}        [description]
- */
-function updateURLObj(urlObj, index){
-    //Setup the urls object for this instance
-    if(urlsJSONFile === null){
-        
-    }
-
-    urlsJSONFile.urls[index] = urlObj; 
-    console.log(urlsJSONFile.urls.slice(0,5)); 
-
-}
-
-/**
- * Get the most upto date URL Obj 
- * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
- * 
- * @param  {Integer} index  position in the URL array of the JSON file
- * @return {Object}       Most recent version of the URL object
- */
-function getURLObj(index){
-
-    return {};
-}
-
-/**
- * If the file is downloading or already downloaded don't start it again. 
- * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
- * 
- * @param  {[type]} index [description]
- * @return {Boolean}  Do we need to download this file
- */
-function needToDownload(index){
-    return !(urlsJSONFile.urls[index].downloading === true || urlsJSONFile.urls[index].downloaded === true);
-}
-
-/**
- * Update the JSON file with the new downloaded/downloading metadata. 
- * !!!!!!!!!!!!MOVE!!!!!!!!!!!!
- * 
- * @param  {Object} fullURLObj Copy of the Full URL Object for writing
- * @return Promise
- */
-function updateJSONFile(){
-
-
-}
-
-/******************* MOVING TO DOWNLOADER *******************/
 
 
 //Return all of the scrapers that will be run 
