@@ -1,2 +1,3 @@
-baseballref/pages
+baseballref/pages/*
+!baseballref/pages/.gitkeep
 baseballref/temp
