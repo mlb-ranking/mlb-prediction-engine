@@ -146,8 +146,13 @@ function getStat(player){
 }
 
 
-function downloadRosterPage(abbrev){
-
+/**
+ * Start downloading some of the pages that will be parsed. Eventually put these pages in 
+ * AWS. 
+ * @return {[type]} [description]
+ */
+function downloadPages(){
+	
 }
 
 /*
@@ -160,7 +165,7 @@ function downloadRosterPage(abbrev){
 
 
 /**
- * Create an array indexed 
+ * Create an array of all of the stat names for easy lookup
  * @param  {Cheerio} Entire cheerio html 
  * @param  {Cheerio} cheerioTable Cheerio object of a table
  * @return {Array}  all of the names of a stat table to lookup 

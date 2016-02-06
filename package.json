@@ -4,7 +4,8 @@
   "description": "A application to predict which MLB teams will be contenders in the range of 3-5 years. Also suggest what a particular team can do to make their team a contender in 3-5 years. Focus which stage a team is in (buying, selling, rebuilding, etc.) and how aggressive they are in that mode. Determine value of players focused on WAR and years of control as primary factors. ",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",
+    "babel-eslint": "^4.1.8",
+    "eslint": "^1.10.3",
     "torrequest": "0.0.2"
   }
 }
