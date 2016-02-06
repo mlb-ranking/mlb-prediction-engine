@@ -3,54 +3,96 @@
  * 
  */
 
+//Imports 
 import scrape from './scraper';
 import Promise from 'promise';
+import constants from '../util/constants';
 import fs from 'fs'; 
 
+//General Constants for baseball reference 
 const baseURL = "http://www.baseball-reference.com/";
-const teams = ["ARI", "ATL", "BAL", "BOS", "CHC", "CHW", "CIN", "CLE", "COL", "DET", "HOU", "KC", "LAA", "LAD", "MIL", "MIN", "NYM", "NYY", "OAK", "PHI", "PIT", "SD", "SEA", "SFG", "STL", "STC", "TBR", "TEX", "TOR", "WSN"];
+const teams = constants.teamsAbbrevs; 
 const totalTeams = teams.length; 
 const totalPlayers = teams.length * 40;
 
+//URLs File Constants 
+const defatulURLFileName = "urls.json";
+const urlsJSONFileLoc = `data/baseballref/${defatulURLFileName}`; 
+
+//Degbugging instance vars  
 let teamsScrapped = 0;
 let playersScrapped = 0;
 
-/**
- * Update the URL file to make verify current urls
- * @return {[type]} [description]
- */
-function updateAllUrls(){
-    let urls = []; 
-    let rosters = teams.map(teamAbbrev => getCurrent40Man(teamAbbrev)); 
+/*
+|--------------------------------------------------------------------------
+| API
+|--------------------------------------------------------------------------
+|   - updatePlayerURLs() - Update the URLS file
+|   - downloadPages() - Trigger downloading of pages
+|
+*/
 
-    //When all of pages are parsed create a file with all of the urls 
-    Promise.all(rosters)
-        .then(allRosters => allRosters.map(roster => roster.map(player => urls.push({url: player.url, downloaded: false}))))
-        .then(() => fs.writeFile('data/baseballref/urls.json', JSON.stringify(urls, null, 2), err => {if (err) throw err;}));
+/**
+ * Update the URL file to make verify current URLS.
+ * 
+ * @param {Vary} False by default or file name to change the export file to
+ * @return Promise 
+ */
+function updatePlayerURLs(changeExport = false){
+    let exportFile = changeExport === false ? urlsJSONFileLoc: changeExport;
+    console.log(`Updating the ${exportFile} file with new URLS.`);
+
+    let jsonFile = {
+        urls: [],
+        dateCreated: new Date()
+    };
+    let rosters = getAll40Man();
+
+    //When all of rosters are scrapped get the URLS from those pages for later downloading 
+    return Promise.all(rosters)
+        .then(allRosters => allRosters.map(roster => roster.map(player => jsonFile.urls.push({url: player.url, downloading: false, downloaded: false, inAWS: false}))))
+        .then(() => fs.writeFile(exportFile, JSON.stringify(jsonFile, null, 2), err => {if (err) throw err;}))
+        .then(() => console.log(`The file was successfully written to ${exportFile}`))
+        .catch(err => console.log(err));
 }
 
 /**
- * Get all of the forty man rosters from all of the teams 
- * @return {Array} [description]
+ * Start downloading some of the pages that will be parsed. Eventually put these pages in 
+ * AWS. 
+ * 
+ * @param {Boolean} Update the urls page first
+ * @param {Vary} false if default file name otherwise the file name of the urls 
+ * @return 
  */
-function getAll40Man(){
+function downloadPages(updateURLs = false, changedImport = false){
+    let importFile = changedImport === false ? urlsJSONFileLoc: changedImport;
+    
+    if(updateURLs !== false){
+        updatePlayerURLs(importFile)
+            .then(() => console.log("URLS updated from downloadPages"))
+            .then(() => downloadPages(false, importFile)); // Then run this function without updating
+    }
+    else{
 
+        //Check to see if there is a valid urls file
+        fs.readFile(importFile, (err, data) => {
+            if (err) throw err;
+            console.log(JSON.parse(data));
+        });
+    }
+
+    
 }
 
-/**
- * Full featured parse. Prase every team and everyplayer all at once. 
- * @return {Promise} Promise that only resolves if all are fullfilled 
- */
-function getAll40ManStats(){    
-    let promises;
-    promises = teams.map(team => getCurrent40Man(team).then(players => getStats(players)));
-    return Promise.all(promises);
-}
+
+
 
 /**
- * Very specifically get the individual table rows that are neccessary 
- * @param  {String} teamAbbrv Abbreavted team name
- * @return {Promise} return a promise that will allow access to an array of all of the players 
+ * Get the individual table rows that are necessary to construct basic information about a rosters players.
+ * Most importantly getting the URL of each player to build the urls.json file. 
+ * 
+ * @param  {String} teamAbbrv Abbreviated team name
+ * @return {Promise} return a promise that will allow access to an array of all of the players for teamAbbrv
  */
 function getCurrent40Man(teamAbbrv) {
     let url = 'http://www.baseball-reference.com/teams/' + teamAbbrv + '/2015-roster.shtml';
@@ -60,7 +102,6 @@ function getCurrent40Man(teamAbbrv) {
         let dateUpdated  = new Date();
 
         console.log(`Currently scrapping players for ${teamAbbrv}`);
-
 
         scrape(url, ($) => {
             let table = $('#div_40man tbody tr'); 
@@ -97,29 +138,22 @@ function getCurrent40Man(teamAbbrv) {
 
             resolve(players);
             reject("failed scrapping a player");
-
-            //Handle rejection
         });
     });
 }
 
-/**
- * Add the stats (Probably shouldn't be exposed)
- * @param  {Array} players All of the previously built players 
- * @return {[type]}         [description]
- */
-function getStats(players){
-    let promises; 
-    promises = players.map(player => getStat(player));
-    return Promise.all(promises);
-}
 
 /**
- * Add the actual stats to a given player
- * @param  {Player} player object that contains the url to access the stats
+ * Add all of the stats from the players personal page to the player object. 
+ * 
+ * @param  {Player} player object that contains the URL to access the stats
  * @return {Promise} Returns a promise once the player has been returned 
  */
 function getStat(player){
+    if(player.url === undefined){
+        throw new Error("The passed player must have a URL field!");
+    }
+
     let url = 'http://www.baseball-reference.com' + player.url;
     return new Promise((resolve, reject) => {
         console.log(`Currently scrapping stats for ${player.name}`);
@@ -146,14 +180,7 @@ function getStat(player){
 }
 
 
-/**
- * Start downloading some of the pages that will be parsed. Eventually put these pages in 
- * AWS. 
- * @return {[type]} [description]
- */
-function downloadPages(){
-	
-}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -163,10 +190,43 @@ function downloadPages(){
 |
 */
 
+/**
+ * Get all of the forty man rosters from all of the teams 
+ * @return {Array} Array of all of the 40 man rosters
+ */
+function getAll40Man(){
+    return teams.map(teamAbbrev => getCurrent40Man(teamAbbrev)); 
+}
+
+
+
+/**
+ * Add the stats (Probably shouldn't be exposed)
+ * @param  {Array} players All of the previously built players 
+ * @return {[type]}         [description]
+ */
+function getStats(players){
+    let promises; 
+    promises = players.map(player => getStat(player));
+    return Promise.all(promises);
+}
+
+
+/**
+ * Full featured parse. Parse every team and every player all at once. 
+ * @return {Promise} Promise that only resolves if all are fulfilled 
+ */
+function getAll40ManStats(){    
+    let promises;
+    promises = teams.map(team => getCurrent40Man(team).then(players => getStats(players)));
+    return Promise.all(promises);
+}
+
+
 
 /**
  * Create an array of all of the stat names for easy lookup
- * @param  {Cheerio} Entire cheerio html 
+ * @param  {Cheerio} Entire cheerio HTML 
  * @param  {Cheerio} cheerioTable Cheerio object of a table
  * @return {Array}  all of the names of a stat table to lookup 
  */
@@ -176,8 +236,8 @@ function createStatIndex(cheerio, cheerioTable){
 
 /**
  * Retrieve all of the stats from the individual rows 
- * @param  {cheerio} cheerio      Loaded dom
- * @param  {[type]} cheerioTable  Table within the dom for convience 
+ * @param  {cheerio} cheerio      Loaded DOM
+ * @param  {[type]} cheerioTable  Table within the DOM for convenience 
  * @param  {[type]} filters      (optional) filters to parse out content
  * @return {Stat}              All of the stats in each row of this table 
  */
@@ -207,7 +267,7 @@ function getStatsFromTable(cheerio, cheerioTable, filters){
 
 /**
  * Try to convert the value to the correct type
- * @param  {String} value Parsed value in html 
+ * @param  {String} value Parsed value in HTML 
  * @return {Varies}    Attempts to return the correct type for JSON 
  */
 function normalizeValue(value){
@@ -222,9 +282,6 @@ function normalizeValue(value){
 
 //Return all of the scrapers that will be run 
 module.exports = {
-    getCurrent40Man,
-    getAll40Man,
-    getStat,
-    getStats,
-    updateAllUrls
-}
+    updatePlayerURLs, 
+    downloadPages
+};

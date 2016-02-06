@@ -44,6 +44,5 @@ import fs from 'fs';
 // }
 // 
 
-
-
-rosters.updateAllUrls(); 
+// rosters.updatePlayerURLs(); 
+rosters.downloadPages();

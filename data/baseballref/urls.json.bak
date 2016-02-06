@@ -1,0 +1,6917 @@
+{
+  "urls": [
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425844",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571863",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571946",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=643327",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592662",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594857",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595235",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605151",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605177",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605342",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605359",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608678",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=611093",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621281",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571578",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545332",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446899",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=517414",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518567",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519186",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=523989",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542609",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543339",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=591712",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516416",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502671",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488912",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456078",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=444482",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=630111",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571875",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605113",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=602115",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=598284",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543302",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572008",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594838",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593647",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592273",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572041",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=623406",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543391",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543901",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544365",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=554234",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571871",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572089",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592181",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592314",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592433",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592709",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595465",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605374",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605538",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606291",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607231",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621408",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542432",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=527055",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=527054",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519437",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=276351",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502032",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=462382",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542255",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430947",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430897",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607054",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430637",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=611177",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605480",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452095",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455976",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593495",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456422",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=466988",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493343",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493596",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518692",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=150229",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542960",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502154",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=503285",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592811",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518854",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519008",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592332",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592329",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543118",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592170",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501957",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592869",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475054",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=628333",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434622",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605541",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605164",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=451085",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456068",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595296",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474699",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571710",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592518",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=625329",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572233",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572073",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570731",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430945",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=444432",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446308",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448801",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460099",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475247",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=506747",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=517370",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519068",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=429666",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543376",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=645848",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547749",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519144",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519443",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=523260",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543726",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=598264",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=546276",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596064",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593958",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572990",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518927",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518886",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=598271",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606273",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605476",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453214",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453329",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605301",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456034",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=598287",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493157",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592390",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=598265",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605141",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596119",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593523",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593428",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592231",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434670",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452672",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455759",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456030",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=467055",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518490",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543768",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543877",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=120074",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571788",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571918",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=628329",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=407793",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518852",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519166",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=524349",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542923",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543294",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543607",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571521",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572955",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573127",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605218",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607359",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518748",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502239",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=476589",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=444468",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452657",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453385",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453562",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=467008",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434628",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475243",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=624585",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595879",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596129",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600303",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608365",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=424325",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600869",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592178",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=575929",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518792",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=471083",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519203",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519333",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458085",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570489",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570799",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450314",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=656941",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571476",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502593",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518858",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519242",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592454",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592165",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543359",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573589",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543900",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545363",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502085",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=500779",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435043",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474029",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607074",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458006",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605304",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453222",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452061",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=433579",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571602",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571665",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573135",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592609",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594809",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425560",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570560",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547989",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425900",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453943",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=466320",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488671",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=541645",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542963",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543434",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543742",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543776",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544725",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607345",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=628452",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543101",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543331",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543424",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605232",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596112",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547179",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571561",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571584",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542266",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572102",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622217",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456701",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621283",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621209",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=471822",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607237",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502028",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607219",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606959",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595909",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594988",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594807",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592835",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606299",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571740",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446359",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457803",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458015",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474443",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519023",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=534627",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=541608",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543788",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544269",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=550298",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=553993",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571466",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408252",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=641490",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519096",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542866",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542888",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594736",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543334",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592102",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543766",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543803",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545333",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596049",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=517593",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502083",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605182",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621173",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607320",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446372",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=471911",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453249",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458708",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571980",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608070",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595025",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607256",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596019",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570482",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570481",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547379",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435063",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=467793",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488726",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501659",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502082",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518577",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542583",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542994",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543228",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543401",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547172",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434658",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=407822",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543022",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543475",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543734",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545064",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=548357",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=554431",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571735",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572750",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592351",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608032",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608566",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=612434",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622608",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542881",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518452",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=623184",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=459429",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457429",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435400",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493603",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502522",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430589",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608596",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606132",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596115",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453568",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408314",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572863",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448602",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572019",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518934",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542436",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501255",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488681",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=471865",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=467827",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460026",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571448",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518614",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607951",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543278",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543935",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=553970",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571510",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571656",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572080",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572308",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572403",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572888",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594815",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594986",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596057",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605242",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=541652",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519455",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434378",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450275",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408061",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460059",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458677",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434671",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592144",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592206",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592407",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502110",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408234",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607385",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=578428",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435079",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=449107",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543238",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=461865",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543510",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=553988",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570615",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457727",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457708",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457454",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=400121",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=444857",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621121",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571666",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571704",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572066",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572971",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573185",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573668",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592879",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593140",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594311",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600944",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605397",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543521",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450729",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=451661",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448609",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450212",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502748",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501789",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502087",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502381",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458675",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=514888",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594828",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605512",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621043",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592274",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460576",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=472528",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=503556",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543807",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545331",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545337",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545358",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=554054",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572138",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488771",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545350",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622092",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543169",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570649",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518633",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518397",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516969",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=465657",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=602083",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460024",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453178",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=525768",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=432934",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621381",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621219",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450172",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=451584",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450306",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450665",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596144",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543333",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605253",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571681",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=609275",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593527",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593528",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605490",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=521692",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434778",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=444876",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=449181",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456715",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460077",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460086",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488810",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=500874",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502481",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518568",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518649",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519058",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408299",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622505",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501925",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571760",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502327",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519169",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=533167",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592135",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573046",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572140",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572070",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501625",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=500610",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607374",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434718",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450308",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450351",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456379",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474284",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=477569",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592743",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605323",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592239",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592230",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594777",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605227",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596847",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545361",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434567",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460060",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488862",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502226",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519071",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=527043",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=537953",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542208",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542364",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542908",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543068",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543213",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=405395",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=477132",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605194",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=548389",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501593",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501822",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502051",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502211",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516910",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547943",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=520980",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474463",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=554340",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593423",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571893",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430599",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=431148",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434442",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622072",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435221",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621962",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=445276",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545346",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605131",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=400284",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608369",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608672",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=624577",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592626",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572204",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408236",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408307",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435062",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=444843",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=454560",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457759",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475100",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518735",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571771",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=648717",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608349",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519076",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519293",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605200",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592804",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543380",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=553872",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592341",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572958",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572788",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605288",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518468",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516414",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448855",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606930",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=490063",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605347",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502026",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502624",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=503449",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571911",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594555",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595023",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592680",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605439",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606115",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571697",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455117",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460075",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474892",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501981",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518960",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519421",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542340",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542642",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542979",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543590",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570267",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570717",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=431094",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543548",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608638",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600968",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543242",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600915",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543507",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543542",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543859",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594951",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572175",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573124",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=534737",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519151",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502272",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448178",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450282",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=429722",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=461833",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608691",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608648",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502043",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=445060",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593934",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621439",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596146",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608724",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593871",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592696",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573627",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435559",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456488",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=461858",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=500871",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542454",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542455",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543308",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408045",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571974",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572821",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=112526",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571927",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593679",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518774",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519294",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592789",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592665",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544727",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=548337",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=554430",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570663",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592570",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572831",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516714",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594798",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607625",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543219",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455374",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607229",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460283",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606160",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502368",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592340",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607043",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=599096",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608700",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608703",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=624424",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=431151",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434158",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435522",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446263",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457477",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493316",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493472",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501571",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=514913",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518595",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=527038",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452678",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516769",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622663",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547888",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547973",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=553883",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570666",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571951",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572021",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572038",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=580792",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592127",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592705",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592741",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605338",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621397",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543135",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=476454",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=282332",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501381",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489446",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453192",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=467100",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=435263",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=407893",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592863",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595885",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519222",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596142",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608701",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=136860",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592325",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452104",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543305",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544369",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516770",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=554429",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571761",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458731",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453056",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=591720",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=121347",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=623430",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593417",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=506693",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519105",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519240",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=521230",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=534910",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571439",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543243",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605135",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605156",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605525",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425492",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446099",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448179",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448281",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543594",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=451775",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608665",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=467094",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621563",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572033",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571970",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592660",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600524",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592192",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543760",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542993",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453539",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456714",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475174",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=476704",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502143",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502210",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502285",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518911",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519295",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519299",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519390",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=424825",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=648737",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605396",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605388",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542587",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571527",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571786",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=591693",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592527",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592826",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593576",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594742",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519085",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605400",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622772",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621385",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=450203",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456696",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457448",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595191",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=472610",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=476451",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605894",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489039",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=491646",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595963",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596748",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605125",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596451",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595751",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573131",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=433217",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434563",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488721",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=514917",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519237",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=520471",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=546318",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571437",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572182",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=429667",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=285064",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=491703",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=491708",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502046",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=504379",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543037",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543270",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543456",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543746",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592145",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592468",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592791",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607192",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=477003",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453343",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458720",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434538",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453172",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453265",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446481",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=444379",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434604",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593700",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474568",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595386",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605137",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621559",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=623912",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=591994",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572876",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=465753",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=465041",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457705",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516782",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455755",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543281",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547912",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=553869",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570256",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=628356",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571473",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=599998",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519141",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=534812",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594027",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572362",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543506",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543508",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543883",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544930",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=570714",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600526",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475115",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607294",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453646",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607067",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488748",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=488768",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448306",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606131",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457754",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608671",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=602922",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595978",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605486",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425834",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571976",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543105",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=445055",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=461314",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=477165",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493351",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=500208",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=506560",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=517369",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518466",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519083",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542194",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622534",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=276542",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543716",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501992",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543557",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572020",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=515052",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518553",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518603",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518703",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573064",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489119",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547874",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608167",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=433587",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543964",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543921",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592836",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592533",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475857",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519267",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571467",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572122",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572287",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596143",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606466",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621035",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=552662",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547982",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=429664",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=429711",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=443558",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452234",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452252",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455104",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=491696",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=493114",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502182",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502523",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=524968",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621471",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=408241",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502188",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518516",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518715",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518790",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519326",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571687",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571882",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592612",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605195",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593340",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595345",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502004",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=606167",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489265",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425657",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430912",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=433586",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621389",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608717",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456501",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607727",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458678",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607185",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605143",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605509",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607776",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605412",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622110",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592620",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=434636",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452254",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452655",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453923",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457763",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474832",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501303",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543063",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572180",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=623143",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544928",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595307",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502190",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518771",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518883",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594835",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543779",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593969",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593372",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592815",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=477229",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=621199",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425794",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608641",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572096",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608379",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448802",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455009",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458681",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=462515",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605508",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=576397",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572761",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594824",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572039",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425509",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425877",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430910",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=461235",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502054",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542883",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543939",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=407812",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545341",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571431",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571685",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572000",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=649557",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607188",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=517008",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519043",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=541640",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542882",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543144",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543606",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544836",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544993",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502202",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502171",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502042",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605483",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605260",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571479",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595032",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=458584",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592767",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592166",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592200",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595281",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572128",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571912",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600301",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592604",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572816",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=545338",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425784",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446334",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446386",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=456665",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457775",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474233",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489149",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519306",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=523253",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=542921",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543484",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543543",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425766",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519168",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502706",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=506433",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518617",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518693",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605226",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600917",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=527048",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592222",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592346",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592426",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592712",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=501817",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489294",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=474521",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=622795",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=407890",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430935",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452666",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607309",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607259",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605309",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=473879",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607387",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608336",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=596059",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=608577",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595777",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593643",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=285078",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425783",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=425902",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=448605",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=455139",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=460269",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=462101",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519048",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=134181",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592261",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=623182",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=285079",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519322",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519381",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=532077",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544759",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=554432",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571800",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571901",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572193",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=573186",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592717",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594985",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607170",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607352",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=504186",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607962",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446399",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457918",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=462136",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=445926",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=447755",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=431145",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=592647",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=430832",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=581527",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446381",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=429665",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572365",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607680",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453064",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489365",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=516809",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518625",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518626",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=485567",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475253",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543362",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=459431",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571553",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=499624",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=641627",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502578",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=514669",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518863",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=518875",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594840",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519301",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=593582",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543699",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544931",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595014",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595297",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=595918",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=424144",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=433589",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=449097",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=453286",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=605452",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=461829",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=553878",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607208",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=594694",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=607471",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=572191",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=600474",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571851",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=571718",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=547180",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=446653",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=452220",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=457787",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=467092",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=475582",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=489138",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=502517",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519184",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=519208",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=543685",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=544925",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    },
+    {
+      "url": "/route.cgi?player=1&mlb_ID=150029",
+      "downloading": false,
+      "downloaded": false,
+      "inAWS": false
+    }
+  ],
+  "dateCreated": "2016-02-06T06:08:07.746Z"
+}

@@ -20,6 +20,9 @@ function scrape(url, callback) {
             let $ = cheerio.load(html);
             callback($);
         }
+        else{
+            console.log(err); 
+        }
     });
 }
 
@@ -34,6 +37,4 @@ function downloadPage(url, dest){
 }
 
 // Expose the function to the rest of the app.
-module.exports = {
-    scrape
-};
+module.exports = scrape;
