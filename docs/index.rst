@@ -7,13 +7,38 @@ MLB Ranking Documentation
    project-goals
    ...
 
-Welcome to the mlb-ranking wiki!
+Welcome to the MLB Ranking Documentation!
 
-## Project Goals
 
-A application to predict which MLB teams will be contenders in the range of 3-5 years. Also suggest what a particular team can do to make their team a contender in 3-5 years. Focus which stage a team is in (buying, selling, rebuilding, etc.) and how aggressive they are in that mode. Determine value of players focused on WAR and years of control as primary factors.
 
-This will also be an exploration of ES2015 / ES6, Map and Reduce, and draw many ideas and algorithms from Data Science.
+
+Example Table:
+
++------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | Cells may span columns.          |
++------------------------+------------+---------------------+
+| body row 3             | Cells may  | - Table cells       |
++------------------------+ span rows. | - contain           |
+| body row 4             |            | - body elements.    |
++------------------------+------------+---------------------+
+
++------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2. adding some more content  | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | Cells may span columns.          |
++------------------------+------------+---------------------+
+| body row 3             | Cells may  | - Table cells       |
++------------------------+ span rows. | - contain           |
+| body row 4             |            | - body elements.    |
++------------------------+------------+---------------------+
 
 
 ## Navigation
