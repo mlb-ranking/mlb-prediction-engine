@@ -2,13 +2,11 @@ MLB Ranking Documentation
 =========================
 
 .. toctree::
+   :maxdepth: 2
 
-    bookmarks
-    builds
-    doc_builder
-    core
-    projects
-    vcs_support
+   intro
+   tutorial
+   ...
 
 Welcome to the mlb-ranking wiki!
 
