@@ -1,3 +1,15 @@
+MLB Ranking Documentation 
+===
+
+.. toctree::
+
+    bookmarks
+    builds
+    doc_builder
+    core
+    projects
+    vcs_support
+
 Welcome to the mlb-ranking wiki!
 
 ## Project Goals
