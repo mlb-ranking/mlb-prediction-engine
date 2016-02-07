@@ -41,6 +41,34 @@ Example Table:
 +------------------------+------------+---------------------+
 
 
+Simple Table 
+
+=====  =====  =======
+  A      B    A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+
+=====  =====  =======
+  A      B    A and B
+=====  =====  =======
+False  False  False
+True with some more content  False  False
+False  True   False
+True   True   True
+=====  =====  =======
+
+.. csv-table:: a title
+   :header: "name", "firstname", "age"
+   :widths: 20, 20, 10
+
+   "Smith", "John", 40
+   "Smith", "John, Junior", 20
+
+
 ## Navigation
 * [Database Page](https://github.com/JoshuaRogan/mlb-ranking/wiki/Database)
 * [Assumptions & Constants - Draft](https://github.com/JoshuaRogan/mlb-ranking/wiki/Assumptions-and-Constants)
