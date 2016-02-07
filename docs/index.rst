@@ -4,8 +4,7 @@ MLB Ranking Documentation
 .. toctree::
    :maxdepth: 2
 
-   project goals
-   tutorial
+   project-goals
    ...
 
 Welcome to the mlb-ranking wiki!
