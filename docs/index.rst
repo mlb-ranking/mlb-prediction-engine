@@ -1,5 +1,5 @@
 MLB Ranking Documentation 
-===
+=========================
 
 .. toctree::
 
