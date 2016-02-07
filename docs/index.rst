@@ -4,7 +4,7 @@ MLB Ranking Documentation
 .. toctree::
    :maxdepth: 2
 
-   intro
+   project goals
    tutorial
    ...
 
