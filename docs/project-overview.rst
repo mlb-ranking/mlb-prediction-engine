@@ -1,17 +1,19 @@
 Project Overview
 =============
-
 .. image:: https://readthedocs.org/projects/mlb-ranking/badge/?version=latest
-:target: http://mlb-ranking.readthedocs.org/en/latest/?badge=latest
-:alt: Documentation Status
 
 Version
 -------
 0.0.1
 
+Repository
+-------
+ 
+`Github <https://github.com/JoshuaRogan/mlb-ranking>`_ 
+
 Author
 -------
-Josh Rogan (JoshJRogan@gmail.com) - `joshuarogan.com <https://joshuarogan.com>` 
+Josh Rogan (JoshJRogan@gmail.com) - `Developer Site <https://joshuarogan.com>`_ 
 
 Preface
 -------
@@ -21,8 +23,7 @@ Goals
 ------
 A application to predict which MLB teams will be contenders in the range of 3-5 years. Also suggest what a particular team can do to make their team a contender in 3-5 years. Focus which stage a team is in (buying, selling, rebuilding, etc.) and how aggressive they are in that mode. Determine value of players focused on WAR and years of control as primary factors.
 
-This will also be an exploration of ES2015 / ES6, Map and Reduce, and draw many ideas and algorithms from Data Science.
-
+This will also be an exploration of ES2015 / ES6, Map and Reduce, and draw many ideas and algorithms from data science.
 
 Assumptions and Constants 
 -------------------------
