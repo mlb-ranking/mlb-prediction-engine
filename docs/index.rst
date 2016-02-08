@@ -14,12 +14,12 @@ Navigation
    :glob:
    :titlesonly:
 
-   todo/*
+   todo/
    project-overview
    assumptions-and-constants
-   API/*
-   database/*
-   simulator/*
+   API/
+   database/
+   simulator/
    faq
    ...
 
