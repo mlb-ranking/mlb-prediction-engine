@@ -18,7 +18,7 @@ Navigation
    project-overview
    assumptions-and-constants
    API/
-   database/
+   database/index
    simulator/
    faq
    ...

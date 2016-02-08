@@ -1,17 +1,18 @@
 Database Information 
 ====================
-
-.. include:: player-model.rst
-
 .. toctree::
    :maxdepth: 3
    :glob:
-   :hidden: 
 
-   sources/*
+   sources/index
    player-model
    staff-model
    ...
+
+
+.. include:: player-model.rst
+
+
 
 
 

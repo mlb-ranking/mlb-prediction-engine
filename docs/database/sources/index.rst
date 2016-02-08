@@ -1,5 +1,5 @@
-Information Sources
-===================
+Data Sources
+============
 
 .. toctree::
     :maxdepth: 2

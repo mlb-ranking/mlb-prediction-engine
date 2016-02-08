@@ -1,9 +1,11 @@
 Tasks
 =====
 
+Simple todo lists to manage overall tasks. 
+
 .. toctree::
    :maxdepth: 3
-   :glob:
+   :hidden:
 
    gathering-data
    create-api
@@ -11,5 +13,5 @@ Tasks
    predictor
    ...
 
-All of the tasks to be completed. 
+
 
