@@ -4,7 +4,7 @@ Database Information
    :maxdepth: 2
    :titlesonly:
 
-   sources/
+   sources
    player-model
    staff-model
    ...

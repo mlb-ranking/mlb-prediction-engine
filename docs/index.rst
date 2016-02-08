@@ -17,7 +17,7 @@ Navigation
    todo/index
    project-overview
    API/index
-   database/index
+   database/
    simulator/index
    faq
    ...
