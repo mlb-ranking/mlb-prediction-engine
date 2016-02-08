@@ -19,7 +19,6 @@ Navigation
    database/index
    simulator/index
    faq
-   ...
 
 
 

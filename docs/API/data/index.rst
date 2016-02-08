@@ -6,7 +6,6 @@ Simple API to interface with the data stored. Will be used for the simulators an
    stats
    prospects
    staff
-   ...
 
 
 

@@ -3,6 +3,8 @@ Player Sources
 
 All of the useful sources for players. 
 
+Player Stats
+------------
 .. csv-table:: Stats
     :header: "Name", "URL", "Notes", "Use Case", "Use Grade"
 

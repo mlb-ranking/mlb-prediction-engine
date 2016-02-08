@@ -2,12 +2,16 @@ Prospect Sources
 ================
 All of the useful sources for prospects. 
 
+General Information
+--------------------
 .. csv-table:: General Information
     :header: "Name", "URL", "Notes", "Use Case", "Use Grade"
 
     "MLB Prospect Pipeline", "`mlb.com <http://mlb.mlb.com/mlb/news/prospects/index.jsp>`_", "Detailed information about propspects", "Informative", "9/10"
-...
 
+
+Lists & Rankings
+--------------------
 .. csv-table:: Lists/Rankings
     :header: "Name", "Years", "URL", "Notes", "Use Case", "Use Grade"
 

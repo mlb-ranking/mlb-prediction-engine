@@ -6,7 +6,7 @@ Information for building the database and the associated data models that will b
   
    sources/index
    player-model
-   ...
+
 
 
 
