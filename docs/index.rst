@@ -16,7 +16,6 @@ Navigation
 
    todo/index
    project-overview
-   assumptions-and-constants
    API/
    database/index
    simulator/

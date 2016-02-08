@@ -7,14 +7,13 @@ General idea is to stick with runs/wins as the primary unit of measurement. All 
 
 The simulator will allow the user to weight other stats differently but the goal will be to have defaults with the best accuracy.
 
-My Focus
-~~~~~~~~
+Personal Focus
+~~~~~~~~~~~~~~
 These are the stats my initial thoughts are to focus on and weigh the most heavily.
 
 Offensive
 ^^^^^^^^^
-Qualifiers
-   Plate Appearances
+**Qualifiers** - Plate Appearances
 
 * Runs created per 27 outs
 * Batting average (weighted per season)
@@ -22,8 +21,7 @@ Qualifiers
 
 Pitching
 ^^^^^^^^
-Qualifiers
-   Innings Pitched (Differentiate starters and relievers)
+**Qualifiers** - Innings Pitched (Differentiate starters and relievers)
 
 * ERA (weighted per season)
 * Defensive independent ERA 
@@ -31,8 +29,7 @@ Qualifiers
 
 Defensive
 ^^^^^^^^^
-Qualifiers
-   Innings
+**Qualifiers** - Innings
 
 * dWAR
 
@@ -41,15 +38,15 @@ Non Statistical Based Measurements
 ----------------------------------
 Analyzing prospects (domestic & international) will be one of the most difficult parts to build on the database. It will based on a lot of different baseball analysts top prospect lists. 
 
-Obvious
-~~~~~~~
+Ideas
+~~~~~
 * Position on top ranking lists 
 * Scouting power rankings (difficult to analyze many different sites have different definitations for this)
 * High school stats **difficult to acquire**
 * Analyze bio, height, etc when predicting. 
 
-Ideas
-~~~~~
+Additional Ideas
+~~~~~~~~~~~~~~~~
 * Mainting the movement a player undergoes on top lists 
 
 
