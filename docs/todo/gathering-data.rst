@@ -20,7 +20,3 @@ Phase 3: Prospects
 * [ ] Download snapshot lists
 * [ ] Download moving lists
 * [ ] Analyze scouting ranks
-
-Phase 4: Create API
-----------
-* [ ] Create API See `Creating API`_
