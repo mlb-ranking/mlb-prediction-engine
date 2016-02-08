@@ -7,8 +7,8 @@ General idea is to stick with runs/wins as the primary unit of measurement. All 
 
 The simulator will allow the user to weight other stats differently but the goal will be to have defaults with the best accuracy.
 
-Personal Focus
-~~~~~~~~~~~~~~
+Emphasis
+~~~~~
 These are the stats my initial thoughts are to focus on and weigh the most heavily.
 
 Offensive
