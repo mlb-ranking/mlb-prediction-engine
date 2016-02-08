@@ -2,14 +2,9 @@ Tasks
 =====
 Simple todo lists to manage overall tasks.
 
-.. toctree::
-    :hidden:
-    :caption: Todo Tasks
+.. include:: gathering-data.rst
+.. include:: create-api.rst
 
-   gathering-data
-   create-api
-   simulator
-   predictor
 
 
 
