@@ -19,7 +19,7 @@ Josh Rogan (JoshJRogan@gmail.com) - `Developer Site <https://joshuarogan.com>`_
 
 Preface
 -------
-Having played baseball for such a long time this project is very interesting to me on many levels. Much of the baseball specific analysis will be based upon is [The Hidden Game] by John Thorn and Pete Palmer. However, a significant portion of the project will be based on principles of data science not specific to baseball including data mining (with scheduling), association rules, recommender systems utilizing [Jaccard Similarity]. 
+Having played baseball for such a long time this project is very interesting to me on many levels. Much of the baseball specific analysis will be based upon is `The Hidden Game <http://www.amazon.com/The-Hidden-Game-Baseball-Revolutionary/dp/022624248X/ref=dp_ob_title_bk>`_ by John Thorn and Pete Palmer. However, a significant portion of the project will be based on principles of data science not specific to baseball including data mining (with scheduling), association rules, recommender systems utilizing **Jaccard Similarity**. 
 
 Goals
 ------

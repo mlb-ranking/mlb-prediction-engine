@@ -13,10 +13,12 @@ Navigation
 
    todo/index
    project-overview
-   API/index
+   algorithms
    database/index
    simulator/index
+   API/index <API - Draft>
    faq
+   
 
 
 
