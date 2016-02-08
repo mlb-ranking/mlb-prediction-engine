@@ -65,9 +65,6 @@ The table belows some of the algorithms that will be used to create a hybrid bet
 * Front End Framework - TBD
 * Statistical Analysis Framework - TBD
 
-### Wiki
-Check out the [Full Wiki][wiki] for more information. Most updates will be done there instead of the README. 
-
 #### Sections
 * [Home][wiki]
 * [Database][wiki-db]
