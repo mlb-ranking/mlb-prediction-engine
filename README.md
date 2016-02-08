@@ -1,6 +1,10 @@
-# MLB Rankings
+# MLB Rankings 
+[![Documentation Status](https://readthedocs.org/projects/mlb-ranking/badge/?version=latest)](http://mlb-ranking.readthedocs.org/en/latest/?badge=latest)
 
-### Version 
+## Documentation
+Documentation for this project is avaiable at [Read the Docs - MLB Rankings](http://mlb-ranking.readthedocs.org/en/latest/)
+
+## Version 
 1.0.0
 
 ## Project Goals

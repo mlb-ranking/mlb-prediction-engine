@@ -5,9 +5,9 @@ MLB Ranking Documentation
    :maxdepth: 3
    :glob:
 
+   todo/*
    project-goals
    assumptions-and-constants
-   todo/*
    API/*
    database/*
    simulator/*

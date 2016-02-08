@@ -1,5 +1,5 @@
-TODO Lists
-==========
+Tasks
+=====
 
 .. toctree::
    :maxdepth: 3
