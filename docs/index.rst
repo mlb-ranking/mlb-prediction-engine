@@ -3,14 +3,14 @@ MLB Ranking Documentation
 
 Welcome to the MLB Ranking Documentation!
 
-.. include:: project-goals.rst
+.. include:: project-overview.rst
 
 .. toctree::
    :maxdepth: 3
    :glob:
 
    todo/*
-   project-goals
+   project-overview
    assumptions-and-constants
    API/*
    database/*
