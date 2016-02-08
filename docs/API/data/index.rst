@@ -3,6 +3,7 @@ Data APIs
 
 .. toctree::
    :maxdepth: 3
+   :hidden:
 
    stats
    prospects

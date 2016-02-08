@@ -4,6 +4,7 @@ APIs
 .. toctree::
    :maxdepth: 3
    :glob:
+   :hidden:
 
    data/*
    ...
