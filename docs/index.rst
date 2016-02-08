@@ -19,6 +19,12 @@ Navigation
    API/index <API - Draft>
    faq
    
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
 
 
