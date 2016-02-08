@@ -10,8 +10,6 @@ Navigation
 ----------
 
 .. toctree::
-   :maxdepth: 2
-   :titlesonly:
 
    todo/index
    project-overview
