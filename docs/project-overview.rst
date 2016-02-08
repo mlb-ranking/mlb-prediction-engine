@@ -1,9 +1,17 @@
 Project Overview
 =============
 
+.. image:: https://readthedocs.org/projects/mlb-ranking/badge/?version=latest
+:target: http://mlb-ranking.readthedocs.org/en/latest/?badge=latest
+:alt: Documentation Status
+
 Version
 -------
 0.0.1
+
+Author
+-------
+Josh Rogan (JoshJRogan@gmail.com) - `joshuarogan.com <https://joshuarogan.com>` 
 
 Preface
 -------
