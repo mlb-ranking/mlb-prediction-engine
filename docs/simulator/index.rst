@@ -22,3 +22,7 @@ Simulation Options
 ~~~~~~~~~~~~~~~~~~
 * Look at age, height, weight, and position as base factors
 * Determine which stats best predict a players future. Similar to how MIT noted the correleation of run differential to wins
+
+.. toctree::
+   :hidden:
+   

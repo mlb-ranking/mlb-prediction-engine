@@ -1,7 +1,8 @@
 ..  _project_overview:
 
 Project Overview
-=============
+================
+
 .. image:: https://readthedocs.org/projects/mlb-ranking/badge/?version=latest
 
 Version
@@ -9,12 +10,12 @@ Version
 0.0.1
 
 Repository
--------
+----------
  
 `Github <https://github.com/JoshuaRogan/mlb-ranking>`_ 
 
 Author
--------
+------
 Josh Rogan (JoshJRogan@gmail.com) - `Developer Site <https://joshuarogan.com>`_ 
 
 Preface
@@ -28,7 +29,7 @@ A application to predict which MLB teams will be contenders in the range of 3-5 
 This will also be an exploration of ES2015 / ES6, Map and Reduce, and draw many ideas and algorithms from data science.
 
 Quick Links
--------
+-----------
 Links to some of the important sections.
 
 * :ref:`algorithms` - Algorithms for similarity comparisons to be used
