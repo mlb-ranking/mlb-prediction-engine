@@ -1,4 +1,12 @@
+APIs
+====
 
-- Data Retrieval (Data API)
-- Player Predictions (Simulator API) 
-- Team Predictions (Simulator API) 
+.. toctree::
+   :maxdepth: 3
+   :glob:
+
+   data/*
+   ...
+
+All of the  APIs for the MLB Rankings application. 
+

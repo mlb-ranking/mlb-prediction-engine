@@ -6,6 +6,9 @@ MLB Ranking Documentation
    :glob:
 
    project-goals
+   assumptions-and-constants
+   todo/*
+   API/*
    database/*
    simulator/*
    faq
@@ -13,8 +16,3 @@ MLB Ranking Documentation
 
 Welcome to the MLB Ranking Documentation!
 
-
-## Navigation
-* [Database Page](https://github.com/JoshuaRogan/mlb-ranking/wiki/Database)
-* [Assumptions & Constants - Draft](https://github.com/JoshuaRogan/mlb-ranking/wiki/Assumptions-and-Constants)
-* [Simulator / Front End Application](https://github.com/JoshuaRogan/mlb-ranking/wiki/Simulator)
