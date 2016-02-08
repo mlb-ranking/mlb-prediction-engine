@@ -6,5 +6,7 @@
 import baseballRefScrapper from './scraper/baseballReference';
 
 //Download the players
-baseballRefScrapper.downloadPlayers(); 
-setInterval(function() { baseballRefScrapper.downloadPlayers(); }, 60000);
+// baseballRefScrapper.downloadPlayers(); 
+// setInterval(function() { baseballRefScrapper.downloadPlayers(); }, 60000);
+
+baseballRefScrapper.scrapePlayers(); 

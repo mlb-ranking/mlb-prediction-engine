@@ -1,3 +1,5 @@
+..  _project_overview:
+
 Project Overview
 =============
 .. image:: https://readthedocs.org/projects/mlb-ranking/badge/?version=latest
@@ -24,6 +26,13 @@ Goals
 A application to predict which MLB teams will be contenders in the range of 3-5 years. Also suggest what a particular team can do to make their team a contender in 3-5 years. Focus which stage a team is in (buying, selling, rebuilding, etc.) and how aggressive they are in that mode. Determine value of players focused on WAR and years of control as primary factors.
 
 This will also be an exploration of ES2015 / ES6, Map and Reduce, and draw many ideas and algorithms from data science.
+
+Quick Links
+-------
+Links to some of the important sections 
+* :ref:`algorithms` - Algorithms for similarity comparisons to be used
+* :ref:`player_model` - Shows which stats will be focused on and why
+* :ref:`simulator_index` - High level synopsis of how the simulator will work 
 
 Assumptions and Constants 
 -------------------------

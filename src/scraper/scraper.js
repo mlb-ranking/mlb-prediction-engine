@@ -65,7 +65,10 @@ function scrape(url, callback) {
  * @return {[type]}            [description]
  */
 function localScrape(fileLoc, callback){
-
+    fsp.readFile(urlsFileLoc)
+        .then(html => {
+            callback(cheerio.load(html));
+        });
 }
 
 

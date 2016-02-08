@@ -1,3 +1,4 @@
+..  _player_model:
 Player Model
 ============
 

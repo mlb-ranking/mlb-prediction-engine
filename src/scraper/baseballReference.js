@@ -145,8 +145,8 @@ function scrapePlayers(urlsFileLoc = URLS_JSON_FILE_LOC){
         })
         .then(() => {
             //Begining to scrap a player
-            
-            
+            console.log(urlsJSONFile.urls.length); 
+                        
         })
         .catch(err => console.log("[FS READ ERROR]", err));
 }
@@ -370,5 +370,6 @@ function debugMessage(){
 module.exports = {
     run, 
     updatePlayerURLs, 
-    downloadPlayers
+    downloadPlayers, 
+    scrapePlayers
 };
