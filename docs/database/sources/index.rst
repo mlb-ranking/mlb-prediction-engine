@@ -9,6 +9,6 @@ Data Sources
 
 List of some of the sources that can be used to build the database. Updated
 
-.. include:: players.rst
+.. include:: players
 .. include:: prospects.rst
 
