@@ -1,6 +1,6 @@
 Tasks
 =====
-Simple todo lists to manage overall tasks. 
+Simple todo lists to manage overall tasks. Tst
 
 .. toctree::
     :hidden:
@@ -9,7 +9,7 @@ Simple todo lists to manage overall tasks.
    create-api
    simulator
    predictor
-   ...
+
 
 
 
