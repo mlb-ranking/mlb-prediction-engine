@@ -1,4 +1,5 @@
 ..  _algorithms:
+
 Algorithms 
 ==========
 The data science algorithms that will be used to determine similarities among players will be determined based on how accurate the results are during the learning phase. 

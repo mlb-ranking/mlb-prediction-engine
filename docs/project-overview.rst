@@ -29,7 +29,8 @@ This will also be an exploration of ES2015 / ES6, Map and Reduce, and draw many 
 
 Quick Links
 -------
-Links to some of the important sections 
+Links to some of the important sections.
+
 * :ref:`algorithms` - Algorithms for similarity comparisons to be used
 * :ref:`player_model` - Shows which stats will be focused on and why
 * :ref:`simulator_index` - High level synopsis of how the simulator will work 
