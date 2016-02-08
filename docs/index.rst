@@ -14,7 +14,7 @@ Navigation
    :glob:
    :titlesonly:
 
-   todo/
+   todo/index
    project-overview
    assumptions-and-constants
    API/
