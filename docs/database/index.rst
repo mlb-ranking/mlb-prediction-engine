@@ -2,9 +2,8 @@ Database Information
 ====================
 .. toctree::
    :maxdepth: 3
-   :glob:
 
-   sources/index
+   sources/
    player-model
    staff-model
    ...
