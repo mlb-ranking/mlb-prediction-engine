@@ -3,11 +3,8 @@
  * of current 40 man rosters. First attempt to analyze player similarities using similarity metrics. 
  *
  */
-
 import baseballRefScrapper from './scraper/baseballReference';
 
-// baseballRefScrapper.updatePlayerURLs(); 
-// 
+//Download the players
 baseballRefScrapper.downloadPlayers(); 
 setInterval(function() { baseballRefScrapper.downloadPlayers(); }, 60000);
-// baseballRefScrapper.downloadPlayers();

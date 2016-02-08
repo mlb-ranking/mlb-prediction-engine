@@ -4,10 +4,20 @@
 import torRequest from 'torrequest';
 import cheerio from 'cheerio';
 import fs from 'fs'; 
+import fsp from 'fs-promise'; 
 
 //Constants
 const TOR_HOST      = "localhost"; 
 const TOR_PORT      = 9050;
+
+/*
+|--------------------------------------------------------------------------
+| API
+|--------------------------------------------------------------------------
+| scrape()     - Run this scrapper
+| 
+|
+*/
 
 /**
  * Scrape a given url
@@ -34,6 +44,28 @@ function scrape(url, callback) {
             console.log(err); 
         }
     });
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Internal API
+|--------------------------------------------------------------------------
+| localScrape()     - Scrape a local file
+| networkScrape()   - Scrape a url on the web 
+| torScrape()       - Scrape a url on the web through tor 
+|
+*/
+
+/**
+ * Local scrapping of a file that is already downloaded. 
+ * 
+ * @param  {[type]}   fileLoc  Location of the file
+ * @param  {Function} callback function to call after scrape is setup with cheerio
+ * @return {[type]}            [description]
+ */
+function localScrape(fileLoc, callback){
+
 }
 
 

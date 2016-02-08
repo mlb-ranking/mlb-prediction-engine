@@ -13,7 +13,6 @@ const NETWORK_TIMEOUT           = 30000;
 const DEFAULT_DESTINATION       = "data/temp/";
 const DEFAULT_URLS_FILENAME     = "urls.json"; 
 
-
 //Local Vars
 let urlsJSONFile                = null;
 let urlsJSONFileLoc             = "";
@@ -53,8 +52,9 @@ function create(urls, dest, baseURL){
             url: url, 
             downloaded:false, 
             downloading: false, 
-            inAWS: false,
-            hash: null //Hash of the page to detect changes in the future
+            inAWS: false,           //In the cloud
+            scrapped: false,        //Used to determine if it was scrapped
+            hash: null              //Hash of the page to detect changes in the future
         });
     });
 
