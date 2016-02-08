@@ -2,8 +2,11 @@ Tasks
 =====
 Simple todo lists to manage overall tasks.
 
+General 
+-------
+*None yet*
+
 .. toctree::
-    :hidden:
 
    gathering-data
    create-api

@@ -31,7 +31,7 @@ Work in progress
 
 Assumptions
 ~~~~~~~~~~~
-*Upcoming*
+Decide on source for WAR - Baseball Reference, FanGraphs, ESPN, etc 
 
 Constants
 ~~~~~~~~~
