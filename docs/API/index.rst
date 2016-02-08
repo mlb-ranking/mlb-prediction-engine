@@ -1,13 +1,11 @@
 APIs
 ====
+All of the  APIs for the MLB Rankings application. 
+
 
 .. toctree::
-   :maxdepth: 3
-   :glob:
-   :hidden:
-
-   data/*
+   data/index
    ...
 
-All of the  APIs for the MLB Rankings application. 
+
 
