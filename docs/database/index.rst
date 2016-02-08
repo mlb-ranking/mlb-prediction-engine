@@ -1,10 +1,10 @@
 Database Information 
 ====================
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
+   :titlesonly:
 
-   sources/players
-   sources/prospects
+   sources/
    player-model
    staff-model
    ...
