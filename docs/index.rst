@@ -1,6 +1,10 @@
 MLB Ranking Documentation 
 =========================
 
+Welcome to the MLB Ranking Documentation!
+
+.. include:: project-goals.rst
+
 .. toctree::
    :maxdepth: 3
    :glob:
@@ -14,5 +18,5 @@ MLB Ranking Documentation
    faq
    ...
 
-Welcome to the MLB Ranking Documentation!
+
 
