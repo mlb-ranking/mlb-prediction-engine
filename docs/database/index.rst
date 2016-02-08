@@ -3,7 +3,8 @@ Database Information
 .. toctree::
    :maxdepth: 3
 
-   sources/
+   sources/players
+   sources/prospects
    player-model
    staff-model
    ...
