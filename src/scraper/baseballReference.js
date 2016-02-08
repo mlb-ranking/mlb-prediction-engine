@@ -15,7 +15,7 @@ import fsp from 'fs-promise';
 const BASEURL               = "http://www.baseball-reference.com/"; 
 const TEAMS                 = constants.teamsAbbrevs; 
 const TOTALTEAMS            = TEAMS.length; 
-const TOTALPLAYERS          = TEAMS.length * 40;
+
 
 //File Constants 
 const DEFAULT_URL_FILENAME  = "urls.json";
@@ -27,6 +27,7 @@ const PLAYER_JSON_DIR       = "data/baseballref/json";
 //Degbugging instance vars  
 let teamsScrapped           = 0;
 let playersScrapped         = 0;
+let totalPlayers            = null;
 
 //URLs loaded for this run
 let urlsJSONFile            = null;    
@@ -80,10 +81,28 @@ function clean(){
 |--------------------------------------------------------------------------
 | Internal API
 |--------------------------------------------------------------------------
+|   - setup()               - Setup the initial vars
 |   - updatePlayerURLs()    - Update the URLS file
 |   - downloadPlayers()     - Trigger downloading of pages
 |   - deletePlayers()       - Remove old data
 */
+
+/**
+ * Setup initial vars and files
+ * 
+ * @return Promise
+ */
+function setup(urlsFileLoc){
+    urlsJSONFileLoc = urlsFileLoc; 
+
+    return fsp.readFile(urlsJSONFileLoc)
+        .then((jsonFileContents) => {
+            urlsJSONFile = JSON.parse(jsonFileContents); 
+        })
+        .then(() => {
+            totalPlayers = urlsJSONFile.urls.length; 
+        });
+}
 
 /**
  * Update the URL file to make verify current URLS.
@@ -138,17 +157,66 @@ function downloadPlayers(updateURLs = false, changedImport = false){
  * @return Promise
  */
 function scrapePlayers(urlsFileLoc = URLS_JSON_FILE_LOC){
-    return fsp.readFile(urlsFileLoc)
-        .then((jsonFileContents) => {
-            urlsJSONFile = JSON.parse(jsonFileContents); 
-            urlsJSONFileLoc = urlsFileLoc;
-        })
+    setup(urlsFileLoc)
         .then(() => {
-            //Begining to scrap a player
-            console.log(urlsJSONFile.urls.length); 
-                        
+            for(let i=0; i < urlsJSONFile.urls.length; i++){
+                let urlObj = urlsJSONFile.urls[i];
+                if(urlObj.isScrapped !== true){
+                    scrapePlayer(urlObj,i)
+                        .then(player => {
+                            writePlayerJSON(player)
+                        })
+                        .then(() => {
+                            urlObj.isScrapped = true; 
+                            urlsJSONFile.urls[i] = urlObj; 
+                            writeURLSJSONFile(); 
+                        })
+                        .catch((err)=>{
+                            console.log(`[SCRAPPER - ERROR] Error at player at index ${i}`);
+                        }); 
+                }
+                else{
+                    console.log(`[SCRAPPER - SKIP] Skipping scraping player at index ${i} of ${totalPlayers}`);
+                }
+            }
+
         })
         .catch(err => console.log("[FS READ ERROR]", err));
+}
+
+/**
+ * Parse a single page and create an object for this player.
+ * 
+ * @param  {[type]} urlObj [description]
+ * @param  {[type]} i      [description]
+ * @return {[type]}        [description]
+ */
+function scrapePlayer(urlObj, i){
+    console.log(`[SCRAPPER - START] Starting scraping player at index ${i}`);
+
+    return new Promise((resolve, reject) => {
+        scrape.localScrape(urlObj.fileLocation, ($) => {
+                let player = {};
+                player.jsonLocation = PLAYER_JSON_DIR + '/' + urlObj.url.replace('/', '') + '.json';
+                player.bio = getBioInfoPlayerPage($); 
+                player.stats = {};
+                player.source = urlObj; 
+
+                if(player.bio.position == 'pitcher'){
+                    player.stats.standardPitching = getStatsFromTable($, $('#pitching_standard')); 
+                }
+                else if(player.bio.position == 'position'){
+                    player.stats.standardBatting = getStatsFromTable($, $('#batting_standard'));
+                    player.stats.battingValue = getStatsFromTable($, $('#batting_value'));
+                }
+                player.stats.standardFielding = getStatsFromTable($, $('#standard_fielding'));
+
+                playersScrapped++;
+                resolve(player);
+                reject("[SCRAPPER - ERROR] Failed scrapping a player");
+                console.log(`[SCRAPPER - SUCCESS] Player ${player.bio.name} scrapped at index ${i} (${playersScrapped} of ${totalPlayers}).`);
+        });
+    });
 }
 
 /**
@@ -246,7 +314,7 @@ function getStat(player){
             player.stats.standardFielding = getStatsFromTable($, $('#standard_fielding'));
 
             playersScrapped++;
-            console.log(`Finished scrapping stats for ${player.name} \t\t player ${playersScrapped} out of ${TOTALPLAYERS} finished`);
+            console.log(`Finished scrapping stats for ${player.name} \t\t player ${playersScrapped} out of ${totalPlayers} finished`);
             resolve(player);
             reject("failed scrapping a stats for a player");
         });
@@ -340,6 +408,50 @@ function getStatsFromTable(cheerio, cheerioTable, filters){
 }
 
 /**
+ * Get the bio info for this player
+ * @param  {[type]} cheerio [description]
+ * @return {[type]}         [description]
+ */
+function getBioInfoPlayerPage(cheerio){
+    const INFO_ID = "#info_box";
+    let bio = {};
+    let info = cheerio(INFO_ID);
+    
+    bio.position = info.find('[itemprop="role"]').text().toLowerCase();
+    if(bio.position !== 'pitcher') bio.position = 'position'; 
+
+    bio.name = info.find('#player_name').text();
+    
+    //Add more stats here
+    // bio.currentTeam = "Braves"; 
+    // bio.bats = "Batting Position"; 
+    // bio.throws = "R"; 
+    // bio.height = "XXXX"; 
+    // bio.weight = 220; //Weight in pounds
+    // bio.birth = "DATE";
+    // bio.debut = "DATE"; 
+    // bio.highschool = "SOMETHING"; 
+    // bio.twitter = "";
+
+
+
+    return bio; 
+}
+
+/**
+ * Get the contract information for this player
+ * 
+ * @param  {[type]} cheerio [description]
+ * @return {[type]}         [description]
+ */
+function getContractInfo(cheerio){
+    let contract = {};
+    contract.agent = "BOB"; 
+    contract.status = "Contact Status";
+
+}
+
+/**
  * Try to convert the value to the correct type
  * @param  {String} value Parsed value in HTML 
  * @return {Varies}    Attempts to return the correct type for JSON 
@@ -351,6 +463,24 @@ function normalizeValue(value){
     else{
         return Number(value); 
     }
+}
+
+/**
+ * Update this URLS JSON file
+ * ***************MOVE TO DOWNLOADER OR SOMEWHERE or URL/JSON MANAGER************************
+ * @return {[type]} [description]
+ */
+function writeURLSJSONFile(){
+    fs.writeFile(urlsJSONFileLoc, JSON.stringify(urlsJSONFile, null, 2), err => {if (err) throw err;});
+}
+
+/**
+ * Write the player JSON file
+ * @param  {[type]} player [description]
+ * @return {[type]}        [description]
+ */
+function writePlayerJSON(player){
+    fs.writeFile(player.jsonLocation, JSON.stringify(player, null, 2), err => {if (err) throw err;});
 }
 
 /**

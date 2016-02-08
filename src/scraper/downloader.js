@@ -44,7 +44,7 @@ function create(urls, dest, baseURL){
     let jsonFile = {
         baseURL: baseURL,
         dateCreated: new Date(),
-        urls: []
+        urls: [],
     };
 
     urls.map(url =>{
@@ -53,10 +53,14 @@ function create(urls, dest, baseURL){
             downloaded:false, 
             downloading: false, 
             inAWS: false,           //In the cloud
-            scrapped: false,        //Used to determine if it was scrapped
+            isScrapped: false,        //Used to determine if it was scrapped
             hash: null              //Hash of the page to detect changes in the future
         });
     });
+
+    //Need to have an indexed by url option either by lookup table or
+
+
 
     // return new Promise
 }

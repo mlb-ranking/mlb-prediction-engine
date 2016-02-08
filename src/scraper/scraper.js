@@ -14,7 +14,7 @@ const TOR_PORT      = 9050;
 |--------------------------------------------------------------------------
 | API
 |--------------------------------------------------------------------------
-| scrape()     - Run this scrapper
+| scrape(url, callback)     - Run this scrapper on somefile (network or local)
 | 
 |
 */
@@ -65,15 +65,36 @@ function scrape(url, callback) {
  * @return {[type]}            [description]
  */
 function localScrape(fileLoc, callback){
-    fsp.readFile(urlsFileLoc)
+    fsp.readFile(fileLoc
+        )
         .then(html => {
             callback(cheerio.load(html));
         });
+}
+
+/*
+|--------------------------------------------------------------------------
+| Helper Functions
+|--------------------------------------------------------------------------
+| isLocalFile(filename) - Determine if a given file name is a web file or local file
+|
+|
+*/
+
+/**
+ * Determine if a given file name is a web file or local file. 
+ * 
+ * @param  {[type]}  fileName [description]
+ * @return {Boolean}          [description]
+ */
+function isLocalFile(fileName){
+
 }
 
 
 
 // Expose the function to the rest of the app.
 module.exports = {
-    scrape
+    scrape, 
+    localScrape 
 };
