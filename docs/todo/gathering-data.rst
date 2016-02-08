@@ -5,7 +5,7 @@ Phase 1: Current 40 Man Rosters
 -------------------------------
 * [DONE] Download appropriate pages for currently players
 * [IN-PROGRESS] Move downloads to AWS
-* [IN-PROGRESS] Parse downloads to create JSON files
+* [DONE] Parse downloads to create JSON files
 * [ ] Implement MongoDB or other DBMS to optimize performance
 * [ ] Create weights for stats of each year to allow comparisons across years. (Simple idea - store season averages for each stat)
 
