@@ -47,6 +47,6 @@ The table belows some of the algorithms that will be used to create a hybrid bet
 
 Potential Problems
 ------------------
-This entire approach of collaborative filtering might not produce poor predictions. 
+This entire approach of collaborative filtering might produce poor predictions. 
 
 
