@@ -2,5 +2,5 @@
 
 # Init for Debian based systems. Run from root of project
 
-#Confirm that virtual env is installed 
+# Confirm that virtual env is installed and install requirements
 
