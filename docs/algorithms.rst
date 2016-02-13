@@ -29,12 +29,14 @@ Variables
 Similarity Measures
 ~~~~~~~~~~~~~~~~~~~
 `Jaccard Similarity <https://www.cs.utah.edu/~jeffp/teaching/cs5955/L4-Jaccard+Shingle.pdf>`_
-    A statistic used for comparing the similarity and diversity of sample sets of individual player stats
+    A statistic used for comparing the similarity and diversity of sample sets of individual player stats.
 `Pearson Correlation Coefficient <https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient>`_
     Measures how well two stats fit on a straight line
 `Adjusted Cosine Similarity <http://www10.org/cdrom/papers/519/node14.html>`_
     Treat stats for each player as vectors in n-dimensional space (n = number of players) and determine the angle between the two vectors. **Important Adjustment** - weight all values with the average of each stat for that particular year as year to year factors change.
-    
+
+
+
 Algorithms
 ~~~~~~~~~~
 The table belows some of the algorithms that will be used to create a hybrid between memory and model based collaborative filtering. 
@@ -48,5 +50,11 @@ The table belows some of the algorithms that will be used to create a hybrid bet
 Potential Problems
 ------------------
 This entire approach of collaborative filtering might not produce poor predictions. 
+
+Stats
+~~~~~
+
+* Look up the `Curse of dimensionality <https://en.wikipedia.org/wiki/Curse_of_dimensionality>`_ when choosing which stats and what **distance algorithm** to use. *Most often not euclidean.*
+
 
 
