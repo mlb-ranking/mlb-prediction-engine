@@ -8,9 +8,9 @@ First Draft
 -----------
 First draft will try to compute the :ref:`Jaccard Similarity <algorithms>` for players and determine some of the most similar players. 
 
-Most Similar Players
-~~~~~~~~~~~~~~~~~~~~
-TBD
+Most Similar Players (All Time)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 
