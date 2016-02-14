@@ -51,10 +51,12 @@ Potential Problems
 ------------------
 This entire approach of collaborative filtering might produce poor predictions. 
 
+
 Stats
 ~~~~~
 
 * Look up the `Curse of dimensionality <https://en.wikipedia.org/wiki/Curse_of_dimensionality>`_ when choosing which stats and what **distance algorithm** to use. *Most often not euclidean.*
+
 
 
 
