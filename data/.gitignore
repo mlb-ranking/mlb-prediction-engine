@@ -3,3 +3,5 @@ baseballref/pages/*
 !baseballref/pages/.gitkeep
 baseballref/json/*
 !baseballref/json/.gitkeep
+baseballref/results/*
+!baseballref/results/.gitkeep
