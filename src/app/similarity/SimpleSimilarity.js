@@ -111,6 +111,11 @@ Promise.all(BaseBallReferenceFactory.playerPromises)
         //Write to File
         fileUtil.writeJSON('data/baseballref/results/', 'result-new', similarites, {ts: true});
 
+        //Output for CSV Table
+        similarites.results.splice(0,25).map((result) => {
+            console.log(`"${result.players[0]}", "${result.players[1]}", ${result.distance}, ${result.similarity}`);
+        });
+
     });
 }
 catch(err){

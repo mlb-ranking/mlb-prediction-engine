@@ -19,6 +19,7 @@ Navigation
    database/index
    simulator/index
    faq
+   results/index
 
    
 .. Indices and tables
