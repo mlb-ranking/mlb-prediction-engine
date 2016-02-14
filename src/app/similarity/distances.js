@@ -29,7 +29,7 @@ function computeEuclidNDim(vector1, vector2){
     }
 
     let result = Math.sqrt(inner)
-    console.log(`[DEBUG] Distance between ${vector1} and ${vector2} is ${result}`);
+    // console.log(`[DEBUG] Distance between ${vector1} and ${vector2} is ${result}`);
     return result; 
 }
 

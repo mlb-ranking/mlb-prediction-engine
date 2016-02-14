@@ -4,6 +4,27 @@ import PlayerFactory from '../player/PlayerFactory.js'
 import distances from './distances.js'
 import fileUtil from '../../util/files.js'
 
+let yearToCompare = 2015;
+let statsToCompare = ['pa', 'h', 'hr', 'rbi', 'ba'];
+
+let BaseBallReferenceFactory;
+let allPlayers;
+let positionPlayers;
+let pitchers;
+
+let similarites = {
+    meta: {
+        "year": yearToCompare,
+        "stats": statsToCompare,
+        "date": new Date(),
+        "distanceAlgorithm": 'euclidean', 
+        "similairtyAlgorith": '1/(1 + distance)',
+        "qualifier": 'plate appearences > 502'
+    },
+    results: []
+}; 
+
+
 /*
 |--------------------------------------------------------------------------
 | Methods
@@ -11,8 +32,20 @@ import fileUtil from '../../util/files.js'
 |   
 |
 */
+
 function computeSimilairty(distance){
     return 1 / (1 + distance); 
+}
+
+function init(){
+    BaseBallReferenceFactory = new PlayerFactory({source: 'baseballreference', jsonDir: 'data/baseballref/json/'});
+    allPlayers = BaseBallReferenceFactory.createPlayers();
+
+    return Promise.all(BaseBallReferenceFactory.playerPromises)
+        .then(()=>{
+            positionPlayers = BaseBallReferenceFactory.getPosition();
+            pitchers = BaseBallReferenceFactory.getPitchers();
+        })
 }
 
 
@@ -23,34 +56,10 @@ function computeSimilairty(distance){
 |   
 |
 */
-try{
-
-let BaseBallReferenceFactory = new PlayerFactory({source: 'baseballreference', jsonDir: 'data/baseballref/json/'});
-let allPlayers = BaseBallReferenceFactory.createPlayers();
-
-
-
 
 //Load up all of the JSON files
-Promise.all(BaseBallReferenceFactory.playerPromises)
+init()
     .then(()=>{
-        let positionPlayers = BaseBallReferenceFactory.getPosition();
-        let pitchers = BaseBallReferenceFactory.getPitchers();
-
-        let yearToCompare = 2015;
-        let statsToCompare = ['pa', 'h', 'hr', 'rbi', 'ba'];
-
-        let similarites = {
-            meta: {
-                "year": yearToCompare,
-                "stats": statsToCompare,
-                "date": new Date(),
-                "distanceAlgorithm": 'euclidean', 
-                "similairtyAlgorith": '1/(1 + distance)',
-                "qualifier": 'plate appearences > 502'
-            },
-            results: []
-        }; 
 
         //Filter Players 
         positionPlayers = positionPlayers.filter(player => {
@@ -62,9 +71,7 @@ Promise.all(BaseBallReferenceFactory.playerPromises)
             }
         });
 
-
-
-
+        //Compute Similairties for each pair of players 
         let count = 0; 
         for(let i=0; i<positionPlayers.length; i++){
             let playerI = positionPlayers[i];
@@ -96,6 +103,7 @@ Promise.all(BaseBallReferenceFactory.playerPromises)
         //Post Processing Meta
         similarites.meta.pairs = count; 
 
+        //Sort by similarity score
         similarites.results.sort(function(a, b){
             if(a.similarity < b.similarity){
                 return 1;
@@ -117,7 +125,3 @@ Promise.all(BaseBallReferenceFactory.playerPromises)
         });
 
     });
-}
-catch(err){
-    console.log(err); 
-}
