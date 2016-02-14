@@ -52,7 +52,7 @@ function setup(){
 
 //Create a stat vector for each player
 function createStatsVector(player){
-    let vector  = []; //Array of coordinate pairs
+    let vector  = [];   //Array of coordinate pairs
     
     //Validate Stats Vector
     if(player.stats === undefined) {
@@ -90,10 +90,40 @@ function createStatsVector(player){
  * @param  {integer} year  year of the stat
  * @return {Array.players}       
  */
-function filterPlayers(stats,year){
+function filterStandardBatting(stats, year){
     return players.filter((player)=>{
-        
+        player.stats.standardBatting.map((stats)=>{
+        if(stats.Year === year && (stats.Lg == 'AL' || stats.Lg == 'NL')){
+            // for(let statName of statsToCompare){
+            //     if(stats[statName]){
+            //         vector.push(stats[statName]);
+            //     } 
+            //     else{
+            //         throw new Error(`[STATS VECTOR] Stat ${statName} not found for ${player.jsonLocation}`);
+            //     }
+            // }
+        }
+        else{
+
+        }
     });
+
+    });
+}
+
+/**
+ * Check to verify the stats exist 
+ * @param  {[type]}  analyzingStats [description]
+ * @param  {[type]}  actualStats    [description]
+ * @return {Boolean}                [description]
+ */
+function hasStats(analyzingStats, actualStats){
+
+}
+
+
+function isValidYear(stats, year){
+
 }
 
 
