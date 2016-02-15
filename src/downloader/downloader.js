@@ -37,9 +37,9 @@ function Downloader(files = [], options = {}){
 
 //Configuration 
 Downloader.prototype.options = {
-    debug: 'true',
-    downloaderFileLoc: '_downloader.json',      //Should override
-    downloadsDestination: '_downloads/',        //Should override
+    debug: true,
+    downloaderFileLoc: 'data/_downloader.json',      //Should override
+    downloadsDestination: './_downloads/pages',        //Should override
     maxConcurrentRequests: 50,
     timeBetweenRequests: 500,
     breakInterval: 100000,                      //At every breakInterval pause parsing
@@ -68,6 +68,8 @@ Downloader.prototype.options = {
 //Activate all downloads
 Downloader.prototype.startDownloading = function(options = {update: false}){
     this.options.update = options.update; 
+    this.infoOut('Starting Downloading');
+    this.infoOut(this);
     this.concurrentRequests = 0; 
     this.downloadQueue = new QueueDownloads(this.options.timeBetweenRequests); 
 
@@ -94,11 +96,13 @@ Downloader.prototype.addPage = function(url, options = {}){
 
 //Reset all of the Download objects & update the json file
 Downloader.prototype.clean = function(){
-    //Copy the old file
-    
+    this.infoOut('"Downloader.json" file being cleaned' ,{prefix: '[CLEANER] '});
+
+    //Backup the old file
     
     let oldFile = '_downloader.json'; 
-    let meta = {cleaned: true, oldJSON: oldFile};
+    let meta = {cleaned: true};
+    this.options.metadata.oldJSON = oldFile; 
 
     for(let download of this.downloads){
         let url = download.url;
@@ -126,7 +130,6 @@ Downloader.prototype.startDownload = function(download){
     //Check Download to see if we should start
     
     if(this.shouldDownload(download)){
-        // if(this.debugLevel > 1) console.log('[DOWNLOADER - STARTED]');
         this.downloaderDebug(`Started Download`);
 
         this.concurrentRequests++;
@@ -143,6 +146,7 @@ Downloader.prototype.startDownload = function(download){
                     this.downloaderDebug('Finished Download');
                     this.downloadedHandler(true, download, contents);
                     this.concurrentRequests--;
+                    this.writeDownloaderFile();
                     resolve(true);
                 }
                 else{
@@ -157,18 +161,74 @@ Downloader.prototype.startDownload = function(download){
      
 }
 
+//Parse the downloader.json and update this instance (Only needs to have a property called downloads that contain URL properties)
+Downloader.prototype.parseDownloaderFile = function(downloaderFileLoc){
+    // this.options.downloaderFileLoc = downloaderFileLoc;
+    this.infoOut(this.options.downloaderFileLoc);
+
+    // this.infoOut(this.loadDownloaderFile());
+    // let promise = this.loadDownloaderFile();
+    
+    //
+    this.loadDownloaderFile()
+        .then((json)=>{
+            this.infoOut("Parsing JSON File");
+            json = JSON.parse(json)
+            this.infoOut(json, 4);
+
+            //Sync this instance
+            if(json.options instanceof Object){
+                let opt = Object.assign({}, this.options.__proto__, this.options, json.options);
+                this.options = opt; 
+                this.infoOut(opt);
+            }
+            if(json.downloads){
+                
+            }
+
+        })
+        .catch(err => this.errorOut(err));
+
+    //Update Options 
 
 
-
+    // Download.prototype.createFromJSON()
+}
 
 //Read and load the _downloader.json file
 Downloader.prototype.loadDownloaderFile = function(){
+    let filename = this.options.downloaderFileLoc;
+    this.fileSystemDebug(`Loading downloader JSON file from ${filename}.`);
 
+    // return fsp.readFile(filename);
+    return fsp.readFile(filename)
+        .then((data)=>{
+            this.fileSystemDebug('JSON file finished reading')
+            // this.infoOut(JSON.parse(data), 5);
+            return data
+        })
+        .catch((err) => this.errorOut(err));
 }
 
-//Update the _downloads.json file
+
+
+//Write to the downloader json file
 Downloader.prototype.writeDownloaderFile = function(){
-    //Write options.metadata
+    let filename = this.options.downloaderFileLoc;
+    this.fileSystemDebug(`Writing downloader JSON File to ${filename}.`);
+
+    let json = {
+        options: Object.assign({}, this.options.__proto__, this.options),
+        downloads: {}
+    };
+
+    for(let download of this.downloads){
+        json.downloads[md5(download.url)] = download;
+    }
+
+    return fsp.writeFile(filename, JSON.stringify(json, null, 2))
+        .then(() => this.fileSystemDebug('JSON file finished writing'))
+        .catch(err => this.errorOut(err));
 }
 
 //Generate all of the downloads objects
@@ -187,13 +247,7 @@ Downloader.prototype.finish = function(properties = {}){
     this.finishHook(properties);
 }
 
-//Parse the downloader.json and add it to this instance 
-Downloader.prototype.parseDownloaderFile = function(downloaderFileLoc){
-    //Update options from the parser file
-    this.options.downloaderFileLoc = downloaderFileLoc;
-    this.options.downloadsDestination = 'tities/';
 
-}
 
 //What to do with the downloaded file
 Downloader.prototype.downloadedHandler = function(status, download, filecontents = '', writeToFile = true){
@@ -224,7 +278,7 @@ Downloader.prototype.shouldDownload = function(download){
     }
     else{
         if(this.concurrentRequests >= this.options.maxConcurrentRequests){
-            this.downloaderDebug('MAX REQUESTSION - Max requests achieved. Will try again.')
+            this.downloaderDebug('MAX REQUESTS - Max requests achieved. Will try again.')
 
             let downloadLater = this.startDownload.bind(this, download);
             this.downloadQueue.add(download.url, downloadLater);
@@ -241,8 +295,10 @@ Downloader.prototype.infoOut = Debug.prototype.levelCreator(3, 2,{});
 Downloader.prototype.allOut = Debug.prototype.levelCreator(3, 3,{});
 Downloader.prototype.errorOut = Debug.prototype.levelCreator(3, 1,{error: true, prefix: '[ERROR] ', always: true, colorPrefixOnly: false});
 
+Downloader.prototype.fileSystemDebug = Debug.prototype.levelCreator(3, 2,{prefix: '[FILESYSTEM] ', colorOverride: 'cyan'});
 Downloader.prototype.downloaderDebug = Debug.prototype.levelCreator(3, 1,{prefix: '[DOWNLOADER] '});
-Debug.prototype.updateLevel(4);
+Debug.prototype.updateLevel(3); //DEBUG LEVEL
+
 
 
 /*
@@ -251,6 +307,8 @@ Debug.prototype.updateLevel(4);
 |--------------------------------------------------------------------------
 |
 */
+
+//Allow regular and tor requests
 Object.defineProperty(Downloader.prototype, "request", {
     get: function request() {
         if(!this.requestType){
@@ -258,18 +316,6 @@ Object.defineProperty(Downloader.prototype, "request", {
             else this.requestType = basicrequest;
         }
         return this.requestType;  
-    }
-});
-
-Object.defineProperty(Downloader.prototype, "debug", {
-    get: function debug() {
-        return this.options.debug; 
-    }
-});
-
-Object.defineProperty(Downloader.prototype, "debugLevel", {
-    get: function debug() {
-        return (this.options.debugLevel) ? this.options.debugLevel : (this.debug) ? 1 : 0;  
     }
 });
 
@@ -308,19 +354,38 @@ Downloader.prototype.finishHook = function(options){
 |--------------------------------------------------------------------------
 |
 */
+
 let downloader = new Downloader(
     ['https://www.google.com/', 
     'https://www.google.com/', 
     'http://www.baseball-reference.com/route.cgi?player=1&mlb_ID=623406',  
     'http://motherfuckingwebsite.com/'], 
     {
+        downloaderFileLoc: './data/baseballref/urls.json',
+        downloadsDestination: './data/baseballref/pages/',
         debugLevel: 2,
         useTor: false, 
         maxConcurrentRequests: 1
     }
 );
 
-downloader.startDownloading();
+downloader.parseDownloaderFile('')
+
+// downloader.startDownloading();
+// downloader.loadDownloaderFile();
+// 
+// 
+
+// let downloadJSON = {"downloaded": true,
+//       "downloading": false,
+//       "url": "https://www.google.com/",
+//       "attempts": 1,
+//       "startedAt": "2016-02-15T10:25:00.049Z",
+//       "completedAt": "2016-02-15T10:25:00.341Z",
+//       "contentsHashMD5": "a1eee6fc1000797bc18ba4b85cfb2aaa",
+//       "fileLocation": "location/of/file"};
+
+// let downloadFromJson = Download.prototype.createFromJSON(downloadJSON);
 
 
 module.exports = Downloader;

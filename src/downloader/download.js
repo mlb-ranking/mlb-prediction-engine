@@ -1,12 +1,28 @@
 "use strict";
 
+import Debug from '../util/debugger.js'
+
 function Download(url, props = {}){
+    Download.prototype.count++;
+    this.infoOut('Download Object Created');
+
     this.downloaded = false;
     this.downloading = false; 
     this.url = url;
     this.attempts = 0; 
 
     this.addProps(props); 
+}
+
+Download.prototype.count = 0;
+
+Download.prototype.createFromJSON = function(jsonObj, props = {}){
+    Download.prototype.count++;
+
+    let download = Object.create(Download.prototype); 
+    Object.assign(download, jsonObj);
+    download.addProps(props); 
+    return download; 
 }
 
 Download.prototype.isDownloaded = function(){
@@ -45,6 +61,8 @@ Download.prototype.addProps = function(properties){
     }
 }
 
+//Debuggers
+Download.prototype.infoOut = Debug.prototype.levelCreator(3, 3,{colorOverride: 'cyan', prefix: '[DOWNLOAD OBJECT] '});
 
 
 

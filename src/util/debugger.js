@@ -32,16 +32,15 @@ const LEVEL_TO_COLOR_FUNCTION = [
 
 function Debug(debugLevel = 0, options = {}){
     Debug.prototype.numDebuggers++;
-
     this.options = Object.create(Debug.prototype.options);
-    Object.assign(this.options, {minLevel: 1}, options);
+    this.options = Object.assign({}, this.options.__proto__, {minLevel: 1}, options);
     this.options.debugLevel = debugLevel;
     this.colors = colors; 
 }
 
 Debug.prototype.levelCreator = function(debugLevel, minLevel, options = {}){
     Debug.prototype.staticLevel = debugLevel;
-    options = Object.assign(options, {minLevel: minLevel});  
+    options = Object.assign({}, options, {minLevel: minLevel});  
     let debugObj = new Debug(debugLevel, options);
     debugObj.levelMode = true;
     return debugObj.debug.bind(debugObj); 
@@ -63,7 +62,7 @@ Debug.prototype.updateMinLevel = function(minLevel){
 Debug.prototype.options = {
     colorPrefixOnly: true,
     colored: true,
-    depth: 4,
+    depth: null,
     showHidden: true
 };
 
@@ -75,12 +74,25 @@ Debug.prototype.levelToColorMap = new Map(LEVEL_TO_COLOR);
 Debug.prototype.levelToPrefixMap = new Map(LEVEL_TO_PREFIX);
 Debug.prototype.levelToColorFunctionMap = new Map(LEVEL_TO_COLOR_FUNCTION);
 
-Debug.prototype.debug = function(message, minLevel = this.minLevel, options = {}){
-    this.tempOptions = Object.assign(Object.create(this.options), {minLevel: minLevel}, options);
+Debug.prototype.debug = function(message, minLevel = false, options = {}){
+    //Shorthand debugging method second argument is options
+    if(minLevel instanceof Object && Object.keys(options).length === 0){
+        options = minLevel; 
+    }
+    else{
+        minLevel = (minLevel === false) ? this.minLevel : minLevel;  
+    }
 
-    if(this.debugLevel >= this.minLevel || this.options.always){
+
+    this.tempOptions = {temp: true};
+    this.tempOptions = Object.assign({}, this.tempOptions, this.options.__proto__, this.options, {minLevel: minLevel}, options);
+    if(this.debugLevel >= this.minLevel || this.tempOptions.always){
         if(typeof message !== 'string' && !(message instanceof String)){
-            message = util.inspect(message, {showHidden: this.tempOptions.showHidden, depth: this.tempOptions.depth, colors: this.tempOptions.colored});
+            message = util.inspect(message, {
+                showHidden: this.tempOptions.showHidden, 
+                depth: this.tempOptions.depth, 
+                colors: this.tempOptions.colored
+            });
         }
 
         if(this.tempOptions.colorPrefixOnly === true){
@@ -90,10 +102,10 @@ Debug.prototype.debug = function(message, minLevel = this.minLevel, options = {}
             this.standardOut(this.color(message));
         }
     }
-    else{
-        return false; 
-    }
+
     this.tempOptions = undefined;
+    return false; 
+    
 }
 
 
@@ -161,6 +173,32 @@ Object.defineProperty(Debug.prototype, "color", {
 });
 
 module.exports = Debug;
+
+
+/*
+|--------------------------------------------------------------------------
+| Rewrite as Single Modules
+|--------------------------------------------------------------------------
+|
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
