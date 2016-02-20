@@ -3,6 +3,7 @@
 import QueueDownloads from './queueDownloads.js'
 import Download from './download.js'
 import Debug from '../util/debugger.js'
+import simpleout from '../util/logger.js'
 
 import basicrequest from 'request';
 import torrequest from 'torrequest';
@@ -27,9 +28,11 @@ function Downloader(files = [], options = {}){
     this.urlsMap = new Map(); //Access the downloads via the md5 of the url
 
     if(Array.isArray(files)){
+
         this.createDownloads(files); 
     }
-    else{ 
+    else{
+
         this.parseDownloaderFile(files); 
     }
 
@@ -369,9 +372,9 @@ let downloader = new Downloader(
     }
 );
 
-downloader.parseDownloaderFile('')
+// downloader.parseDownloaderFile('')
 
-// downloader.startDownloading();
+downloader.startDownloading();
 // downloader.loadDownloaderFile();
 // 
 // 

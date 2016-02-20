@@ -23,9 +23,9 @@
       "downloading": false,
       "url": "https://www.google.com/",
       "attempts": 1,
-      "startedAt": "2016-02-15T10:25:00.049Z",
-      "completedAt": "2016-02-15T10:25:00.341Z",
-      "contentsHashMD5": "a1eee6fc1000797bc18ba4b85cfb2aaa",
+      "startedAt": "2016-02-20T23:29:28.501Z",
+      "completedAt": "2016-02-20T23:29:28.745Z",
+      "contentsHashMD5": "6e523a236a90d712807b058fd5bcd49f",
       "fileLocation": "location/of/file"
     },
     "54aea88f7fe394efeaec3a520d6617f6": {
@@ -33,9 +33,9 @@
       "downloading": false,
       "url": "http://www.baseball-reference.com/route.cgi?player=1&mlb_ID=623406",
       "attempts": 1,
-      "startedAt": "2016-02-15T10:25:01.071Z",
-      "completedAt": "2016-02-15T10:25:02.483Z",
-      "contentsHashMD5": "6e0857a9fd00a20bbd3f8c6211ed0b69",
+      "startedAt": "2016-02-20T23:29:29.522Z",
+      "completedAt": "2016-02-20T23:29:31.004Z",
+      "contentsHashMD5": "51cf33cb4d0f4b86bb651b95f29f03e2",
       "fileLocation": "location/of/file"
     },
     "b3c81ad037a1dc3e9b0b297b2781c424": {
@@ -43,8 +43,8 @@
       "downloading": false,
       "url": "http://motherfuckingwebsite.com/",
       "attempts": 1,
-      "startedAt": "2016-02-15T10:25:00.558Z",
-      "completedAt": "2016-02-15T10:25:00.763Z",
+      "startedAt": "2016-02-20T23:29:29.010Z",
+      "completedAt": "2016-02-20T23:29:29.305Z",
       "contentsHashMD5": "928fac6b1069df87456e65c2083fddc2",
       "fileLocation": "location/of/file"
     }

@@ -3,109 +3,90 @@
 import colors from 'colors';
 import util from 'util';
 
-let loggers = new Map();
-let loggerGroups = new Map(); 
-let aliases = new Map();
+colors.setTheme({
+    normal: 'white',
+    debug: 'green',
+    more: 'blue',
+    all: 'magenta',
+    warning: ['red', 'underline'],
+    error: 'red'
+});
 
-let logger = {
-    overrides: {},
-    name: 'debug',      //Make immutable
-    aliases: [],
-    group: 'general', 
-    debugLevel: 1,      
-    minDebugLevel: 1,   //Won't fire if debug level is below this
-    maxDebugLevel: 100, //Won't fire if debug level is past this
+
+//Inital debug level to control what gets output
+let level = 3; 
+
+//Default options
+let options = {
     prefix: '[DEBUG] ',
     color: 'green',
     always: false,
+    colorAll: false
+};
 
-    log: function(){
-        console.log.apply(this, arguments)
-    }, 
-    setProperty: function(name, value){
-        this[name] = value; 
+//Often used presets
+let presets = new Map(); 
+
+
+//Register some presets 
+presets.set('debug', {}); //Basepreset no changes
+presets.set('info', {prefix: '[INFO] ', color: 'blue'}); 
+presets.set('all', {prefix: '[ALL] ', color: 'magenta'}); 
+presets.set('error', {prefix: '[ERROR] ', color: 'red'}); 
+
+
+function cout(minLevel, message, config = {}){
+    let preset = (config.preset && presets.get(config.preset)) ? presets.get(config.preset) : {};
+    let currentConfig = Object.assign({}, options, preset, config);
+    
+    if(options.always || level >= minLevel){
+        console.log(formatMessage(message, currentConfig));
     }
-};
 
-let loggerGroup = {
-    overrides: {},
-    name: 'general',           //Make immutable
-    aliases: [],
-    groupDebugLevel: 1, 
-    groupMinDebugLevel: 1,      //Won't fire if debug level is below this
-    groupMaxDebugLevel: 100,    //Won't fire if debug level is past this
-    groupPrefix: '[DEBUG] ',
-    groupColor: 'green',
-    groupAlways: false,
-    loggers: null
-};
-
-
-function registerDefaults(){
-    registerLogger('debug', {minDebugLevel: 1})
-    registerLogger('info', {minDebugLevel: 2})
-    registerLogger('all', {minDebugLevel: 3})
-    registerLogger('always', {minDebugLevel: -1, always: true})
 }
 
-
-function registerLogger(name, options = {}){
-    let newLogger = Object.create(logger);
-    Object.assign(newLogger, {name: name}, options);
-    loggers.set(newLogger.name, newLogger);
-    addToLoggerGroup(newLogger);
-    return newLogger;
+function registerPreset(name, presetOptions){
+    presets.set(name, presetOptions);
 }
 
-function createLoggerAliases(logger){
-    
+function setLevel(newLevel, config){
+    level = newLevel;
 }
 
+//Helpers
+function formatMessage(message, config){
+    let output = ''; 
 
-function registerLoggerGroup(name, options = {}){
-    let newLoggerGroup = Object.create(loggerGroup);
-    Object.assign(newLoggerGroup, {name: name, loggers: new Map()}, options);
-    loggerGroups.set(newLoggerGroup.name, newLoggerGroup);
-    return newLoggerGroup;
-}
+    if(config.prefix){
+        output += colorize(config.prefix, config);
+    }
 
-function createLoggerGroupAliases(loggerGroup){
-    
-}
-
-function addToLoggerGroup(logger){
-    if(!loggerGroups.has(logger.group)){
-        let newLoggerGroup = registerLoggerGroup(logger.group);
-        newLoggerGroup.loggers.set(logger.name, logger);
+    if(config.colorAll === true){
+        output += colorize(message, config);
     }
     else{
-        loggerGroups.get(logger.group).loggers.set(logger.name, logger)
+        output += message; 
+    }
+
+    return output;
+}
+
+function colorize(string, config){
+    // if(config.color)
+    if(colors[config.color]){
+        return colors[config.color](string);
+    }
+    else{
+        return colors.green(string); //Default
     }
 }
-
-
-
-///HELPERS
-function log(message){
-    message = util.inspect(message, {
-        showHidden: true, 
-        depth: null, 
-        colors: true
-    });
-
-    console.log(message); 
-}
-
-
 
 
 //Check out
 //https://github.com/mohsen1/better-console/blob/master/index.js
 
-registerDefaults();
-let filesystemLogger = registerLogger('filesystem', {prefix: '[FILESYSTEM] ', group: 'filesystem'});
-let downloaderLogger = registerLogger('downloader', {prefix: '[DOWNLOADER] ', group: 'app'});
-
 module.exports = {
-    registerLogger: registerLogger,
+    cout: cout,
+    setLevel: setLevel, 
+    registerPreset: registerPreset
 }
