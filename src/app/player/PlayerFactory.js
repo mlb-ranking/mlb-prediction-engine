@@ -12,13 +12,15 @@
 
 //Player Types
 import Player from './Player.js'; 
-// import BaseballReferencePlayer from './BaseballReferencePlayer';
+import BaseballReferencePlayer from './BaseballReferencePlayer';
 
 import fsp from 'fs-promise'; 
 
 //Factory Function 
 function PlayerFactory(jsonDir, source = Player){
-    this.players = new Set();               // Set of all of the players
+    this.playersMap = new Map();            // Set of all of the players
+    this.tempPlayersSet = new Set();        // players without an id set 
+
     this.source = source;                   // What types of players this factory is going to create
     this.jsonPlayersDir = jsonDir;          // Directory of files
     this.jsonPlayersFiles = [];             // JSON Files of players 
@@ -76,7 +78,6 @@ PlayerFactory.prototype.getJSONFiles = function(update = false, dir = this.jsonP
 
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Creation
@@ -93,7 +94,10 @@ PlayerFactory.prototype.getJSONFiles = function(update = false, dir = this.jsonP
  */
 PlayerFactory.prototype.createPlayer = function(jsonContents){
     let player = new this.source(jsonContents);
-    this.players.add(player); 
+    
+    if(player.id) this.playersMap.set(player.id, player); 
+    else tempPlayersSet.add(player); 
+    
     return player; 
 };
 
@@ -111,7 +115,7 @@ PlayerFactory.prototype.createPlayers = function(){
                 let jsonContents = JSON.parse(contents);
                 this.createPlayer(jsonContents);
             })
-            .catch(console.log);
+            .catch(console.error);
         promises.push(promise); 
     }
 

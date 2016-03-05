@@ -1,21 +1,27 @@
 "use strict";
 
-// import PlayerFactory from './PlayerFactory.js'; 
 import fsp from 'fs-promise'; 
 import md5 from 'md5'; 
 
-function Player(json){
+function Player(json = ''){
     this.data = false;
+    this.id = false; 
 
     if(typeof json === 'object'){
-        this.jsonData = json;
-        this.filename = json.jsonLocation;
-        this.optimizeData();
+        if(json.jsonData == 'optimized'){
+            Object.assign(this, json);
+        }
+        else{
+            this.jsonData = json;
+            this.filename = json.jsonLocation;
+            this.optimize();
+        }
+        
     }
     else if(json.includes('.json')){
-        this.jsonData = json; 
         //Read the file and add it to this player
-        
+        this.filename = json; 
+    
     }
     else{
         this.filename = false;
@@ -28,36 +34,47 @@ Player.prototype.DEFAULT_YEAR = 2015;
 
 /*
 |--------------------------------------------------------------------------
-| Methods
+| Util Methods
 |--------------------------------------------------------------------------
-|   - getStat
-|   - getStatVector
+|  
 |
 */
+Player.prototype.optimize = function(){
+    if(this.data) return this; 
 
-/**
- * Get a stat for this player for the supplied year. Using the optimiszed and normalized data
- *     that should be the same across all sources.
- * 
- * @param  {string} statname [description]
- * @param  {integer} year     [description]
- * @return {mixed} Returns the stat for that year or false if not found
- */
+    this.data = true;
+    this.download = this.jsonData.source;  
+
+    this.name = this.jsonData.bio.name;
+    this.team = this.jsonData.bio.team;
+    this.id = this.createUID(this.name, this.team, this.download.url);
+    this.type = this.jsonData.bio.position;
+
+    //Ability to create a download obj and redownload this player
+    this.bio = this.jsonData.bio; 
+
+    //Create Good data structure for accesing this
+    this.stats = this.jsonData.stats;
+
+    this.jsonData = 'optimized';
+
+    return this; 
+};
+
+Player.prototype.createUID = function(playerName, team, url){
+    return (team + '-' + playerName + '-' + md5(url)).toLowerCase().replace(' ', '-');
+};
+
 Player.prototype.getStat = function(statname, year = this.DEFAULT_YEAR){
-    if(!this.data) this.optimizeData();
+    if(!this.data) this.optimize();
     statname = statname.toLowerCase(); 
     let result = this.data[year][statname]; 
     return result ? result : false; 
 };
 
-/**
- * Get a stat for this player for the supplied year
- * @param  {Array} stats Array of stats
- * @param  {Integer} year     year of the stats 
- * @return {Array}          ex: getStatVector(['h', 'r', 'sb'], 2015) -> [5,32,13]
- */
+
 Player.prototype.createStatVector = function(stats, year = this.DEFAULT_YEAR){
-    if(!this.data) this.optimizeData(); 
+    if(!this.data) this.optimize(); 
 
     let vector = [];
     for(let stat of stats){
@@ -74,58 +91,33 @@ Player.prototype.createStatVector = function(stats, year = this.DEFAULT_YEAR){
     return vector.length > 0 ? vector : false; 
 };
 
-/*
-|--------------------------------------------------------------------------
-| Util Methods
-|--------------------------------------------------------------------------
-|   - getJSONFile
-|
-*/
-Player.prototype.optimizeData = function(){
-    if(this.data) return this.data; 
-    this.data = true; 
 
-    let stats = {};
-    this.name = this.jsonData.bio.name;
-    this.type = this.jsonData.bio.position;
-
-    //Ability to create a download obj and redownload this player
-    this.download = this.jsonData.source;  
-
-    console.log(this.jsonData);
-    this.jsonData = 'optimized';
-    console.log(this);
-};
+Player.prototype.addSimilarities = function(type, similarityMap){
+    if(!this.similarityMaps) this.similarityMaps = [];
+    this.similarityMaps[type] = similarityMap; //player.id -> similarity score
+}
 
 
-Player.prototype.createUID = function(playerName, url){
-    return (playerName + '-' + md5(url)).toLowerCase().replace(' ', '-');
-};
-
-/**
- * Get the JSON file for this player. Set the readyPromise property on this 
- * object to read it when ready. 
- * 
- * @param  {string} filename full filename for the JSON file
- */
 Player.prototype.getJSONFile = function(filename = this.filename){
     fsp.readFile(`${filename}`)
         .then((data) => {
             this.data =  JSON.parse(data);
-            // this.name = this.data.bio.name;
-            // this.position = this.data.bio.position;
-            // this.uid = false; //TODO
         })
         .catch((err) => { throw new Error(`Error reading JSON file ${filename}`) });
 };
 
+
+Player.prototype.updateJSONFile = function(){
+    return fsp.writeFile(this.filename, this.toJSON())
+        .then(()=> {})
+        .catch(console.log);
+};
+
+Player.prototype.toJSON = function(){
+    let json = {};
+    Object.assign(json, this);
+    return JSON.stringify(json); 
+};
+
+
 module.exports = Player;
-
-
-/*
-|--------------------------------------------------------------------------
-| Testing
-|--------------------------------------------------------------------------
-|   - getJSONFile
-|
-*/
