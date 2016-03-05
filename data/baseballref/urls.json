@@ -1,21 +1,24 @@
 {
+  "last_updated": "2016-02-21T05:27:00.961Z",
   "options": {
-    "debug": true,
+    "downloaderFileDir": "./data/baseballref/",
+    "downloaderFileBackupDir": "./data/baseballref/backups/",
     "downloaderFileLoc": "./data/baseballref/urls.json",
     "downloadsDestination": "./data/baseballref/pages/",
-    "maxConcurrentRequests": 1,
+    "maxConcurrentRequests": 50,
     "timeBetweenRequests": 500,
     "breakInterval": 100000,
     "breakTime": 100000,
-    "useTor": false,
+    "useTor": true,
     "requestConfig": {
       "torHost": "localhost",
       "torPort": 9050,
       "timeout": 30000
     },
     "metadata": {},
+    "debug": true,
     "debugLevel": 2,
-    "update": false
+    "update": true
   },
   "downloads": {
     "d75277cdffef995a46ae59bdaef1db86": {
@@ -23,30 +26,63 @@
       "downloading": false,
       "url": "https://www.google.com/",
       "attempts": 1,
-      "startedAt": "2016-02-20T23:29:28.501Z",
-      "completedAt": "2016-02-20T23:29:28.745Z",
-      "contentsHashMD5": "6e523a236a90d712807b058fd5bcd49f",
-      "fileLocation": "location/of/file"
+      "cleaned": true,
+      "urlHash": "d75277cdffef995a46ae59bdaef1db86",
+      "startedAt": "2016-02-21T05:26:43.161Z",
+      "writtenToFile": true,
+      "completedAt": "2016-02-21T05:26:59.445Z",
+      "contentsHashMD5": "65e57bb72d55d80db5d106ee19cb4789",
+      "fileLocation": "./data/baseballref/pages/sgoogle-65e57bb72d55d80db5d106ee19cb4789"
     },
     "54aea88f7fe394efeaec3a520d6617f6": {
       "downloaded": true,
       "downloading": false,
       "url": "http://www.baseball-reference.com/route.cgi?player=1&mlb_ID=623406",
       "attempts": 1,
-      "startedAt": "2016-02-20T23:29:29.522Z",
-      "completedAt": "2016-02-20T23:29:31.004Z",
-      "contentsHashMD5": "51cf33cb4d0f4b86bb651b95f29f03e2",
-      "fileLocation": "location/of/file"
+      "cleaned": true,
+      "urlHash": "54aea88f7fe394efeaec3a520d6617f6",
+      "startedAt": "2016-02-21T05:26:43.168Z",
+      "writtenToFile": true,
+      "completedAt": "2016-02-21T05:26:58.794Z",
+      "contentsHashMD5": "d242a80f778f290ac228dd85ec0a4ffb",
+      "fileLocation": "./data/baseballref/pages/baseballreferenceroutecgiplayer1mlbID623406-d242a80f778f290ac228dd85ec0a4ffb"
     },
     "b3c81ad037a1dc3e9b0b297b2781c424": {
       "downloaded": true,
       "downloading": false,
       "url": "http://motherfuckingwebsite.com/",
       "attempts": 1,
-      "startedAt": "2016-02-20T23:29:29.010Z",
-      "completedAt": "2016-02-20T23:29:29.305Z",
+      "cleaned": true,
+      "urlHash": "b3c81ad037a1dc3e9b0b297b2781c424",
+      "startedAt": "2016-02-21T05:26:43.170Z",
+      "writtenToFile": true,
+      "completedAt": "2016-02-21T05:26:56.613Z",
       "contentsHashMD5": "928fac6b1069df87456e65c2083fddc2",
-      "fileLocation": "location/of/file"
+      "fileLocation": "./data/baseballref/pages/motherfuckingwebsite-928fac6b1069df87456e65c2083fddc2"
+    },
+    "d74b7cec855cea279016c633332a54fb": {
+      "downloaded": false,
+      "downloading": false,
+      "url": "https://simplebac.com/",
+      "urlHash": "d74b7cec855cea279016c633332a54fb",
+      "attempts": 1,
+      "cleaned": true,
+      "startedAt": "2016-02-21T05:26:43.171Z",
+      "writtenToFile": false,
+      "failed": true
+    },
+    "0515fae92f4a572650d73dc0224d00ef": {
+      "downloaded": true,
+      "downloading": false,
+      "url": "https://amazon.com",
+      "urlHash": "0515fae92f4a572650d73dc0224d00ef",
+      "attempts": 1,
+      "cleaned": true,
+      "startedAt": "2016-02-21T05:26:43.172Z",
+      "writtenToFile": true,
+      "completedAt": "2016-02-21T05:27:00.881Z",
+      "contentsHashMD5": "fff2da75dc290d32d00a1ce339ca979f",
+      "fileLocation": "./data/baseballref/pages/samazon-fff2da75dc290d32d00a1ce339ca979f"
     }
   }
 }

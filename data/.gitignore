@@ -5,3 +5,5 @@ baseballref/json/*
 !baseballref/json/.gitkeep
 baseballref/results/*
 !baseballref/results/.gitkeep
+urls.json.bak*
+backups/

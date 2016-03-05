@@ -25,24 +25,42 @@ function Downloader(files = [], options = {}){
     this.options = Object.assign(this.options, options);
 
     //Initialize Properties
+    this.readyToDownload = false;
+    this.downloadingInProgress = false;  
+    this.readyToDownloadPromise = null; 
+    this.downloads = [];
     this.urlsMap = new Map(); //Access the downloads via the md5 of the url
+    this.allPromises = new Map(); 
+    this.fileSystemIO = 0;
+    this.downloadQueue = new QueueDownloads(this.options.timeBetweenRequests);
+    this.concurrentRequests = 0; 
+    this.downloadsFinished = 0;
+    this.fileSystemIO = 0;
+    this.finishedPromise = false; 
 
     if(Array.isArray(files)){
-
+        this.infoOut('Initializing Downloader from files array');
         this.createDownloads(files); 
+        this.readyToDownload = true; 
+        this.readyToDownloadPromise = Promise.resolve();
     }
     else{
-
-        this.parseDownloaderFile(files); 
+        this.infoOut('Initializing Downloader from JSON file');
+        this.readyToDownloadPromise = this.parseDownloaderFile(files)
+            .then(() => {
+                //Override JSON file argument options
+                this.options = Object.assign(this.options, options);
+            }); 
     }
 
 }
 
 //Configuration 
 Downloader.prototype.options = {
-    debug: true,
-    downloaderFileLoc: 'data/_downloader.json',      //Should override
-    downloadsDestination: './_downloads/pages',        //Should override
+    downloaderFileDir: './',                              
+    downloaderFileBackupDir: './',    
+    downloaderFileLoc: 'data/_downloader.json',      
+    downloadsDestination: './_downloads/pages/',        //Should override & file must exist 
     maxConcurrentRequests: 50,
     timeBetweenRequests: 500,
     breakInterval: 100000,                      //At every breakInterval pause parsing
@@ -69,50 +87,83 @@ Downloader.prototype.options = {
 */
 
 //Activate all downloads
-Downloader.prototype.startDownloading = function(options = {update: false}){
-    this.options.update = options.update; 
-    this.infoOut('Starting Downloading');
-    this.infoOut(this);
-    this.concurrentRequests = 0; 
-    this.downloadQueue = new QueueDownloads(this.options.timeBetweenRequests); 
+Downloader.prototype.startDownloading = function(options = {}){
+    if(this.readyToDownload === false) {
+        this.errorOut('Not Ready to download'); 
+        throw new Error('Not Ready to download');
+    }
+
+    Object.assign(this.options, options);
+
+
+
+    //Create backup
+    if(this.options.backup !== false) this.createBackupDownloaderFile();
+
+    //Begin all of the downloads
+    this.infoOut('Starting global download process!');
+    this.downloadingInProgress = true; 
+
 
     for(let download of this.downloads){
         this.startDownload(download);
     }
+
 }
 
-//Add a new page
+Downloader.prototype.restartDownloading = function(){
+    this.infoOut('Restarting Downloader');
+    this.downloadingInProgress = true;
+
+    //Only start new downloads
+    for(let download of this.downloads){
+        if(!download.isDownloaded() && !download.isDownloading()) {
+            this.startDownload(download);
+        }
+    }
+}
+
+//Add a new page to be downloaded
 Downloader.prototype.addPage = function(url, options = {}){
-    options = Object.assign({updateJSON: false, addDuplicates: false}, options);
+    options = Object.assign({updateJSON: true, addDuplicates: false}, options);
     let hash = md5(url); 
 
     if(!this.urlsMap.has(hash) || options.addDuplicates){
         let download = new Download(url); 
         this.urlsMap.set(hash, download);
         this.downloads.push(download);
+
         if(options.updateJSON) this.writeDownloaderFile();
+
+        //Restart downloading if neccessary
+        if(this.downloadingInProgress !== true){
+            this.infoOut('Page added. Need to restart.'); 
+            this.restartDownloading();
+        }
+        
     }
     else{
-        this.debugOut(`DUPLICATE URL - The url "${url}" has already been added! Skipping.`)
+        this.infoOut(`The url "${url}" has already been added! Skipping.`, 2, {colorOverride: 'blue', prefix: '[DUPLICATE URL] '});
     }
 }
 
 //Reset all of the Download objects & update the json file
 Downloader.prototype.clean = function(){
-    this.infoOut('"Downloader.json" file being cleaned' ,{prefix: '[CLEANER] '});
+    this.infoOut('Downloader JSON file being cleaned for fresh downloads and metadata.');
+
+    if(this.readyToDownload === false) {
+        this.errorOut('Downloads not set'); 
+        throw new Error('Downloads not set');
+    }
 
     //Backup the old file
-    
-    let oldFile = '_downloader.json'; 
-    let meta = {cleaned: true};
-    this.options.metadata.oldJSON = oldFile; 
+    this.createBackupDownloaderFile();
 
     for(let download of this.downloads){
-        let url = download.url;
-        download = new Download(url, meta); //Replace the object with a new one
+        download.clean();
     }
-    
-    this.writeDownloaderFile();
+
+    this.writeDownloaderFile(true);
 }
 
 
@@ -133,33 +184,42 @@ Downloader.prototype.startDownload = function(download){
     //Check Download to see if we should start
     
     if(this.shouldDownload(download)){
+        // debugger;
+
         this.downloaderDebug(`Started Download`);
-
         this.concurrentRequests++;
-
         download.start();   //Setup some properties
 
         let requestConfig = Object.create(this.options.requestConfig);
         requestConfig.url = download.url; 
+
         //Figure out a way to handle redirects as errors by editing the configObj
         
-        return new Promise((resolve, reject) => {
+        let promise = new Promise((resolve, reject) => {
+            this.networkDebugger(`Request (${this.concurrentRequests} / ${this.options.maxConcurrentRequests}) created to ${requestConfig.url}`);
+
             this.request(requestConfig, (err, response, contents) => {
+                this.downloadsFinished++; //always mark finished
+
                 if(!err){
-                    this.downloaderDebug('Finished Download');
-                    this.downloadedHandler(true, download, contents);
                     this.concurrentRequests--;
+                    this.networkDebugger(`Finished request ${requestConfig.url}`);
+                    this.downloadedHandler(true, download, contents);
                     this.writeDownloaderFile();
                     resolve(true);
                 }
                 else{
-                    this.errorOut(`Request Failed ${err}`);
-                    this.downloadedHandler(false, download); 
                     this.concurrentRequests--;
+                    this.networkDebugger(`Request failed for ${requestConfig.url} - ${err}`);
+                    this.downloadedHandler(false, download); 
                     reject(false);
                 }
             });
-        });
+        })
+        .then(() => this.checkIfFinished());
+
+        this.allPromises.set(download.url, promise); 
+        return promise; 
     }
      
 }
@@ -167,60 +227,87 @@ Downloader.prototype.startDownload = function(download){
 //Parse the downloader.json and update this instance (Only needs to have a property called downloads that contain URL properties)
 Downloader.prototype.parseDownloaderFile = function(downloaderFileLoc){
     // this.options.downloaderFileLoc = downloaderFileLoc;
-    this.infoOut(this.options.downloaderFileLoc);
+    
 
     // this.infoOut(this.loadDownloaderFile());
     // let promise = this.loadDownloaderFile();
     
     //
-    this.loadDownloaderFile()
+    return this.loadDownloaderFile()
         .then((json)=>{
-            this.infoOut("Parsing JSON File");
-            json = JSON.parse(json)
-            this.infoOut(json, 4);
+            this.infoOut2('Parsing json file from ' + this.options.downloaderFileLoc);
+            json = JSON.parse(json);
+            this.allOut(json);
 
             //Sync this instance
             if(json.options instanceof Object){
                 let opt = Object.assign({}, this.options.__proto__, this.options, json.options);
                 this.options = opt; 
-                this.infoOut(opt);
             }
             if(json.downloads){
-                
+                this.infoOut2('Updating downloaded data structures from loaded json file.');
+
+                for(let downloadUrlHash in json.downloads){
+                    let download = Download.prototype.createFromJSON(json.downloads[downloadUrlHash]);
+                    this.downloads.push(download); 
+                    this.urlsMap.set(downloadUrlHash, download); 
+                }
+
+                this.readyToDownload = true; 
+            }
+            else{
+                this.errorOut('No Downloads found in JSON file'); 
             }
 
         })
         .catch(err => this.errorOut(err));
 
-    //Update Options 
-
-
-    // Download.prototype.createFromJSON()
 }
 
 //Read and load the _downloader.json file
 Downloader.prototype.loadDownloaderFile = function(){
+    this.fileSystemIO++;
+
     let filename = this.options.downloaderFileLoc;
     this.fileSystemDebug(`Loading downloader JSON file from ${filename}.`);
 
-    // return fsp.readFile(filename);
-    return fsp.readFile(filename)
+    let promise = fsp.readFile(filename)
         .then((data)=>{
-            this.fileSystemDebug('JSON file finished reading')
-            // this.infoOut(JSON.parse(data), 5);
+            this.fileSystemIO--;
+            this.fileSystemDebug('JSON file finished reading');
             return data
         })
-        .catch((err) => this.errorOut(err));
+        .catch((err) => {
+            this.fileSystemIO--;
+            this.errorOut(err);
+        });
+
+    this.allPromises.set('loadDownloaderFile', promise); 
+
+    return promise; 
 }
 
+Downloader.prototype.createBackupDownloaderFile = function(){
+    return fsp.readFile(this.options.downloaderFileLoc)
+        .then((data) => {
+            let backupJSONFile = this.options.downloaderFileBackupDir + 'downloader-' + new Date().getTime() + '.bak.json';
+            fsp.writeFile(backupJSONFile, data)
+                .then(() => this.infoOut(`Backup JSON file saved to ${backupJSONFile}`))
+                .catch((err) => this.errorOut(`Write error ${err}`));
+        })
+        .catch(err => this.errorOut(`Read error ${err}`));
+}
 
+//Could be done much better 
+Downloader.prototype.writeDownloaderFile = function(last = false){
+    this.fileSystemIO++;
 
-//Write to the downloader json file
-Downloader.prototype.writeDownloaderFile = function(){
+    //Only perform the last write
     let filename = this.options.downloaderFileLoc;
     this.fileSystemDebug(`Writing downloader JSON File to ${filename}.`);
 
     let json = {
+        last_updated: new Date(),
         options: Object.assign({}, this.options.__proto__, this.options),
         downloads: {}
     };
@@ -229,15 +316,25 @@ Downloader.prototype.writeDownloaderFile = function(){
         json.downloads[md5(download.url)] = download;
     }
 
-    return fsp.writeFile(filename, JSON.stringify(json, null, 2))
+    let content = JSON.stringify(json, null, 2);
+
+    let promise = fsp.writeFile(filename, content)
+        .then(() => this.fileSystemIO--)
         .then(() => this.fileSystemDebug('JSON file finished writing'))
-        .catch(err => this.errorOut(err));
+        .then(() => {if(!last) this.checkIfFinished();})
+        .then(() => {if(last) this.infoOut('Wrote downloader JSON for the last time.');})
+        .catch(err => {
+                this.fileSystemIO--;
+                this.errorOut(err);
+            }
+        );
+
+    this.allPromises.set('writingDownloaderFile', promise);
+    return promise; 
 }
 
 //Generate all of the downloads objects
 Downloader.prototype.createDownloads = function(urls){
-    this.downloads = [];
-
     for(let url of urls){
         this.addPage(url, {updateJSON: false}); 
     }
@@ -245,9 +342,11 @@ Downloader.prototype.createDownloads = function(urls){
 
 //Update the download file and add additional meta data
 Downloader.prototype.finish = function(properties = {}){
+    this.infoOut('Finished Tasks');
+    this.downloadingInProgress = false;
     properties = Object.assign({}, properties);
-
     this.finishHook(properties);
+    this.writeDownloaderFile(true); 
 }
 
 
@@ -255,20 +354,44 @@ Downloader.prototype.finish = function(properties = {}){
 //What to do with the downloaded file
 Downloader.prototype.downloadedHandler = function(status, download, filecontents = '', writeToFile = true){
     download.finish(status);
-    if(status == true){ 
+    if(status === true){ 
         let meta = {};
         meta.contentsHashMD5 = md5(filecontents); 
         
         if(writeToFile === true){
-            meta.fileLocation = 'location/of/file'; //Not sure what to do here
+            //Use the md5 hash to see if the file has changed otherwise don't write
+            if(download.contentsHashMD5 === meta.contentsHashMD5){
+                this.infoOut(`Equal MD5 hash for ${download.url}. No need to write the contents of the file.`);
+                return download;   
+            }
+
+            let dir = this.options.downloadsDestination;
+            meta.fileLocation = dir + download.url.replace(/[^a-z0-9]|http|https|com|www/gi, '') + '-' + meta.contentsHashMD5;
+
+            this.fileSystemDebug(`START Writing of ${meta.fileLocation}`);
+            let promise = fsp.writeFile(meta.fileLocation, filecontents)
+                .then(() => this.fileSystemIO--)
+                .then(() => this.fileSystemDebug(`DONE Write of ${meta.fileLocation}`))
+                .then(() => {
+                    download.addProps({writtenToFile: true});
+                    this.writeDownloaderFile();
+                    // this.debugOut(download);
+                })
+                .then(() => this.checkIfFinished())
+                .catch(err => {
+                    this.fileSystemIO--
+                    this.errorOut(err);
+                });
+
+            this.fileSystemIO++;
+            this.allPromises.set('writing-page-' + meta.fileLocation, promise); 
         }
 
         download.addProps(meta);
     }
 
     download = this.downloadedHandlerHook(status, download, filecontents);   //Hook in to do more tasks 
-    this.debugOut(download);
-
+    this.checkIfFinished(); 
     return download; 
 }
 
@@ -276,31 +399,59 @@ Downloader.prototype.downloadedHandler = function(status, download, filecontents
 
 //Determines if we should kick off a request for this Download
 Downloader.prototype.shouldDownload = function(download){
-    if(download.isDownloaded() || download.isDownloading()){
+    if(download.isDownloading()){
+        this.infoOut(`The file ${download.url} is in the process of being downloaded.`);
         return false; 
     }
-    else{
-        if(this.concurrentRequests >= this.options.maxConcurrentRequests){
-            this.downloaderDebug('MAX REQUESTS - Max requests achieved. Will try again.')
 
-            let downloadLater = this.startDownload.bind(this, download);
-            this.downloadQueue.add(download.url, downloadLater);
-            return false; 
-        }
-        return true; 
+    if(download.isDownloaded()){
+        this.infoOut(`The file ${download.url} is already downloaded.`);
+        if(this.options.update === false) return false; 
+        else this.infoOut(`Redownloading the file ${download.url}.`);
     }
+
+    if(this.concurrentRequests >= this.options.maxConcurrentRequests){
+        this.networkDebugger(`Max requests (${this.concurrentRequests} / ${this.options.maxConcurrentRequests}) achieved. Will try again.`, 3, {prefix: '[NETWORK - MAX REQUESTS] '});
+        let downloadLater = this.startDownload.bind(this, download);
+        this.downloadQueue.add(download.url, downloadLater);
+        return false; 
+    }
+    return true; 
+    
 }
+
+//Determine if there is anything left 
+Downloader.prototype.checkIfFinished = function(){
+    this.finishedDebugger(this.allPromises);
+    this.finishedDebugger(this.fileSystemIO);
+    this.finishedDebugger(this.downloadsFinished);
+
+    if(this.downloadQueue) {
+        if (this.downloadQueue.names.length > 0) return false;
+    }
+
+    if(this.fileSystemIO > 0) return false;
+    if(this.downloadsFinished < this.downloads.length) return false;
+
+    this.finish();
+}
+
 
 //Debuggers
 Downloader.prototype.alwaysOut = Debug.prototype.levelCreator(3, 0,{always: true, colorOverride: 'cyan', prefix: '[GENERAL] '});
 Downloader.prototype.debugOut = Debug.prototype.levelCreator(3, 1,{});
 Downloader.prototype.infoOut = Debug.prototype.levelCreator(3, 2,{});
-Downloader.prototype.allOut = Debug.prototype.levelCreator(3, 3,{});
+Downloader.prototype.infoOut2 = Debug.prototype.levelCreator(3, 4,{prefix: '[INFO] ', color: 'cyan'});
+Downloader.prototype.allOut = Debug.prototype.levelCreator(3, 4,{});
 Downloader.prototype.errorOut = Debug.prototype.levelCreator(3, 1,{error: true, prefix: '[ERROR] ', always: true, colorPrefixOnly: false});
 
-Downloader.prototype.fileSystemDebug = Debug.prototype.levelCreator(3, 2,{prefix: '[FILESYSTEM] ', colorOverride: 'cyan'});
-Downloader.prototype.downloaderDebug = Debug.prototype.levelCreator(3, 1,{prefix: '[DOWNLOADER] '});
-Debug.prototype.updateLevel(3); //DEBUG LEVEL
+Downloader.prototype.fileSystemDebug = Debug.prototype.levelCreator(3, 4,{prefix: '[FILESYSTEM] ', colorOverride: 'cyan'});
+Downloader.prototype.downloaderDebug = Debug.prototype.levelCreator(3, 4,{prefix: '[DOWNLOADER] '});
+Downloader.prototype.promisesDebug = Debug.prototype.levelCreator(3, 2,{prefix: '[PROMISES] '});
+Downloader.prototype.finishedDebugger = Debug.prototype.levelCreator(3, 4,{prefix: '[CHECK IF FINISHED] ', colorOverride: 'magenta'});
+Downloader.prototype.networkDebugger = Debug.prototype.levelCreator(3, 3,{prefix: '[NETWORK] ', colorOverride: 'magenta'});
+
+Debug.prototype.updateLevel(3); 
 
 
 
@@ -322,6 +473,8 @@ Object.defineProperty(Downloader.prototype, "request", {
     }
 });
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Hooks
@@ -334,8 +487,8 @@ Downloader.prototype.downloadedHandlerHook = function(status, download, filecont
     return download; 
 }
 
-Downloader.prototype.finishHook = function(options){
-    return download; 
+Downloader.prototype.finishHook = function(){
+     
 }
 
 
@@ -358,37 +511,44 @@ Downloader.prototype.finishHook = function(options){
 |
 */
 
+// let downloader = new Downloader(
+//     ['https://www.google.com/', 
+//     'https://www.google.com/', 
+//     'http://www.baseball-reference.com/route.cgi?player=1&mlb_ID=623406',  
+//     'http://motherfuckingwebsite.com/'], 
+//     {
+//         downloaderFileLoc: './data/baseballref/urls.json',
+//         downloadsDestination: './data/baseballref/pages/',
+//         debugLevel: 2,
+//         useTor: false, 
+//         maxConcurrentRequests: 1
+//     }
+// );
+
 let downloader = new Downloader(
-    ['https://www.google.com/', 
-    'https://www.google.com/', 
-    'http://www.baseball-reference.com/route.cgi?player=1&mlb_ID=623406',  
-    'http://motherfuckingwebsite.com/'], 
+    './data/baseballref/urls.json', 
     {
+        downloaderFileDir: './data/baseballref/',
+        downloaderFileBackupDir: './data/baseballref/backups/',
         downloaderFileLoc: './data/baseballref/urls.json',
         downloadsDestination: './data/baseballref/pages/',
-        debugLevel: 2,
-        useTor: false, 
-        maxConcurrentRequests: 1
+        useTor: true, 
+        maxConcurrentRequests: 50
     }
 );
 
-// downloader.parseDownloaderFile('')
 
-downloader.startDownloading();
-// downloader.loadDownloaderFile();
-// 
-// 
+//Essentially have the producer and consumer problem here
 
-// let downloadJSON = {"downloaded": true,
-//       "downloading": false,
-//       "url": "https://www.google.com/",
-//       "attempts": 1,
-//       "startedAt": "2016-02-15T10:25:00.049Z",
-//       "completedAt": "2016-02-15T10:25:00.341Z",
-//       "contentsHashMD5": "a1eee6fc1000797bc18ba4b85cfb2aaa",
-//       "fileLocation": "location/of/file"};
-
-// let downloadFromJson = Download.prototype.createFromJSON(downloadJSON);
+downloader.readyToDownloadPromise.then(() => downloader.startDownloading({update: true}));
+// downloader.readyToDownloadPromise.then(() => downloader.clean());
 
 
-module.exports = Downloader;
+let newUrls = ['https://simplebac.com/', 'https://amazon.com'];
+downloader.finishHook = function(){
+   if(newUrls.length) downloader.addPage(newUrls.pop());
+};
+
+
+
+module.exports = Downloader; 
