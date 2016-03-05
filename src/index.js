@@ -17,8 +17,12 @@ function init(){
 
 
 function computeSimiliarities(){
-    let iter = playersMap.values();
-    let player = iter.next().value;
+    let pitchers = playerFactory.getPitchers(); 
+    let batters = playerFactory.getPositionPlayers(); 
+
+    console.log(playersMap.size, pitchers.size, batters.size);
+    // let iter = playersMap.values();
+    // let player = iter.next().value;
     // console.log(player);
     // player.updateJSONFile();
     

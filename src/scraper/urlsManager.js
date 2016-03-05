@@ -1,3 +1,0 @@
-/**
- * Manage the URLs File
- */

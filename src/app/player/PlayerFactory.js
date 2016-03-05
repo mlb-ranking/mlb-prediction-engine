@@ -60,18 +60,24 @@ PlayerFactory.prototype.getJSONFiles = function(update = false, dir = this.jsonP
     return this.jsonPlayersFiles; 
 };
 
-// PlayerFactory.prototype.getPitchers = function(dir){
-//     return this.players.filter((player) => {
-//         if (player.position == 'pitcher') return true; 
-//     });
-// };
+PlayerFactory.prototype.getPitchers = function(){
+    let pitchers = new Map(); 
+    for(let player of this.playersMap){
+        
+        if (player.type == 'pitcher') pitchers.set(player.id, player); 
+        console.log(player);
+    }
+    return pitchers;
+};
 
 
-// PlayerFactory.prototype.getPositionPlayers = function(dir){
-//     return this.players.filter((player) => {
-//         if (player.position == 'position') return true; 
-//     });
-// };
+PlayerFactory.prototype.getPositionPlayers = function(){
+    let positionPlayers = new Map(); 
+    for(let player of this.playersMap){
+        if (player.type == 'position') positionPlayers.set(player.id, player); 
+    }
+    return positionPlayers;
+};
 
 
 

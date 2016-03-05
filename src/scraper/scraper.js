@@ -1,14 +1,10 @@
 // src/scraper.js
 
 // Imports
-import torRequest from 'torrequest';
 import cheerio from 'cheerio';
 import fs from 'fs'; 
 import fsp from 'fs-promise'; 
 
-//Constants
-const TOR_HOST      = "localhost"; 
-const TOR_PORT      = 9050;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,24 +22,7 @@ const TOR_PORT      = 9050;
  * @return {[type]}            [description]
  */
 function scrape(url, callback) {
-    console.log(`[SCRAPER START] Scraping the url: ${url}`); 
-
-    let options = {
-        url: url,
-        torHost: TOR_HOST,
-        torPort: TOR_PORT
-    };  
-
-    torRequest(options, (err, response, html) => {
-        if(!err) {
-            let $ = cheerio.load(html);
-            callback($);
-            console.log(`[SCRAPER FINISH] Finished scraping the url: ${url}`); 
-        }
-        else{
-            console.log(err); 
-        }
-    });
+   
 }
 
 
