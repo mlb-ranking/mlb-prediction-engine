@@ -159,17 +159,20 @@ function downloadPlayers(updateURLs = false, changedImport = false){
 function scrapePlayers(urlsFileLoc = URLS_JSON_FILE_LOC){
     setup(urlsFileLoc)
         .then(() => {
-            for(let i=0; i < urlsJSONFile.urls.length; i++){
+            let max = 2; //urlsJSONFile.urls.length
+            max = urlsJSONFile.urls.length;
+            for(let i=0; i < max; i++){
                 let urlObj = urlsJSONFile.urls[i];
-                if(urlObj.isScrapped !== true){
+                if(true){
                     scrapePlayer(urlObj,i)
                         .then(player => {
-                            writePlayerJSON(player)
+                            writePlayerJSON(player);
                         })
                         .then(() => {
                             urlObj.isScrapped = true; 
                             urlsJSONFile.urls[i] = urlObj; 
                             writeURLSJSONFile(); 
+                            urlObj = null; 
                         })
                         .catch((err)=>{
                             console.log(`[SCRAPPER - ERROR] Error at player at index ${i}`);
@@ -197,26 +200,78 @@ function scrapePlayer(urlObj, i){
     return new Promise((resolve, reject) => {
         scrape.localScrape(urlObj.fileLocation, ($) => {
                 let player = {};
-                player.jsonLocation = PLAYER_JSON_DIR + '/' + urlObj.url.replace('/', '') + '.json';
-                player.bio = getBioInfoPlayerPage($); 
+                player.bio = {};
                 player.stats = {};
+
+                //Metadata
+                player.jsonLocation = PLAYER_JSON_DIR + '/' + urlObj.url.replace('/', '') + '.json';
                 player.source = urlObj; 
 
+                //Bio Information 
+                player.bio = getBioInfoPlayerPage($); 
+                player.stats.standardFielding = getStatsFromTable($, $('#standard_fielding'));
+                player.bio.team = player.stats.standardFielding[player.stats.standardFielding.length-1].Tm;
+                
+                //Stats 
                 if(player.bio.position == 'pitcher'){
                     player.stats.standardPitching = getStatsFromTable($, $('#pitching_standard')); 
+                    player.stats.postSeasonPitching = getStatsFromTable($, $('#pitching_postseason')); 
                 }
                 else if(player.bio.position == 'position'){
                     player.stats.standardBatting = getStatsFromTable($, $('#batting_standard'));
+                    player.stats.postSeasonBatting = getStatsFromTable($, $('#batting_postseason'));
                     player.stats.battingValue = getStatsFromTable($, $('#batting_value'));
                 }
-                player.stats.standardFielding = getStatsFromTable($, $('#standard_fielding'));
+
+                //Contact Information
+                player.bio.contract = getStatsFromTable($, $('#salaries'));
+
+                //Awards and Leaderboards Information 
+                
 
                 playersScrapped++;
-                resolve(player);
-                reject("[SCRAPPER - ERROR] Failed scrapping a player");
                 console.log(`[SCRAPPER - SUCCESS] Player ${player.bio.name} scrapped at index ${i} (${playersScrapped} of ${totalPlayers}).`);
+                resolve(player);
         });
     });
+}
+
+/**
+ * Get the bio info for this player
+ * @param  {[type]} cheerio [description]
+ * @return {[type]}         [description]
+ */
+function getBioInfoPlayerPage(cheerio){
+    const INFO_ID = "#info_box";
+    let bio = {};
+    let info = cheerio(INFO_ID);
+    
+    bio.position = info.find('[itemprop="role"]').text().toLowerCase();
+    if(bio.position !== 'pitcher') bio.position = 'position'; 
+
+    //Basic Bio Information 
+    let paragraphs = cheerio('#info_box p').text().toLowerCase();
+    bio.name = info.find('#player_name').text();
+    bio.birth = new Date(cheerio('#necro-birth').attr('data-birth')).toDateString(); 
+    bio.age = (new Date() - new Date(bio.birth)) / (31536000 * 1000); 
+    bio.height = paragraphs.substr(paragraphs.indexOf('height:') + 7, 10).replace(/([a-z])|(\.)|(\s)|(,)/g, '');
+    bio.weight = Number(paragraphs.substr(paragraphs.indexOf('weight:') + 7, 10).replace(/([a-z])|(\.)/g, ''));
+    bio.throws = paragraphs.includes('throws: right') ? 'right' : 'left';;
+    bio.bats = paragraphs.includes('bats: right') ? 'right' : 'left'; 
+
+    if(paragraphs.indexOf('debut:') !== -1){
+        bio.debut = paragraphs.substr(paragraphs.indexOf('debut:') + 7, paragraphs.substr(paragraphs.indexOf('debut:') + 7, 100).indexOf('(age') - 1);
+        bio.debut = new Date(bio.debut).toDateString();
+        bio.debutAge = (new Date(bio.debut) - new Date(bio.birth)) / (31536000 * 1000);
+    }
+
+    //Contract Information 
+    bio.contract = {}; 
+
+    //Social Media Information 
+    bio.twitter = '';
+
+    return bio; 
 }
 
 /**
@@ -390,11 +445,10 @@ function getStatsFromTable(cheerio, cheerioTable, filters){
     let statIndex = createStatIndex(cheerio, cheerioTable); 
 
     //Iterate over all of the rows that contain the stats 
-    cheerioTable.find('tbody tr').each(function(index, element){
+    cheerioTable.find('tr').each(function(index, element){
         let statRow = cheerio(element).children(); 
-
         //Ignore rows without a year
-        if(statRow.eq(0).text().length === 4){
+        if(statRow.eq(0).text().length === 4 && !statRow.eq(0).text().includes('Year')){
             let stat = {};
             statRow.each(function(statRowIndex, statValue){
                 if(cheerio(statValue).text().length > 0){
@@ -407,36 +461,7 @@ function getStatsFromTable(cheerio, cheerioTable, filters){
     return stats; 
 }
 
-/**
- * Get the bio info for this player
- * @param  {[type]} cheerio [description]
- * @return {[type]}         [description]
- */
-function getBioInfoPlayerPage(cheerio){
-    const INFO_ID = "#info_box";
-    let bio = {};
-    let info = cheerio(INFO_ID);
-    
-    bio.position = info.find('[itemprop="role"]').text().toLowerCase();
-    if(bio.position !== 'pitcher') bio.position = 'position'; 
 
-    bio.name = info.find('#player_name').text();
-    
-    //Add more stats here
-    // bio.currentTeam = "Braves"; 
-    // bio.bats = "Batting Position"; 
-    // bio.throws = "R"; 
-    // bio.height = "XXXX"; 
-    // bio.weight = 220; //Weight in pounds
-    // bio.birth = "DATE";
-    // bio.debut = "DATE"; 
-    // bio.highschool = "SOMETHING"; 
-    // bio.twitter = "";
-
-
-
-    return bio; 
-}
 
 /**
  * Get the contract information for this player
@@ -449,6 +474,7 @@ function getContractInfo(cheerio){
     contract.agent = "BOB"; 
     contract.status = "Contact Status";
 
+    return contract; 
 }
 
 /**
@@ -461,7 +487,16 @@ function normalizeValue(value){
         return value; 
     }
     else{
-        return Number(value); 
+        if(value.includes('$')){
+            value = value.replace('$', '').replace(/\,/g, '');
+        }
+        
+        if(!isNaN(Number(value))){
+            return Number(value);
+        }
+        else{
+            return value; 
+        }
     }
 }
 
@@ -480,7 +515,11 @@ function writeURLSJSONFile(){
  * @return {[type]}        [description]
  */
 function writePlayerJSON(player){
-    fs.writeFile(player.jsonLocation, JSON.stringify(player, null, 2), err => {if (err) throw err;});
+    fs.writeFile(player.jsonLocation, JSON.stringify(player, null, 2), 
+        err => {
+            player = null; 
+            if (err) throw err;
+        });
 }
 
 /**

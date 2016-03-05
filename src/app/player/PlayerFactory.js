@@ -12,32 +12,27 @@
 
 //Player Types
 import Player from './Player.js'; 
-import BaseballReferencePlayer from './BaseballReferencePlayer';
+// import BaseballReferencePlayer from './BaseballReferencePlayer';
 
 import fsp from 'fs-promise'; 
 
 //Factory Function 
-function PlayerFactory(options = {}){
-    this.options = options;
-    this.players = [];             //References to all of the players created
-    this.playerPromises = [];      //References to all of the player is ready promises
-
-    if(options.jsonDir) this.jsonDir = options.jsonDir; 
-    if(options.source) this.source = options.source; 
+function PlayerFactory(jsonDir, source = Player){
+    this.players = new Set();               // Set of all of the players
+    this.source = source;                   // What types of players this factory is going to create
+    this.jsonPlayersDir = jsonDir;          // Directory of files
+    this.jsonPlayersFiles = [];             // JSON Files of players 
+    this.getJSONFiles();
 }
 
 /*
 |--------------------------------------------------------------------------
 | Properties
-|--------------------------------------------------------------------------
-|  - source: location of the data
-|  - jsonDir: location of the data
-|  - jsonFiles: location of the data
+|-------------------------------------------------------------------------- 
+| 
 |
 */
-PlayerFactory.prototype.source      = BaseballReferencePlayer;
-PlayerFactory.prototype.jsonDir     = false;    //Location of the JSON files
-PlayerFactory.prototype.jsonFiles   = [];       //All file names 
+
 
 
 /*
@@ -55,22 +50,26 @@ PlayerFactory.prototype.jsonFiles   = [];       //All file names
  * @param  {[type]} dir [description]
  * @return Promise
  */
-PlayerFactory.prototype.getJSONFiles = function(dir = this.jsonDir){
-    return fsp.readdirSync(dir);
+PlayerFactory.prototype.getJSONFiles = function(update = false, dir = this.jsonPlayersDir){
+    if(this.jsonPlayersFiles.length === 0 || update){
+        this.jsonPlayersFiles = fsp.readdirSync(dir).filter((file) => {if(file.includes('.json')) return true});
+    }
+    
+    return this.jsonPlayersFiles; 
 };
 
-PlayerFactory.prototype.getPitchers = function(dir){
-    return this.players.filter((player) => {
-        if (player.position == 'pitcher') return true; 
-    });
-};
+// PlayerFactory.prototype.getPitchers = function(dir){
+//     return this.players.filter((player) => {
+//         if (player.position == 'pitcher') return true; 
+//     });
+// };
 
 
-PlayerFactory.prototype.getPosition = function(dir){
-    return this.players.filter((player) => {
-        if (player.position == 'position') return true; 
-    });
-};
+// PlayerFactory.prototype.getPositionPlayers = function(dir){
+//     return this.players.filter((player) => {
+//         if (player.position == 'position') return true; 
+//     });
+// };
 
 
 
@@ -92,38 +91,31 @@ PlayerFactory.prototype.getPosition = function(dir){
  * @param  {Object} data player reprsented by a JSON object
  * @return Player
  */
-PlayerFactory.prototype.createPlayer = function(options){
-
-    //Choose which player type to generate
-    switch((options.source) ? options.source : this.source){
-        case "baseballreference":
-            this.creator = BaseballReferencePlayer;
-            break;
-        case "other":
-            this.creator = OtherPlayer;
-            break;
-    }
-    
-    let player = new this.creator(options);
-    this.players.push(player); 
-    this.playerPromises.push(player.readyPromise);
+PlayerFactory.prototype.createPlayer = function(jsonContents){
+    let player = new this.source(jsonContents);
+    this.players.add(player); 
     return player; 
 };
 
 /**
  * Using the source and files properties create all of the players 
  * 
- * @return {[type]} [description]
+ * @return {Promise} When all of the promises are finished
  */
 PlayerFactory.prototype.createPlayers = function(){
+    let promises = [];
+
     for(let file of this.getJSONFiles()){
-        if(file.includes('.json')){
-            let player = this.createPlayer({filename: `${this.jsonDir}${file}`});
-             
-        }
+        let promise = fsp.readFile(this.jsonPlayersDir + file)
+            .then((contents) => {
+                let jsonContents = JSON.parse(contents);
+                this.createPlayer(jsonContents);
+            })
+            .catch(console.log);
+        promises.push(promise); 
     }
 
-    return this.players; 
+    return Promise.all(promises); 
 }
 
 
@@ -134,25 +126,5 @@ PlayerFactory.prototype.createPlayers = function(){
 |   
 |
 */
-
-// try{
-//     //Testing
-//     let BaseBallReferenceFactory = new PlayerFactory({source: 'baseballreference', jsonDir: 'data/baseballref/json/'});    
-//     let allPlayers = BaseBallReferenceFactory.createPlayers(); 
-
-//     //Load Up all of the players
-//     Promise.all(BaseBallReferenceFactory.playerPromises)
-//         .then(
-//             () => {
-//                 console.log(allPlayers.length); 
-//             }
-//         )
-//         .catch((err) => console.log(err)); 
-
-
-// }
-// catch(err){
-//     console.log("ERRRO", err);
-// }
  
 module.exports = PlayerFactory;

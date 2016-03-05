@@ -1,37 +1,30 @@
 "use strict";
 
-import PlayerFactory from './PlayerFactory.js'; 
+// import PlayerFactory from './PlayerFactory.js'; 
 import fsp from 'fs-promise'; 
+import md5 from 'md5'; 
 
-function Player(){}
+function Player(json){
+    this.data = false;
 
-/*
-|--------------------------------------------------------------------------
-| Default Properties
-|--------------------------------------------------------------------------
-|
-*/
-Player.prototype.options = {};          //Config
-Player.prototype.data = false;          //False until loaded
-Player.prototype.isReady = false;       //False until loaded
-Player.prototype.readyPromise = null;   //False until loaded
-Player.prototype.optData = false;       //Optimized data structure for storing and accessing stats fast
-Player.prototype.uid = -1;              //Unique ID
-Player.prototype.name = '';             //Simple Name for easy debuggin
-Player.prototype.positon = '';          //player or position 
+    if(typeof json === 'object'){
+        this.jsonData = json;
+        this.filename = json.jsonLocation;
+        this.optimizeData();
+    }
+    else if(json.includes('.json')){
+        this.jsonData = json; 
+        //Read the file and add it to this player
+        
+    }
+    else{
+        this.filename = false;
+        this.jsonData = false;
+    } 
 
-/*
-|--------------------------------------------------------------------------
-| Methods to be defined
-|--------------------------------------------------------------------------
-|   - hasStats
-|   - hasYear
-|   - generateOptData
-|
-*/
-Player.prototype.hasStats = function(stats, year){throw new Error('Method hasStats not defined')}; 
-Player.prototype.hasYear = function(stats, year){throw new Error('Method hasYear not defined')}; 
-Player.prototype.generateOptData = function(){throw new Error('Method generateOptData not defined')}; 
+}
+
+Player.prototype.DEFAULT_YEAR = 2015;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,42 +41,38 @@ Player.prototype.generateOptData = function(){throw new Error('Method generateOp
  * 
  * @param  {string} statname [description]
  * @param  {integer} year     [description]
- * @return {mixed} 
+ * @return {mixed} Returns the stat for that year or false if not found
  */
-Player.prototype.getStat = function(statname, year){
-    if(this.ready()){   
-        statname = statname.toLowerCase(); 
-        return this.optData[year][statname]; 
-    }
-    return false; 
-}
+Player.prototype.getStat = function(statname, year = this.DEFAULT_YEAR){
+    if(!this.data) this.optimizeData();
+    statname = statname.toLowerCase(); 
+    let result = this.data[year][statname]; 
+    return result ? result : false; 
+};
 
 /**
  * Get a stat for this player for the supplied year
- * @param  {[type]} statname [description]
- * @param  {[type]} year     [description]
- * @return {[type]}          [description]
+ * @param  {Array} stats Array of stats
+ * @param  {Integer} year     year of the stats 
+ * @return {Array}          ex: getStatVector(['h', 'r', 'sb'], 2015) -> [5,32,13]
  */
-Player.prototype.getStatVector = function(stats, year){
-    if(this.ready()){ 
-        let vector = [];
-        for(let stat of stats){
-            let result = this.getStat(stat,year); 
+Player.prototype.createStatVector = function(stats, year = this.DEFAULT_YEAR){
+    if(!this.data) this.optimizeData(); 
 
-            if(result){
-                vector.push(this.getStat(stat, year));
-            }
-            else{
-                throw new Error(`Stat ${stat} not found in data for year ${year}`); 
-                return false; 
-            }
+    let vector = [];
+    for(let stat of stats){
+        let result = this.getStat(stat,year); 
+
+        if(result){
+            vector.push(result);
         }
-
-        return vector; 
+        else{
+            throw new Error(`Stat ${stat} not found in data for year ${year}`); 
+            return false; 
+        }
     }
-
-    return false; 
-}
+    return vector.length > 0 ? vector : false; 
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +81,26 @@ Player.prototype.getStatVector = function(stats, year){
 |   - getJSONFile
 |
 */
+Player.prototype.optimizeData = function(){
+    if(this.data) return this.data; 
+    this.data = true; 
+
+    let stats = {};
+    this.name = this.jsonData.bio.name;
+    this.type = this.jsonData.bio.position;
+
+    //Ability to create a download obj and redownload this player
+    this.download = this.jsonData.source;  
+
+    console.log(this.jsonData);
+    this.jsonData = 'optimized';
+    console.log(this);
+};
+
+
+Player.prototype.createUID = function(playerName, url){
+    return (playerName + '-' + md5(url)).toLowerCase().replace(' ', '-');
+};
 
 /**
  * Get the JSON file for this player. Set the readyPromise property on this 
@@ -99,40 +108,24 @@ Player.prototype.getStatVector = function(stats, year){
  * 
  * @param  {string} filename full filename for the JSON file
  */
-Player.prototype.getJSONFile = function(filename){
-    this.readyPromise = fsp.readFile(`${filename}`)
+Player.prototype.getJSONFile = function(filename = this.filename){
+    fsp.readFile(`${filename}`)
         .then((data) => {
             this.data =  JSON.parse(data);
-            this.isReady = true; 
-
-            this.generateOptData(); //Immediate generate opt datastructure 
-
-            //Setup Basic properites
-            this.name = this.data.bio.name;
-            this.position = this.data.bio.position;
-            this.uid = false; //TODO
+            // this.name = this.data.bio.name;
+            // this.position = this.data.bio.position;
+            // this.uid = false; //TODO
         })
         .catch((err) => { throw new Error(`Error reading JSON file ${filename}`) });
-}
-
-/**
- * Determine if this player is ready to be used. 
- * 
- * @return {boolean} 
- */
-Player.prototype.ready = function(){
-    if(this.optData === false) this.generateOptData();
-    
-    if(this.isReady && this.optData !== false){
-        return true; 
-    }
-    else{
-        if(!this.isReady) console.log("[LOADING JSON] File Not Ready");
-        else if(this.optData === false) this.generateOptData();
-        return false; 
-    }
-}
-
-
+};
 
 module.exports = Player;
+
+
+/*
+|--------------------------------------------------------------------------
+| Testing
+|--------------------------------------------------------------------------
+|   - getJSONFile
+|
+*/

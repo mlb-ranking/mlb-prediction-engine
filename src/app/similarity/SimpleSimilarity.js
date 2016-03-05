@@ -43,7 +43,7 @@ function init(){
 
     return Promise.all(BaseBallReferenceFactory.playerPromises)
         .then(()=>{
-            positionPlayers = BaseBallReferenceFactory.getPosition();
+            positionPlayers = BaseBallReferenceFactory.getPositionPlayers();
             pitchers = BaseBallReferenceFactory.getPitchers();
         })
 }

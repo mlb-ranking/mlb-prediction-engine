@@ -9,4 +9,4 @@ import baseballRefScrapper from './scraper/baseballReference';
 // baseballRefScrapper.downloadPlayers(); 
 // setInterval(function() { baseballRefScrapper.downloadPlayers(); }, 60000);
 
-baseballRefScrapper.scrapePlayers(); 
+baseballRefScrapper.scrapePlayers('data/baseballref/urls.json.latest.bak'); 
