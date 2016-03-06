@@ -1,12 +1,11 @@
 "use strict";
 
 
-function Vectors(headings = [], vectors = [], options = {}){
-    this.options = options;
+function Vectors(headings = [], vectors = []){
     this.addHeadings(headings); 
 
     for(let vector of vectors){
-        this.addVector(vector); 
+       this.addVector(vector); 
     }
 
 }
@@ -17,7 +16,6 @@ function Vectors(headings = [], vectors = [], options = {}){
 |--------------------------------------------------------------------------
 |
 */
-Vectors.prototype.options = {};              //Config
 Vectors.prototype.headings = [];           
 Vectors.prototype.vectors = [];           
 Vectors.prototype.vectorPairs = [];         
@@ -93,11 +91,6 @@ Vectors.prototype.isValid = function(){
         //All must be the same size 
     }
 }
-
-
-
-
-
 
 
 module.exports = Vectors;

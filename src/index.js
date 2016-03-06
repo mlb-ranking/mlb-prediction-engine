@@ -40,7 +40,13 @@ function getSimilarPlayers(playerID){
 
 
 
+const name = 'john';
 
+for (let i = 0; i < name.length; ++i) {
+    console.log(i, name[i]);
+}
 
-init()
-    .then(computeSimiliarities)
+for (let i = 0; i < name.length; i++) {
+    console.log(i, name[i]);
+}
+
