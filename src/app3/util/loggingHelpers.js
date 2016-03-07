@@ -1,9 +1,8 @@
 "use strict";
 
-//Convert to single module
-
 import util from 'util'; 
 import chalk from 'chalk'; 
+import singleLog from 'single-line-log';
 
 let _showHidden = true; 
 let _depth = null; 
@@ -46,6 +45,15 @@ const error = function(){
     }
 }
 
+const staticLog = function(obj){
+    let argArray = [];
+    for(let arg of arguments){
+        argArray.push(inspect(arg));
+    }
+    argArray.push('\n');
+    singleLog.stdout.apply(null, argArray);
+}
+
 const setShallow = function(depth = 2){
     _showHidden = false;
     _depth = 2;
@@ -62,5 +70,6 @@ module.exports = {
     log, 
     error,
     setShallow,
-    setDeep
+    setDeep,
+    staticLog
 };
