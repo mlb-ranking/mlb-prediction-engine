@@ -15,7 +15,7 @@ const PlayerSchema = new Schema({
     bats: {type: String},
     throws: {type: String}, 
     age: {type: Number},
-    yearlyStats: {type: Array},
+    _yearlyStats: {type: Array, ref: 'Statistic'},
     _contact: { type: Schema.Types.ObjectId, ref: 'Contact' }
     // _json: { type: Schema.Types.ObjectId, ref: 'JSON' },
     // _yearStats: {type: Array, ref: 'Statistic'}

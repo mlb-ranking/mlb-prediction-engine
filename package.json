@@ -7,10 +7,7 @@
     "build": "babel src -d lib --source-maps",
     "lint": "eslint src",
     "index": "npm run build && echo ' ' && node lib/index.js",
-    "player": "npm run build && echo ' ' && node lib/app/player/Player.js",
-    "scrapeRef": "npm run build && echo ' ' && node lib/downloadSampleData.js",
-    "playerFactory": "npm run build && echo ' ' && node lib/app/player/PlayerFactory.js",
-    "brplayer": "npm run build && echo ' ' && node lib/app/player/BaseballReferencePlayer.js"
+    "app": "npm run build && echo ' ' && node lib/app/index.js"
   },
   "repository": {
     "type": "git",
