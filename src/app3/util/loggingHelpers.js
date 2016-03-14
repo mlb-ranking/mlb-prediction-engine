@@ -70,6 +70,9 @@ module.exports = {
     log, 
     error,
     setShallow,
-    setDeep,
+    options: {
+        setShallow, 
+        setDeep
+    },
     staticLog
 };

@@ -1,7 +1,8 @@
 "use strict";
 
-import {log, trace, error, setShallow, setDeep} from './../util/loggingHelpers';
+import {log, trace, error} from './../util/loggingHelpers';
 import {mongoose, Schema} from './../util/mongoose';
+import StatisticModel from './Statistic.js';
 
 const PlayerSchema = new Schema({
     name:{ type: String, required: true },
@@ -14,9 +15,12 @@ const PlayerSchema = new Schema({
     bats: {type: String},
     throws: {type: String}, 
     age: {type: Number},
-    _contact: { type: Schema.Types.ObjectId, ref: 'Contact' },
-    _json: { type: Schema.Types.ObjectId, ref: 'JSON' },
-    _stats: {type: Array, ref: 'Statistic'}
+    yearlyStats: {type: Array},
+    _contact: { type: Schema.Types.ObjectId, ref: 'Contact' }
+    // _json: { type: Schema.Types.ObjectId, ref: 'JSON' },
+    // _yearStats: {type: Array, ref: 'Statistic'}
+    // _avgStats: {type: Array, ref: 'Statistic'}
+    // _similaritie: {type: Array, ref: 'Statistic'}
 });
 
 PlayerSchema.methods.getSimilarPlayers = function(){

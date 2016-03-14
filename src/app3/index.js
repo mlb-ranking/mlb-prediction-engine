@@ -2,7 +2,7 @@
 
 import SourceMap from './util/sourceMap';
 import constants from './util/constants'; 
-import {log, trace, error, setShallow, setDeep, staticLog} from './util/loggingHelpers';
+import {log, trace, error, staticLog} from './util/loggingHelpers';
 import fsp from 'fs-promise'; 
 
 import {mongoose} from './util/mongoose';
@@ -17,13 +17,13 @@ let connection = new Promise((resolve, reject) => {
     });
 }).catch(trace); 
 
-let mongoPromises = [];
+let mongoPromises = []
 
 connection
     .then(() => getFiles('./data/baseballref/json/'))
     .then((files) => parseFiles(files))
     .then(() => Promise.all(mongoPromises))
-    .then(() => mongoose.disconnect()) 
+    .then(() => {log('Closing Connection'); mongoose.disconnect();}) 
     .catch(trace);
 
 
@@ -37,12 +37,15 @@ function getFiles(dir){
 
 function parseFiles(files){
   let promises = [];
+  let one = true; 
+
   for(let file of files){
-    if(file.includes('.json')){
+    if(file.includes('.json') && one){
+      one = false;
       let promise = parseJSON(file)
         .then(json => {
              createPlayer(json)
-              .then((player) => createStats(json, player)); 
+                .then((player) => addStats(player, json)); 
         })
         .catch(trace);
 
@@ -64,19 +67,35 @@ function createPlayer(json){
     player.key = json.id || json.jsonLocation; 
     player.team = json.team || json.bio.team;
     player.type = json.type || json.bio.position;
-    mongoPromises.push(player.save().catch(trace));
-
-    return Promise.resolve(player.id); 
+    player.weight = json.bio.weight; 
+    return Promise.resolve(player); 
 }
 
-function createStats(json, player){
-   
-  return Promise.resolve(); 
+function addStats(player, json){
+  let stdPitching = json.stats.standardPitching;
+  player.yearlyStats = [];
+
+  for(let yearStats of stdPitching){
+    let year = yearStats['Year'];
+    delete yearStats['Year'];
+    let group = 'std-pitching'; 
+
+    for(let statKey in yearStats){
+      let stat = new StatisticModel(); 
+      stat.name = statKey;
+      stat.value = yearStats[statKey];
+      stat.group = group;
+      stat.year = year;
+      stat._player = player.id;
+      player.yearlyStats.push(stat);      
+    }
+  }
+
+  return promise = player.save()
+    .then(()=>log('saved'))
+    .catch(trace); 
 }
 
-function createStat(){
-
-}
 
 
 
