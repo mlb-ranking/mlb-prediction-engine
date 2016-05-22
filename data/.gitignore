@@ -8,3 +8,4 @@ baseballref/results/*
 !baseballref/results/.gitkeep
 urls.json.bak*
 backups/
+/json/*
