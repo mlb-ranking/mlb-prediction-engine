@@ -9,7 +9,7 @@ const StatisticSchema = new Schema({
     name:    {type: String, required: true, lowercase: true },
     value:   { type: Schema.Types.Mixed, required: true, lowercase: true },
     group:   { type: String, lowercase: true  }, 
-    year:    { type: Number}
+    year:    { type: Number},
     _player: { type: Schema.ObjectId, ref: 'Player' }
 });
 
