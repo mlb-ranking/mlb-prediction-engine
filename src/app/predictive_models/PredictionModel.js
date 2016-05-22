@@ -1,0 +1,6 @@
+/**
+ * Base Class
+ */
+class PredictionModel{
+  
+}
