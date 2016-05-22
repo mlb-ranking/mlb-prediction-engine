@@ -67,15 +67,32 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   sudo apt-get update
+  #   curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+  #   sudo apt-get --yes install nodejs
+  #   sudo apt-get --yes install build-essential
+  #   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA3129274
+  #   echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+  #   sudo apt-get update
+  #   sudo apt-get install -y mongo
+  #   sudo npm install -g express
+  # SHELL
+
   config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+    echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     sudo apt-get update
-    curl -sL https://deb.nodesource.com/setup | sudo bash -
     sudo apt-get --yes install nodejs
     sudo apt-get --yes install build-essential
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA3129274
-    echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
-    sudo apt-get update
-    sudo apt-get install -y mongo
-  #   sudo apt-get install -y apache2
+    sudo apt-get install -y mongodb-org
+    sudo npm install -g express
+    sudo npm install -g gulp-cli
+    sudo npm install -g bower
+    sudo service mongod start
   SHELL
+
 end
+
+
