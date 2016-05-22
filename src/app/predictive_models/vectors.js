@@ -48,4 +48,8 @@ export class Vector{
   get length(){
     return this.value.length; 
   }
+
+  get(index){
+    return this.value[index];
+  }
 }
