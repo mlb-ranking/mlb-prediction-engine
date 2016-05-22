@@ -30,7 +30,7 @@ function getAllIds(){
 export function getIds(){
   return new Promise((res, rej) => {
     getAllIds()
-      .then((ids) = res(ids))
+      .then((ids) => res(ids))
       .catch(rej); 
   });
 }

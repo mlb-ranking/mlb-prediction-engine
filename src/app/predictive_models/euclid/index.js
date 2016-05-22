@@ -1,8 +1,9 @@
 "use strict";
 
+import {getIds} from './../index';
 import {Vectors, Vector} from './../vectors';
 
-class EuclidDistance{
+class EuclidPair{
   constructor(v1, v2){
     if(v1.length !== v2.length){
       throw new Error('Must be the same length'); 
@@ -31,18 +32,11 @@ class EuclidDistance{
     this.computed = Math.sqrt(innerSum);
     return this.computed;
   }
-
 }
 
 
-
-
-/**
- * Compute all of the pairs from a list of ids
- * @return {[type]} [description]
- */
-function computeAllFromIds(ids){
-  
+export function computeFromIDs(ids, updateDB = false){
+  console.log(ids); 
 }
 
 
@@ -51,10 +45,14 @@ function computeAllFromIds(ids){
 
 
 /**************************** TESTING ****************************/
-let v1 = new Vector([1,2,5]);
-let v2 = new Vector([3,3,6]);
+getIds()
+  .then((ids) => computeFromIDs(ids))
+  .catch(console.log); 
 
-let euc = new EuclidDistance(v1, v2);
-console.log(euc);
-console.log(euc.distance);
-console.log(euc.similarity);
+// let v1 = new Vector([1,2,5]);
+// let v2 = new Vector([3,3,6]);
+
+// let euc = new EuclidPair(v1, v2);
+// console.log(euc);
+// console.log(euc.distance);
+// console.log(euc.similarity);
