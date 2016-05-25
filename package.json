@@ -11,7 +11,8 @@
     "buildb": "npm run build && echo ' ' && node lib/app/util/buildDB.js",
     "jaccard": "npm run build && echo ' ' && node lib/app/predictive_models/jaccard/index.js",
     "prediction": "npm run build && echo ' ' && node lib/app/predictive_models/index.js",
-    "euclid": "npm run build && echo ' ' && node lib/app/predictive_models/euclid/index.js"
+    "euclid": "npm run build && echo ' ' && node lib/app/predictive_models/euclid/index.js",
+    "players": "npm run build && echo ' ' && node lib/app/util/players.js"
   },
   "repository": {
     "type": "git",

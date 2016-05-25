@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 /**
  * Vector container
  *
@@ -37,6 +39,7 @@ export class Vectors{
 }
 
 
+
 /**
  * Container 
  */
@@ -49,7 +52,11 @@ export class Vector{
     return this.value.length; 
   }
 
+  get distance(){
+    //Placeholder this computation should be done here to save time
+  }
+
   get(index){
-    return this.value[index];
+    return Number(this.value[index]);
   }
 }
