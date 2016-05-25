@@ -2,22 +2,13 @@
 
 import {mongoose} from './../util/mongoose';
 import Player from './../models/Player';
-import {euclidFromIDs, euclidFromStreaming} from './euclid/';
 
 mongoose.connect('mongodb://localhost/test');
-let ids = []; 
-
-// getPlayersStreaming((doc) => console.log(doc._id)); 
-euclidFromStreaming(); 
 
 export function close(){
   mongoose.connection.close();
 }
 
-function getOnePlayer(){
-  // let query = Player.find({_id: ids[0]}).exec();
-  return getPlayer('5745f6f5f564b4281c61bd3c');
-}
 
 function getAllIds(){
   let query = Player.find({}).select('id').exec();
@@ -58,31 +49,20 @@ export function getIds(){
   });
 }
 
-export function getPlayersStreaming(onData, onError, onClose){
+let i = 0;
+
+export function getPlayersStreaming(){
   let stream = Player.find().stream(0);
-  
-  stream.on('close', function () {
+  stream.on('data', function (doc) {
+    console.log(i++); 
+  }).on('error', function (err) {
+    console.log(err); 
+  }).on('close', function () {
+    // the stream is closed
+    console.log('closed'); 
     close();
-  });  
-
-
-
-
-  // stream.on('data', function (doc) {
-  //   if(onData) onData.call(this, doc);
-  // }).on('error', function (err) {
-  //   if(onError) nError.call(this, err);
-  // }).on('close', function () {
-  //   // the stream is closed
-  //   console.log('closed'); 
-  //   close();
-  // });
-
-  return stream; 
-}
-
-function runEuclid(ids){
-
+  });
 }
 
 
+getPlayersStreaming();
