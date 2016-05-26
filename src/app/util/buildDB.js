@@ -25,6 +25,10 @@ let finished = 0;
 let allPlayers = [];
 let bar;
 
+/**
+ * Build the inital player database
+ * @return {[type]} [description]
+ */
 function seedPlayers(){
   console.log("Seeding Players from JSON Files!");
 
@@ -63,7 +67,11 @@ function mongoBulkInsert(players){
 }
 
 
-
+/**
+ * Load all of the JSON files
+ * @param  {String} dir Directory to list of JSON files
+ * @return {Promise}     
+ */
 function getJSONFiles(dir){
   return fsp.readdir(dir)
     .then((files) => {
@@ -95,8 +103,8 @@ function parseJSONFiles(files){
 }
 
 /**
- * Parse the JSON of a 
- * @param  {[type]} filePath [description]
+ * Parse the JSON of a full player
+ * @param  {String} filePath [description]
  * @return {[type]}          [description]
  */
 function parseJSON(filePath){
@@ -107,6 +115,11 @@ function parseJSON(filePath){
     .catch(console.trace); 
 }
 
+/**
+ * Load a JSON file 
+ * @param  {String} filePath 
+ * @return {Promise}          
+ */
 function getJSON(filePath){
   return fsp.readFile(filePath)
     .then(contents => {
@@ -115,6 +128,11 @@ function getJSON(filePath){
     .catch(console.trace); 
 }
 
+/**
+ * Create a player and add the stats to it
+ * @param  {Object} json 
+ * @return {Promise}      
+ */
 function createPlayer(json){
   let player = {};
   player.name = json.name || json.bio.name; 
@@ -130,12 +148,23 @@ function createPlayer(json){
   return Promise.resolve(player); 
 }
 
+/**
+ * Add stats to a player
+ * @param {Player} player 
+ * @param {Object} json   
+ */
 function addStats(player, json){
   for(let group in json.stats){
     addGroup(player, json, group);
   }
 }
 
+/**
+ * Add a new JSON group
+ * @param {Player} player 
+ * @param {Object} json   
+ * @param {String} key    Key for the new group
+ */
 function addGroup(player, json, key){
   if(!json.stats[key]) return false; 
   let array = json.stats[key];
@@ -143,6 +172,12 @@ function addGroup(player, json, key){
   player.yearlyStats.push(...stats);
 }
 
+/**
+ * Create stats yearly stats
+ * @param  {Array} statsArray 
+ * @param  {String} groupName  
+ * @return {Array}            
+ */
 function getYearStats(statsArray, groupName){
   let stats = [];
 
