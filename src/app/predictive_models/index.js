@@ -15,7 +15,6 @@ export function close(){
 }
 
 function getOnePlayer(){
-  // let query = Player.find({_id: ids[0]}).exec();
   return getPlayer('5745f6f5f564b4281c61bd3c');
 }
 
@@ -64,19 +63,6 @@ export function getPlayersStreaming(onData, onError, onClose){
   stream.on('close', function () {
     close();
   });  
-
-
-
-
-  // stream.on('data', function (doc) {
-  //   if(onData) onData.call(this, doc);
-  // }).on('error', function (err) {
-  //   if(onError) nError.call(this, err);
-  // }).on('close', function () {
-  //   // the stream is closed
-  //   console.log('closed'); 
-  //   close();
-  // });
 
   return stream; 
 }

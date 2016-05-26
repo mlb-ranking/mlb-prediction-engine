@@ -2,12 +2,12 @@
 
 import {getIds, getPlayer, getPlayersStreaming} from './../index';
 import {Vectors, Vector} from './../vectors';
-
+import util from 'util'; 
 
 class EuclidPair{
 
   /**
-   * [constructor description]
+   * 
    * @param  {Vector} v1 [description]
    * @param  {Vector} v2 [description]
    * @return {[type]}    [description]
@@ -72,7 +72,8 @@ export function euclidFromStreaming(){
   let stream = getPlayersStreaming(); 
 
   stream.on('data', (player) => {
-      let vector = createVector(player); 
+      let vector = createVector(player);
+      player.vector = vector;  
       if(vector){
         let obj = {player: player, vector: vector};
         players.push(obj); 
@@ -93,19 +94,21 @@ function compareAllPlayers(players){
 
   for(let i = 0; i < LIMIT; i++){
     let p1 = players[i].player; 
-    let v1 = players[i].vector; 
+    let v1 = players[i].vector;
+     
     for(let j = i + 1; j < LIMIT; j++){
       let p2 = players[j].player; 
       let v2 = players[j].vector; 
+
       let euc = new EuclidPair(v1, v2);
-      let res = {player1: p1, player2: p2, distance: euc.distance, similarity: euc.similarity};
+      let res = {player1: p1.name, player2: p2.name, distance: euc.distance, similarity: euc.similarity, values: [p1.vector, p2.vector]};
       results.push(res);
     }
   }
 
   results.sort(sortBySim);
 
-  console.log(results); 
+  console.log(util.inspect(results, { showHidden: true, depth: null })); 
 }
 
 
