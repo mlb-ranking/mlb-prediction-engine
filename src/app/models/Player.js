@@ -64,6 +64,13 @@ PlayerSchema.methods.getStat = function getStat(type, year, name) {
   return this.statHashMap[statKey(type, year, name)];
 };
 
+/**
+ * Add a vector to this player object
+ * @param {Vector} vector
+ */
+PlayerSchema.methods.addVector = function addVector(vector) {
+  this.vector = vector;
+};
 
 /**
  * Find similar players based on similarities, attributes, and more.

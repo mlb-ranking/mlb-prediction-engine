@@ -1,34 +1,20 @@
-"use strict";
-
-import {mongoose} from './../util/mongoose';
+import { mongoose } from './../util/mongoose';
 import Player from './../models/Player';
-import {euclidFromIDs, euclidFromStreaming} from './euclid/';
+import { EuclidPredictions } from './euclid/index';
+import { logger } from 'js-utils';
 
 mongoose.connect('mongodb://localhost/test');
-let ids = []; 
 
-// getPlayersStreaming((doc) => console.log(doc._id)); 
-euclidFromStreaming(); 
+// getPlayersStreaming((doc) => console.log(doc._id));
+// euclidFromStreaming();
 
-export function close(){
+
+export function close() {
   mongoose.connection.close();
 }
 
-function getOnePlayer(){
-  return getPlayer('5745f6f5f564b4281c61bd3c');
-}
 
-function getAllIds(){
-  let query = Player.find({}).select('id').exec();
-  return query.then((doc) => {
-    ids = doc; 
-    return doc;
-  });
-}
-
-let playersCache = new Map(); 
-
-export function getPlayer(id){
+export function getPlayer(id) {
   if(playersCache.has(id)){
     return new Promise((resolve, reject) => {
       resolve(playersCache.get(id));
@@ -47,28 +33,40 @@ export function getPlayer(id){
 }
 
 
-export function getIds(){
-  return new Promise((resolve, reject) => {
-    getAllIds()
-      .then((ids) => {
-        resolve(ids);
-      })
-      .catch(reject); 
+export function getPlayerStream() {
+  const stream = Player.find().stream(0);
+
+  stream.on('close', () => {
+    close();
+  });
+
+  return stream;
+}
+
+
+function euclidPredictions() {
+  logger('Running Elucid Predictions...');
+  const stream = getPlayerStream();
+  const predictions = new EuclidPredictions();
+
+  predictions.addStat('standardBatting', 2015, 'H');
+  predictions.addStat('standardBatting', 2015, 'HR');
+  predictions.addStat('standardBatting', 2015, 'RBI');
+  predictions.addStat('standardBatting', 2015, 'BA');
+  predictions.addStat('postSeasonBatting', 2015, 'G');
+
+  stream.on('data', (player) => {
+    predictions.addPlayer(player);
+  });
+
+  stream.on('close', () => {
+    const results = predictions.compute();
+    const result = results.list[23];
+    const player = predictions.getPlayer(result.player2);
+
+    logger(player);
   });
 }
 
-export function getPlayersStreaming(onData, onError, onClose){
-  let stream = Player.find().stream(0);
-  
-  stream.on('close', function () {
-    close();
-  });  
 
-  return stream; 
-}
-
-function runEuclid(ids){
-
-}
-
-
+euclidPredictions();
