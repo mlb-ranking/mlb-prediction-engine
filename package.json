@@ -51,7 +51,8 @@
     "request": "^2.67.0",
     "single-line-log": "^1.1.1",
     "source-map-support": "^0.4.0",
-    "torrequest": "0.0.2"
+    "torrequest": "0.0.2",
+    "js-utils": "git://github.com/JoshuaRogan/js-utils.git"
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",

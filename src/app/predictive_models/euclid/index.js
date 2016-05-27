@@ -1,5 +1,6 @@
 "use strict";
 
+import {logger} from 'js-utils';
 import {getIds, getPlayer, getPlayersStreaming} from './../index';
 import {Vectors, Vector} from './../vectors';
 import util from 'util'; 
@@ -106,9 +107,11 @@ function compareAllPlayers(players){
     }
   }
 
+  logger(players[20].player.getStat('standardFielding', 2008, 'Rdrs')); 
+
   results.sort(sortBySim);
 
-  console.log(util.inspect(results, { showHidden: true, depth: null })); 
+  // console.log(util.inspect(results, { showHidden: true, depth: null })); 
 }
 
 
