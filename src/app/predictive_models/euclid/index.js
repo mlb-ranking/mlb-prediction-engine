@@ -1,4 +1,3 @@
-// import { getPlayer, getPlayersStreaming } from './../index';
 import { Vector } from './../datastructures/Vector';
 import { PredictionModel } from './../PredictionModel';
 
@@ -20,6 +19,14 @@ class StatNotFoundError extends Error {
   }
 }
 
+class StatNotQualified extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'StatNotQualified';
+    this.console = false;
+  }
+}
+
 export class EuclidPredictions extends PredictionModel {
 
   /**
@@ -30,6 +37,7 @@ export class EuclidPredictions extends PredictionModel {
   constructor(players = [], statList = []) {
     super(players);
     this.statList = [];
+    this.qualifiers = [];
 
     if (statList.length) {
       this.statList = statList;
@@ -43,13 +51,21 @@ export class EuclidPredictions extends PredictionModel {
    * @param {String} name  the name of the stat
    * @return {EuclidPredictions}
    */
-  addStat(group, year, name) {
+  addStat(group, year, name, sign, value) {
     if (!group || !year || !name) {
       throw new Error('Must have group year and name!');
     }
+
+    if (sign && value) {
+      this.qualifiers.push([sign, value]);
+    } else {
+      this.qualifiers.push(false);
+    }
+
     this.statList.push([group, year, name]);
     return this;
   }
+
 
   /**
    * Add a player to the players set
@@ -68,7 +84,6 @@ export class EuclidPredictions extends PredictionModel {
       this.players.push(player);
       this.playersMap.set(player.id, player);
     } catch (err) {
-      // log this error somewhere
       if (err.console !== false) {
         logger(err);
       }
@@ -86,10 +101,18 @@ export class EuclidPredictions extends PredictionModel {
   createVector(player) {
     const vector = new Vector();
 
-    for (const stat of this.statList) {
+    for (let i = 0; i < this.statList.length; i++) {
+      const stat = this.statList[i];
       const statVal = player.getStat(...stat);
 
       if (statVal) {
+        if (this.qualifiers[i]) {
+          const qualifer = this.qualifiers[i];
+          if (!this.isQualifed(statVal, qualifer)) {
+            throw new StatNotQualified(`Stat ${stat} with value of ${statVal} 
+                doesn't qualify with ${qualifer[0]} and ${qualifer[1]}`);
+          }
+        }
         vector.add(statVal, stat.toString());
       } else {
         throw new StatNotFoundError(`Stat ${stat} doesn't exist for ${player.name}!`);
@@ -99,13 +122,46 @@ export class EuclidPredictions extends PredictionModel {
   }
 
   /**
+   * Check if the value and at the qualifer are valid
+   * @param  {Number} value    the value of the statistic
+   * @param  {Array} qualifer [0] = sign (>, <, ==, etc) [1] qualifer value
+   * @return {boolean}
+   */
+  isQualifed(value, qualifer) {
+    const sign = qualifer[0];
+    const qualiferValue = qualifer[1];
+
+    switch (sign) {
+      case '>':
+        return value > qualiferValue;
+      case '<':
+        return value < qualiferValue;
+      case '>=':
+        return value >= qualiferValue;
+      case '<=':
+        return value <= qualiferValue;
+      case '==':
+        return value === qualiferValue;
+      case '===':
+        return value === qualiferValue;
+      case '!=':
+        return value !== qualiferValue;
+      case '!==':
+        return value !== qualiferValue;
+      default:
+        return false;
+    }
+  }
+
+
+  /**
    * Compare all of the pairs of players to determine the distance
    * and similarity between them.
    * @return {Object}   Object containg the results of the computation with player ids
    */
   compute() {
-    if (this.players.length === 0) {
-      throw new Error('No players to compute!');
+    if (this.players.length <= 1) {
+      throw new Error('Not enough players to compute!');
     }
 
     this.results.list = [];

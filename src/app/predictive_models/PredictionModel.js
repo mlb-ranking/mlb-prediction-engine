@@ -2,7 +2,7 @@
 
 /**
  * Base Class that all prediction models should inherit from
- * 
+ *
  */
 export class PredictionModel {
 

@@ -31,7 +31,7 @@ const PlayerSchema = new Schema({
  * @return {String}      Key to lookup this stat
  */
 function statKey(type, year, name) {
-  return `${type}-${year}-${name}`;
+  return `${type}-${year}-${name}`.toLowerCase();
 }
 
 
