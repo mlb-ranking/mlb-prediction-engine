@@ -1,3 +1,5 @@
+// import { logger } from 'js-utils';
+
 /**
  * Basic Vector Class
  *
@@ -14,7 +16,7 @@ export class Vector {
     this.names = [];  // Maintain a list of variable names
 
     if (values && values.length) {
-      const validNames = values.length === names.length;
+      const validNames = names && (names.length === values.length);
 
       for (let i = 0; i < values.length; i++) {
         this.values[i] = values[i];
@@ -52,13 +54,44 @@ export class Vector {
   }
 
   /**
-   * Compute the distance between two vectors
+   * The euclidean distance between itself and another vector
    *
    * @param  {Vector} vector vector to compare to
    * @return {Number}        The distance between all of the dimensions
    */
-  getdistance(vector) {
-    return Vector.computeDistance(this, vector);
+  getEuclideandistance(vector) {
+    return Vector.euclideanDistance(this, vector);
+  }
+
+  /**
+   * The euclidean simliarity between itself and another vector
+   * @param  {Vector} vector
+   * @param  {Number} [distance] precomputed euclidean distance value
+   * @return {Number}          euclidean similarity
+   */
+  getEuclideanSimilarity(vector, distance) {
+    if (distance) {
+      return 1.0 / (1.0 + distance);
+    }
+    return 1.0 / (1.0 + Vector.euclideanDistance(this, vector));
+  }
+
+  /**
+   * The similarity between itself and another vector
+   * @param  {Vector} vector
+   * @return {Number}       similarity between two vectors
+   */
+  getJaccardSimilarity(vector) {
+    return Vector.jaccardSimilarity(this, vector);
+  }
+
+  /**
+   * The cosine similarity between itself and another vector
+   * @param  {Vector} vector
+   * @return {Number}        similarity between two vectors
+   */
+  getCosineSimilarity(vector) {
+    return Vector.cosineSimilarity(this, vector);
   }
 
   /**
@@ -80,7 +113,7 @@ export class Vector {
    * @param  {Vector} vector2
    * @return {Number}         distance between the two vectors
    */
-  static computeDistance(vector1, vector2) {
+  static euclideanDistance(vector1, vector2) {
     let innerSum = 0;
 
     for (let i = 0; i < vector1.length; i++) {
@@ -88,6 +121,48 @@ export class Vector {
     }
 
     return Math.sqrt(innerSum);
+  }
+
+  /**
+   * Compute the jaccard similarity for two vectors.
+   * --- Probably want to remove (not a set)
+   * @param  {Vector} vector1
+   * @param  {Vector} vector2
+   * @return {Number}         similarity between two vectors
+   */
+  static jaccardSimilarity(vector1, vector2) {
+    let num = 0;
+    let denom = 0;
+
+    for (let i = 0; i < vector1.length; i++) {
+      num += Math.min(vector1.get(i), vector2.get(i));
+      denom += Math.max(vector1.get(i), vector2.get(i));
+    }
+
+    return num / denom;
+  }
+
+  /**
+   * Compute the cosine simliarity for two vectors
+   * @param  {Vector} vector1
+   * @param  {Vector} vector2
+   * @return {Number}        similarity between the two vectors
+   */
+  static cosineSimilarity(vector1, vector2) {
+    let dotProduct = 0;
+    let vector1SquaredSum = 0;
+    let vector2SquaredSum = 0;
+
+    for (let i = 0; i < vector1.length; i++) {
+      dotProduct += vector1.get(i) * vector2.get(i);
+      vector1SquaredSum += Math.pow(vector1.get(i), 2);
+      vector2SquaredSum += Math.pow(vector2.get(i), 2);
+    }
+
+    vector1SquaredSum = Math.sqrt(vector1SquaredSum);
+    vector2SquaredSum = Math.sqrt(vector2SquaredSum);
+
+    return dotProduct / (vector1SquaredSum * vector2SquaredSum);
   }
 
 }

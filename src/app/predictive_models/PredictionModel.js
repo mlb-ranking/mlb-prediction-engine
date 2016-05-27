@@ -47,4 +47,41 @@ export class PredictionModel {
   compute() {
     return this;
   }
+
+  /**
+   * Check if the value and at the qualifer are valid
+   * @param  {Number} value    the value of the statistic
+   * @param  {Array} qualifer [0] = sign (>, <, ==, etc) [1] qualifer value
+   * @return {boolean}
+   */
+  isQualifed(value, qualifer) {
+    const sign = qualifer[0];
+    const qualiferValue = qualifer[1];
+
+    switch (sign) {
+      case '>':
+        return value > qualiferValue;
+      case '<':
+        return value < qualiferValue;
+      case '>=':
+        return value >= qualiferValue;
+      case '<=':
+        return value <= qualiferValue;
+      case '==':
+        return value === qualiferValue;
+      case '===':
+        return value === qualiferValue;
+      case '!=':
+        return value !== qualiferValue;
+      case '!==':
+        return value !== qualiferValue;
+      default:
+        return false;
+    }
+  }
+
+  
+  predict(playerID, group, year, name) {
+
+  }
 }

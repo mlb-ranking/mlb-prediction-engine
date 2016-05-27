@@ -1,9 +1,10 @@
 import { mongoose } from './../util/mongoose';
 import Player from './../models/Player';
-import { EuclidPredictions } from './euclid/index';
+import { Similiarties } from './euclid/index';
 import { logger } from 'js-utils';
+import { Vector } from './datastructures/Vector';
 
-mongoose.connect('mongodb://localhost/test');
+
 
 // getPlayersStreaming((doc) => console.log(doc._id));
 // euclidFromStreaming();
@@ -43,12 +44,18 @@ export function getPlayerStream() {
   return stream;
 }
 
-function displayResults(predictions, results) { 
-  for (const result of results.list) {
+function displayResults(predictions, results) {
+  const res = results.list.splice(0, 5);
+  // res = results.list;
+  logger(results.statList);
+  for (const result of res) {
     const p1 = predictions.getPlayer(result.player1);
     const p2 = predictions.getPlayer(result.player2);
-    logger(`Players: ${p1.name} and ${p2.name}`);
-    logger(`Results: d = ${result.distance} \t s = ${result.similarity}\n`);
+    logger(`${p1.name} and ${p2.name}`);
+    logger(p1.vector.values);
+    logger(p2.vector.values);
+    logger(`eD = ${result.euclideanDistance} eS = ${result.euclideanSimilarity} \
+jS = ${result.jaccardSimilarity} cS = ${result.cosineSimilarity} \n`);
   }
 }
 
@@ -57,17 +64,19 @@ function updateDB(predictions, results) {
 }
 
 function euclidPredictions() {
+  mongoose.connect('mongodb://localhost/test');
+
   // console.time("computeEuclid");
   logger('Running Elucid Predictions...');
   const stream = getPlayerStream();
-  const predictions = new EuclidPredictions();
+  const predictions = new Similiarties();
 
-  predictions.addStat('standardBatting', 2015, 'AB', '>', 100);
+  // predictions.addStat('standardBatting', 2015, 'AB', '>', 100);
   predictions.addStat('standardBatting', 2015, 'H');
-  predictions.addStat('standardBatting', 2015, 'HR');
-  predictions.addStat('standardBatting', 2015, 'RBI');
-  predictions.addStat('standardBatting', 2015, 'BA');
-  predictions.addStat('postSeasonBatting', 2015, 'G');
+  predictions.addStat('standardBatting', 2015, 'G', '>', 70);
+  // predictions.addStat('standardBatting', 2015, 'RBI');
+  // predictions.addStat('standardBatting', 2015, 'BA');
+  // predictions.addStat('postSeasonBatting', 2015, 'G', '>', 70);
 
   stream.on('data', (player) => {
     predictions.addPlayer(player);
@@ -82,4 +91,16 @@ function euclidPredictions() {
   });
 }
 
-// euclidPredictions();
+function similarityTests() {
+  const c1 = new Vector([3, 45, 7, 2]);
+  const c2 = new Vector([2, 54, 13, 15]);
+  logger(Vector.cosineSimilarity(c1, c2)); // 0.972
+
+  const e1 = new Vector([0, 3, 4, 5]);
+  const e2 = new Vector([7, 6, 3, -1]);
+  logger(Vector.euclideanDistance(e1, e2)); // 9.74679434481
+}
+
+// similarityTests();
+
+euclidPredictions();

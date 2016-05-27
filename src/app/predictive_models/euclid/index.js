@@ -27,7 +27,7 @@ class StatNotQualified extends Error {
   }
 }
 
-export class EuclidPredictions extends PredictionModel {
+export class Similiarties extends PredictionModel {
 
   /**
    * Setup a euclid prediction set
@@ -49,7 +49,7 @@ export class EuclidPredictions extends PredictionModel {
    * @param {String} group Stat group name (e.g. 'standardBatting')
    * @param {Integer} year  integer of the year for the stat
    * @param {String} name  the name of the stat
-   * @return {EuclidPredictions}
+   * @return {Similiarties}
    */
   addStat(group, year, name, sign, value) {
     if (!group || !year || !name) {
@@ -71,7 +71,7 @@ export class EuclidPredictions extends PredictionModel {
    * Add a player to the players set
    * @param {Player} player
    * @throws {Error} If statlist isn't set
-   * @return {EuclidPredictions}
+   * @return {Similiarties}
    */
   addPlayer(player) {
     if (this.statList.length === 0) {
@@ -122,39 +122,6 @@ export class EuclidPredictions extends PredictionModel {
   }
 
   /**
-   * Check if the value and at the qualifer are valid
-   * @param  {Number} value    the value of the statistic
-   * @param  {Array} qualifer [0] = sign (>, <, ==, etc) [1] qualifer value
-   * @return {boolean}
-   */
-  isQualifed(value, qualifer) {
-    const sign = qualifer[0];
-    const qualiferValue = qualifer[1];
-
-    switch (sign) {
-      case '>':
-        return value > qualiferValue;
-      case '<':
-        return value < qualiferValue;
-      case '>=':
-        return value >= qualiferValue;
-      case '<=':
-        return value <= qualiferValue;
-      case '==':
-        return value === qualiferValue;
-      case '===':
-        return value === qualiferValue;
-      case '!=':
-        return value !== qualiferValue;
-      case '!==':
-        return value !== qualiferValue;
-      default:
-        return false;
-    }
-  }
-
-
-  /**
    * Compare all of the pairs of players to determine the distance
    * and similarity between them.
    * @return {Object}   Object containg the results of the computation with player ids
@@ -188,10 +155,48 @@ export class EuclidPredictions extends PredictionModel {
       throw new Error('Players must have an attached vector!');
     }
 
-    const distance = p1.vector.getdistance(p2.vector);
-    const similarity = 1.0 / (1.0 + distance);
-    const result = { player1: p1.id, player2: p2.id, distance, similarity };
+    const euclideanRes = this.euclideanResult(p1, p2);
+    const jaccardRes = this.jaccardResult(p1, p2);
+    const cosineRes = this.cosineResult(p1, p2);
+
+    const result = {
+      player1: p1.id,
+      player2: p2.id,
+      euclideanDistance: euclideanRes.distance,
+      euclideanSimilarity: euclideanRes.similarity,
+      jaccardSimilarity: jaccardRes.similarity,
+      cosineSimilarity: cosineRes.similarity,
+    };
+
     return result;
+  }
+
+  /**
+   * Determine the similarities and distances based on the euclidean algorithm
+   * @param  {Player} p1
+   * @param  {Player} p2
+   * @return {Object}    Resulting object with similarity and distance
+   */
+  euclideanResult(p1, p2) {
+    const distance = p1.vector.getEuclideandistance(p2.vector);
+    const similarity = p1.vector.getEuclideanSimilarity(p2.vector, distance);
+    return { distance, similarity };
+  }
+
+  /**
+   * Determine the similaries based on the Jaccard Index
+   * @param  {Player} p1
+   * @param  {Player} p2
+   * @return {Object}    Resulting object with similarity and distance
+   */
+  jaccardResult(p1, p2) {
+    const similarity = p1.vector.getJaccardSimilarity(p2.vector);
+    return { similarity };
+  }
+
+  cosineResult(p1, p2) {
+    const similarity = p1.vector.getCosineSimilarity(p2.vector);
+    return { similarity };
   }
 
 }
