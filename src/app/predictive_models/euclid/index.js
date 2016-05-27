@@ -68,6 +68,10 @@ export function euclidFromIDs(ids, updateDB = false){
   }
 }
 
+/**
+ * Compue euclidean from a streaming API
+ * @return {[type]} [description]
+ */
 export function euclidFromStreaming(){
   let players = []; // {player: p, vector: v}
   let stream = getPlayersStreaming(); 
@@ -88,10 +92,14 @@ export function euclidFromStreaming(){
 
 }
 
+/**
+ * Look at each pair of players and determine the similairity between the vectors
+ * @param  {Array.<Player>} players 
+ * @return {Object}         
+ */
 function compareAllPlayers(players){
   let results = [];
   const LIMIT = players.length; 
-  // const LIMIT = 50; 
 
   for(let i = 0; i < LIMIT; i++){
     let p1 = players[i].player; 
@@ -107,11 +115,8 @@ function compareAllPlayers(players){
     }
   }
 
-  logger(players[20].player.getStat('standardFielding', 2008, 'Rdrs')); 
-
   results.sort(sortBySim);
-
-  // console.log(util.inspect(results, { showHidden: true, depth: null })); 
+  return results; 
 }
 
 
@@ -128,51 +133,24 @@ function sortBySim(result1, result2){
 }
 
 
+/**
+ * Creat the same vector in order for every player 
+ * @param  {Player} player 
+ * @return {Vector|boolean}        
+ */
 function createVector(player){
-  let stats = player.yearlyStats.filter(filterBatting2015).filter(hits);
-  if(stats.length){
-    return new Vector([stats[0].value]); 
+  let stats = [];
+
+  let hitstat = player.getStat('standardBatting', 2015, 'H');
+  if(hitstat){
+    return new Vector([hitstat]); 
   }
   else{
     return false; 
   }
 
-}
-
-function comparePlayers(player1, player2){
-   let p1Stats = player1.yearlyStats.filter(filterBatting2015).filter(hits);
-   let p2Stats = player2.yearlyStats.filter(filterBatting2015).filter(hits);
-
-   if(p1Stats.length > 0 && p1Stats.length === p2Stats.length){
-    // console.log('Gucci', player1.name, p1Stats, player2.name, p2Stats); 
-    let v1 = new Vector([p1Stats[0].value]);
-    let v2 = new Vector([p2Stats[0].value]);
-    let euc = new EuclidPair(v1, v2);
-    console.log(`${player1.name} and ${player2.name} \t - `, euc.distance, euc.similarity);
-   }
-   else{
-    // console.log('no gucci'); 
-   }
 
 }
-
-function filterBatting2015(stat){
-  if(stat.group !== 'standardBatting'){
-    return false; 
-  }
-
-  if(stat.year !== 2015){
-    return false; 
-  } 
-
-  return true; 
-}
-
-function hits(stat){
-  return stat.name === 'H';
-}
-
-
 
 
 
