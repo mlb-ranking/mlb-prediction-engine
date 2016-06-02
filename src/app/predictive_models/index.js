@@ -1,6 +1,6 @@
 import { mongoose } from './../util/mongoose';
 import Player from './../models/Player';
-import { Similiarties } from './euclid/index';
+import { Similiarties } from './similarities/index';
 import { logger } from 'js-utils';
 import { Vector } from './datastructures/Vector';
 

@@ -194,6 +194,12 @@ export class Similiarties extends PredictionModel {
     return { similarity };
   }
 
+  /**
+   * Determine the similarites of based on the cosine
+   * @param  {Player} p1
+   * @param  {Player} p2
+   * @return {Object}    Resulting object with similarity
+   */
   cosineResult(p1, p2) {
     const similarity = p1.vector.getCosineSimilarity(p2.vector);
     return { similarity };
