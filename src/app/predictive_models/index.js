@@ -1,6 +1,7 @@
 import { mongoose } from './../util/mongoose';
 import Player from './../models/Player';
 import { Similiarties } from './similarities/index';
+import { KNearestNeighbors } from './knearestNeighbors/index';
 import { logger } from 'js-utils';
 import { Vector } from './datastructures/Vector';
 
@@ -45,6 +46,7 @@ export function getPlayerStream() {
 }
 
 function displayResults(predictions, results) {
+  logger(`Total Results = ${results.list.length}`);
   const res = results.list.splice(0, 5);
   // res = results.list;
   logger(results.statList);
@@ -87,8 +89,16 @@ function euclidPredictions() {
     // const result = results.list[results.list.length - 1];
     // const player = predictions.getPlayer(result.player2);
     // logger(result);
-    displayResults(predictions, results);
+    // displayResults(predictions, results);
+    knearestNeighbor(results);
   });
+}
+
+function knearestNeighbor(results) {
+  logger('Running K Nearest knearestNeighbor');
+  const predictions = new KNearestNeighbors(results);
+
+
 }
 
 function similarityTests() {
@@ -104,3 +114,4 @@ function similarityTests() {
 // similarityTests();
 
 euclidPredictions();
+// knearestNeighbor();
