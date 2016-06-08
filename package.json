@@ -12,7 +12,8 @@
     "jaccard": "npm run build && echo ' ' && node lib/app/predictive_models/jaccard/index.js",
     "prediction": "npm run build && echo ' ' && node lib/app/predictive_models/index.js",
     "euclid": "npm run build && echo ' ' && node lib/app/predictive_models/similarities/index.js",
-    "players": "npm run build && echo ' ' && node lib/app/util/players.js"
+    "players": "npm run build && echo ' ' && node lib/app/util/players.js",
+    "article": "npm run build && echo ' ' && node lib/app/articles/index.js"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
     "md5": "^2.0.0",
     "mongodb": "^2.1.7",
     "mongoose": "^4.4.7",
+    "natural": "^0.4.0",
     "progress": "^1.1.8",
     "promise": "^7.1.1",
     "request": "^2.67.0",
