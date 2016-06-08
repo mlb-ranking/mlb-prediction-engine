@@ -54,7 +54,7 @@ export default class Articles {
   inverseDocumentFrequency(term) {
     const results = {
       term,
-      docs: [],
+      docs: {},
     };
 
     if (this.dirtyTFIDF) {
@@ -63,7 +63,7 @@ export default class Articles {
     }
 
     this.tfidf.tfidfs(term, (i, measure) => {
-      results.docs[i] = measure;
+      results.docs[this.articles[i].name] = measure;
     });
 
     return results;

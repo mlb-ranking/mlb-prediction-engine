@@ -75,7 +75,7 @@ export default class Article {
    * @param  {String} content
    * @return {String}
    */
-  static pronounReplacement(content) {
+  pronounReplacement(content) {
     // TODO
     return content;
   }

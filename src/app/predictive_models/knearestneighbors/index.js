@@ -1,4 +1,4 @@
-import { Vector } from './../datastructures/Vector';
+// import { Vector } from './../datastructures/Vector';
 
 // Dev stuff
 import { logger } from 'js-utils';
