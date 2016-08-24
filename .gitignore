@@ -3,3 +3,4 @@ node_modules
 lib/
 _*
 ENV
+prediction-engine.sublime-workspace
