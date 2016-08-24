@@ -1,6 +1,8 @@
 # MLB Rankings 
 [![Documentation Status](https://readthedocs.org/projects/mlb-ranking/badge/?version=latest)](http://mlb-ranking.readthedocs.org/en/latest/?badge=latest)
 
+[Style Guide](https://github.com/airbnb/javascript)
+
 ## Documentation
 Documentation for this project is avaiable at [Read the Docs - MLB Rankings](http://mlb-ranking.readthedocs.org/en/latest/)
 
